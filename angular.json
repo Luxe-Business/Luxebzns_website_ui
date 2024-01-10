@@ -30,20 +30,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/css/main.css",
-              "src/assets/css/custom.css",
               "src/styles.scss"
             ],
-            "scripts": [
-              "src/assets/js/vendors/jquery-3.6.0.min.js",
-              "src/assets/js/vendors/bootstrap.bundle.min.js",
-              "src/assets/js/vendors/swiper-bundle.min.js",
-              "src/assets/js/vendors/jquery.magnific-popup.min.js",
-              "src/assets/js/vendors/parallax.min.js",
-              "src/assets/js/vendors/aos.js",
-              "src/assets/js/vendors/massonry.min.js",
-              "src/assets/js/app.js"
-            ],
+            "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
