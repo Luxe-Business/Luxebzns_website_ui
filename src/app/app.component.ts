@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
 import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
 import { Platform } from '@angular/cdk/platform';
+import * as AOS from 'aos';
 
 import { PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
@@ -53,12 +54,10 @@ export class AppComponent implements OnInit,AfterViewInit{
 
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
-      import('aos').then(AOSModule => {
-        AOSModule.init();
-        setTimeout(() => {
-          AOSModule.refresh();
-        }, 1000);
-      })
+      AOS.init();
+      setTimeout(() => {
+        AOS.refresh();
+      }, 1000);
     }
   }
   
