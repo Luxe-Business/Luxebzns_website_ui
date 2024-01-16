@@ -1,7 +1,7 @@
 {
-  "name": "luxe-bzns-ui",
-  "short_name": "luxe-bzns-ui",
-  "theme_color": "#1976d2",
+  "name": "Luxe Bzns",
+  "short_name": "Luxe Bzns",
+  "theme_color": "#6501C8",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",

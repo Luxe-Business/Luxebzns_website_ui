@@ -1,9 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
 import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
 import { Platform } from '@angular/cdk/platform';
+
+import { PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'luxe-bzns',
@@ -12,7 +15,7 @@ import { Platform } from '@angular/cdk/platform';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit,AfterViewInit{
   title = 'luxe-bzns-ui';
   
   isOnline: boolean;
@@ -21,16 +24,18 @@ export class AppComponent implements OnInit{
   modalPwaPlatform: string|undefined;
 
   constructor(private platform: Platform,
-              private swUpdate: SwUpdate) {
+              private swUpdate: SwUpdate,@Inject(PLATFORM_ID) private platformId: Object) {
     this.isOnline = false;
     this.modalVersion = false;
   }
 
   public ngOnInit(): void {
-    this.updateOnlineStatus();
 
-    window.addEventListener('online',  this.updateOnlineStatus.bind(this));
-    window.addEventListener('offline', this.updateOnlineStatus.bind(this));
+    this.updateOnlineStatus();
+    if (typeof window !== 'undefined'){
+      window.addEventListener('online',  this.updateOnlineStatus.bind(this));
+      window.addEventListener('offline', this.updateOnlineStatus.bind(this));
+    }
 
     if (this.swUpdate.isEnabled) {
       this.swUpdate.versionUpdates.pipe(
@@ -45,9 +50,23 @@ export class AppComponent implements OnInit{
     this.loadModalPwa();
   }
 
+
+  ngAfterViewInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      import('aos').then(AOSModule => {
+        AOSModule.init();
+        setTimeout(() => {
+          AOSModule.refresh();
+        }, 1000);
+      })
+    }
+  }
+  
+
   private updateOnlineStatus(): void {
-    this.isOnline = window.navigator.onLine;
-    console.info(`isOnline=[${this.isOnline}]`);
+    if (isPlatformBrowser(this.platformId)) {
+      this.isOnline = window.navigator.onLine;
+    }
   }
 
   public updateVersion(): void {

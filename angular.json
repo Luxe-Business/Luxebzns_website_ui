@@ -32,11 +32,10 @@
               "src/manifest.webmanifest",
               "src/sitemap.xml",
               "src/robots.txt",
-              "src/manifest.webmanifest",
-              "src/assets/css/main.css",
-              "src/assets/css/custom.css"
+              "src/manifest.webmanifest"
             ],
             "styles": [
+              "src/assets/css/main.css",
               "src/styles.scss"
             ],
             "scripts": [],
