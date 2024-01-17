@@ -3,15 +3,15 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
-    path: 'home',
+    path: '',
     loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
   },
   {
-    path: 'about-luxebzns',
+    path: 'about',
     loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule)
   },
   {
-    path: 'luxebzns-services',
+    path: 'services',
     loadChildren: () => import('./pages/services/services.module').then(m => m.ServicesModule)
   },
   {

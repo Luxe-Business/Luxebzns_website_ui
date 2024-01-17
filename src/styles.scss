@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+a{
+    cursor: pointer;
+}
+
+.btn-outline-light:hover{
+    color: #ffffff !important;
+    border-color: #5D91F7;
+}
+
+.bg-grey-light{
+    background-color:#f3f3f3;
+}
+
+html[data-bs-theme='dark'] .bg-grey-light {
+    background-color: #222222;
+}
