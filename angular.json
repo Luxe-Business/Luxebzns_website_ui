@@ -25,6 +25,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "localize":["ar-AE"],
             "outputPath": "dist/luxe-bzns-ui",
             "index": "src/index.html",
             "browser": "src/main.ts",
