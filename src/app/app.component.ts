@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule, ViewportScroller } from '@angular/common';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
 import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
 import { Platform } from '@angular/cdk/platform';
@@ -25,9 +25,25 @@ export class AppComponent implements OnInit,AfterViewInit{
   modalPwaPlatform: string|undefined;
 
   constructor(private platform: Platform,
-              private swUpdate: SwUpdate,@Inject(PLATFORM_ID) private platformId: Object) {
+              private swUpdate: SwUpdate,@Inject(PLATFORM_ID) private platformId: Object,private router: Router,private viewportScroller: ViewportScroller) {
     this.isOnline = false;
     this.modalVersion = false;
+
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      this.smoothScrollToTop();
+    });
+  }
+
+  private smoothScrollToTop() {
+    if (isPlatformBrowser(this.platformId)) {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
   }
 
   public ngOnInit(): void {
@@ -49,6 +65,22 @@ export class AppComponent implements OnInit,AfterViewInit{
     }
 
     this.loadModalPwa();
+
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        // Reload the app.js script here
+        this.reloadAppScript();
+      }
+    });
+  }
+
+  reloadAppScript(): void {
+    if (typeof document !== 'undefined'){
+      const script = document.createElement('script');
+      script.src = 'assets/js/app.js';
+      script.async = true;
+      document.head.appendChild(script);
+    }
   }
 
 

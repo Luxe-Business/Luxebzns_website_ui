@@ -4,6 +4,14 @@
   "newProjectRoot": "projects",
   "projects": {
     "luxe-bzns-ui": {
+      "i18n": {
+        "sourceLocale":"en-US",
+        "locales": {
+          "ar-AE":{
+            "translation":"src/locale/messages.ar-AE.json"
+          }
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {

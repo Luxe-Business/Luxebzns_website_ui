@@ -1,18 +1,30 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { HeaderComponent } from './global/header/header.component';
 import { FooterComponent } from './global/footer/footer.component';
+import { ContactFormComponent } from './global/contact-form/contact-form.component';
+import { StatisticsComponent } from './global/statistics/statistics.component';
+import { RouterLink } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    HeaderComponent,
+    FooterComponent,
+    ContactFormComponent,
+    StatisticsComponent,
+  ],
   imports: [
     CommonModule,
-    HeaderComponent,
-    FooterComponent
+    NgOptimizedImage,
+    RouterLink,
+    HttpClientModule
   ],
   exports:[
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ContactFormComponent,
+    StatisticsComponent,
   ]
 })
 export class ComponentsModule { }

@@ -1,14 +1,24 @@
 import { Component } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common'
-import { RouterLink } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-header',
-  standalone: true,
-  imports: [NgOptimizedImage,RouterLink],
+  standalone: false,
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  localesList = [
+    { code: 'en-US', label: 'English' },
+    { code: 'ar-AE', label: 'العربية' },
+  ];
 
+  constructor(private location: Location) {}
+
+  changeLanguage(languageCode: string) {
+    const currentUrl = this.location.path();
+    const newUrl = currentUrl.replace(/^\/(en-US|ar-AE)/, `/${languageCode}`);
+    this.location.go(newUrl);
+    window.location.reload();
+  }
 }

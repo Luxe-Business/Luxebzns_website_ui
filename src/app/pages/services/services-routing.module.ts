@@ -7,6 +7,8 @@ import { WebsiteDesignComponent } from './website-design/website-design.componen
 import { MobileAppDevelopmentComponent } from './mobile-app-development/mobile-app-development.component';
 import { AiChatbotsComponent } from './ai-chatbots/ai-chatbots.component';
 import { TechConsultingComponent } from './tech-consulting/tech-consulting.component';
+import { CrmSolutionsComponent } from './crm-solutions/crm-solutions.component';
+import { UiUxDesignServicesComponent } from './ui-ux-design-services/ui-ux-design-services.component';
 
 const routes: Routes = [
   {
@@ -36,6 +38,14 @@ const routes: Routes = [
   {
     path: 'tech-consulting',
     component: TechConsultingComponent,
+  },
+  {
+    path: 'crm-and-erp-solutions',
+    component: CrmSolutionsComponent,
+  },
+  {
+    path: 'ui-ux-design-services',
+    component: UiUxDesignServicesComponent,
   },
 ];
 
