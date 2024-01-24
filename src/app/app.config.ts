@@ -23,7 +23,6 @@ export const appConfig: ApplicationConfig = {
     }),
     provideAnimations(), provideHttpClient(),
     TranslateModule.forRoot({
-      defaultLanguage: 'en',
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,

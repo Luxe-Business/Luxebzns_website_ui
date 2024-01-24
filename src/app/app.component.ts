@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
-import { CommonModule, DOCUMENT, ViewportScroller } from '@angular/common';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
 import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
@@ -27,7 +27,7 @@ export class AppComponent implements OnInit,AfterViewInit{
   modalPwaPlatform: string|undefined;
 
   constructor(private platform: Platform,
-              private swUpdate: SwUpdate,@Inject(PLATFORM_ID) private platformId: Object,private router: Router,private viewportScroller: ViewportScroller,private languageService: LanguageService,@Inject(DOCUMENT) private document: Document) {
+              private swUpdate: SwUpdate,@Inject(PLATFORM_ID) private platformId: Object,private router: Router,private languageService: LanguageService,@Inject(DOCUMENT) private document: Document) {
     this.isOnline = false;
     this.modalVersion = false;
 

@@ -5,11 +5,11 @@
   "projects": {
     "luxe-bzns-ui": {
       "i18n": {
-        "sourceLocale": "en-US",
+        "sourceLocale":"en-US",
         "locales": {
-          "ar":{
-            "translation":"src/assets/i18n/ar.json",
-            "baseHref": "/ar-AE"
+          "ar-AE":{
+            "translation":"src/assets/i18n/message.ar.json",
+            "baseHref": "ar-AE/"
           }
         }
       },
@@ -26,8 +26,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "externalDependencies":[""],
             "localize":["en-US"],
+            "externalDependencies":[""],
             "outputPath": "dist/luxe-bzns-ui",
             "index": "src/index.html",
             "browser": "src/main.ts",
