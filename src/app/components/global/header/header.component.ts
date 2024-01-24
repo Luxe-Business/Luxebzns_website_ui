@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Location } from '@angular/common';
+import { LanguageService } from '../../../services/language.service';
 
 @Component({
   selector: 'app-header',
@@ -8,17 +8,12 @@ import { Location } from '@angular/common';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  localesList = [
-    { code: 'en-US', label: 'English' },
-    { code: 'ar-AE', label: 'العربية' },
-  ];
 
-  constructor(private location: Location) {}
-
-  changeLanguage(languageCode: string) {
-    const currentUrl = this.location.path();
-    const newUrl = currentUrl.replace(/^\/(en-US|ar-AE)/, `/${languageCode}`);
-    this.location.go(newUrl);
-    window.location.reload();
+  constructor(public languageService: LanguageService) {}
+  
+  toggleLanguage(): void {
+    const newLang = this.languageService.getCurrentLang() === 'en' ? 'ar' : 'en';
+    this.languageService.changeLanguage(newLang);
   }
+
 }

@@ -6,6 +6,8 @@ import { ContactFormComponent } from './global/contact-form/contact-form.compone
 import { StatisticsComponent } from './global/statistics/statistics.component';
 import { RouterLink } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { TranslateModule } from '@ngx-translate/core';
+import { LocalizedLinkDirective } from '../directives/localized-link.directive';
 
 @NgModule({
   declarations: [
@@ -13,12 +15,14 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     ContactFormComponent,
     StatisticsComponent,
+    LocalizedLinkDirective
   ],
   imports: [
     CommonModule,
     NgOptimizedImage,
     RouterLink,
-    HttpClientModule
+    HttpClientModule,
+    TranslateModule
   ],
   exports:[
     HeaderComponent,

@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
-import { CommonModule, ViewportScroller } from '@angular/common';
+import { CommonModule, DOCUMENT, ViewportScroller } from '@angular/common';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
 import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
@@ -8,11 +8,13 @@ import * as AOS from 'aos';
 
 import { PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { TranslateModule} from '@ngx-translate/core';
+import { LanguageService } from './services/language.service';
 
 @Component({
   selector: 'luxe-bzns',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet,TranslateModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -25,7 +27,7 @@ export class AppComponent implements OnInit,AfterViewInit{
   modalPwaPlatform: string|undefined;
 
   constructor(private platform: Platform,
-              private swUpdate: SwUpdate,@Inject(PLATFORM_ID) private platformId: Object,private router: Router,private viewportScroller: ViewportScroller) {
+              private swUpdate: SwUpdate,@Inject(PLATFORM_ID) private platformId: Object,private router: Router,private viewportScroller: ViewportScroller,private languageService: LanguageService,@Inject(DOCUMENT) private document: Document) {
     this.isOnline = false;
     this.modalVersion = false;
 
@@ -46,8 +48,15 @@ export class AppComponent implements OnInit,AfterViewInit{
     }
   }
 
-  public ngOnInit(): void {
 
+  public ngOnInit(): void {
+    if (typeof window !== 'undefined'){
+      const localStorage = document.defaultView?.localStorage;
+      if (localStorage) {
+        const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
+        this.languageService.changeLanguage(preferredLanguage); 
+      } 
+    }
     this.updateOnlineStatus();
     if (typeof window !== 'undefined'){
       window.addEventListener('online',  this.updateOnlineStatus.bind(this));
