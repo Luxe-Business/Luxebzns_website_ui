@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -47,8 +48,7 @@ export const routes: Routes = [
     loadChildren: () => import('./pages/privacy-policy/privacy-policy.module').then(m => m.PrivacyPolicyModule)
   },
   {
-    path: '404',
-    loadChildren: () => import('./pages/not-found/not-found.module').then(m => m.NotFoundModule)
+    path: '404', component: NotFoundComponent
   },
   { path: '**', redirectTo: '404' }
 ];

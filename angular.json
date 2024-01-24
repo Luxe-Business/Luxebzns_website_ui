@@ -4,15 +4,6 @@
   "newProjectRoot": "projects",
   "projects": {
     "luxe-bzns-ui": {
-      "i18n": {
-        "sourceLocale":"en-US",
-        "locales": {
-          "ar-AE":{
-            "translation":"src/assets/i18n/message.ar.json",
-            "baseHref": "ar-AE/"
-          }
-        }
-      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -26,8 +17,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "localize":["en-US"],
             "externalDependencies":[""],
+            "baseHref": "./",
             "outputPath": "dist/luxe-bzns-ui",
             "index": "src/index.html",
             "browser": "src/main.ts",
