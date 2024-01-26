@@ -8,6 +8,8 @@ import { RouterLink } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
 import { LocalizedLinkDirective } from '../directives/localized-link.directive';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { LocalizedLinkDirective } from '../directives/localized-link.directive';
     NgOptimizedImage,
     RouterLink,
     HttpClientModule,
-    TranslateModule
+    TranslateModule,
+    ReactiveFormsModule
   ],
   exports:[
     HeaderComponent,

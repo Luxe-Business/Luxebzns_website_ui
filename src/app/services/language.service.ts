@@ -5,11 +5,11 @@ import { Location } from '@angular/common';
 
 @Injectable({ providedIn: 'root' })
 export class LanguageService {
-  private language = new BehaviorSubject<string>('en');
+  language = new BehaviorSubject<string>('en');
   currentLanguage = this.language.asObservable();
 
   constructor(
-    private translate: TranslateService,
+    public translate: TranslateService,
     private location: Location
   ) {}
 

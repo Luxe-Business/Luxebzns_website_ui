@@ -18,7 +18,6 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "externalDependencies":[""],
-            "baseHref": "./",
             "outputPath": "dist/luxe-bzns-ui",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -38,6 +37,7 @@
             ],
             "styles": [
               "src/assets/css/main.css",
+              "node_modules/ngx-toastr/toastr.css",
               "src/styles.scss"
             ],
             "scripts": [],
@@ -62,7 +62,6 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "./",
               "serviceWorker": "ngsw-config.json"
             },
             "development": {
