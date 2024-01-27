@@ -1,0 +1,327 @@
+<app-header></app-header>
+
+<!--page header section start-->
+<section
+  class="page-header position-relative overflow-hidden ptb-120 bg-dark"
+  style="background: url('assets/img/page-header-bg.svg') no-repeat bottom left"
+>
+  <div class="container pt-5">
+    <div class="row">
+      <div class="col-lg-8 col-md-12">
+        <h1 class="display-5 fw-bold">
+          Our Services - Elevating Your Digital Experience
+        </h1>
+        <p class="lead">
+          At Luxe Bzns, we specialize in bespoke digital solutions to
+          revolutionize your business. Explore our range of services and see how
+          we can transform your digital presence.
+        </p>
+      </div>
+    </div>
+    <div
+      class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light right-5"
+    ></div>
+  </div>
+</section>
+<!--page header section end-->
+
+<!--services section start-->
+<section class="services-section ptb-120 bg-light-subtle">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-10">
+        <div class="section-heading text-center">
+          <h4 class="h5 text-primary">Luxe Bzns Services</h4>
+          <h2>Digital Solutions Tailored to Your Needs</h2>
+          <p>
+            From web development to digital marketing, Luxe Bzns empowers your
+            Dubai business for success.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="feature-grid">
+          <div (click)="goToService('/website-design')"
+            class="feature-card border border-light border-2 bg-white rounded-custom p-4"
+            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Click To View Details"
+          >
+            <div class="feature-icon rounded bg-primary mb-32">
+              <i
+                class="fas fa-laptop-code fa-2x text-white"
+                alt="Web Design & Development Icon"
+              ></i>
+            </div>
+            <div class="feature-content">
+              <h3 class="h5">Innovative <span class="h5 text-decoration-underline">Web Design & Development</span></h3>
+              <p>
+                Elevate your online presence with sleek, SEO-optimized websites
+                designed for maximum engagement and superior performance.
+              </p>
+              <h6 class="mt-4">Features:</h6>
+              <ul class="list-unstyled mb-0">
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i>Bespoke
+                  Design
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i>Advanced
+                  SEO Techniques
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i
+                  >Comprehensive Pages
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i
+                  >Interactive UI/UX
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div (click)="goToService('/mobile-app-development')"
+            class="feature-card border border-light border-2 bg-white rounded-custom p-4"
+            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Click To View Details"
+          >
+            <div class="feature-icon rounded bg-danger mb-32">
+              <i class="fas fa-mobile-alt fa-2x text-white"></i>
+            </div>
+            <div class="feature-content">
+              <h3 class="h5">Cutting-Edge <span class="h5 text-decoration-underline">Mobile App Development</span></h3>
+              <p class="mb-0">
+                Transform your business with innovative mobile apps, designed
+                for high performance and user engagement.
+              </p>
+              <h6 class="mt-4">Features:</h6>
+              <ul class="list-unstyled mb-0">
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i
+                  >User-Centric Design
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i
+                  >Cross-Platform Compatibility
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i
+                  >Performance Optimization
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i>App Store
+                  Optimization
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div (click)="goToService('/crm-and-erp-solutions')"
+            class="feature-card border border-light border-2 bg-white rounded-custom p-4"
+            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Click To View Details"
+          >
+            <div class="feature-icon rounded bg-dark mb-32">
+              <i class="fas fa-users fa-2x text-white"></i>
+            </div>
+            <div class="feature-content">
+              <h3 class="h5">Efficient <span class="h5 text-decoration-underline">CRM and ERP </span>Solutions</h3>
+              <p class="mb-0">
+                Optimize operations with customized CRM and ERP systems for
+                enhanced efficiency and powerful analytics.
+              </p>
+              <h6 class="mt-4">Features:</h6>
+              <ul class="list-unstyled mb-0">
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i
+                  >Customized Business Modules
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i>Seamless
+                  Integration
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i>Real-Time
+                  Data Access
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div (click)="goToService('/digital-marketing')"
+            class="feature-card border border-light border-2 bg-white rounded-custom p-4"
+            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Click To View Details"
+          >
+            <div class="feature-icon rounded bg-success mb-32">
+              <i class="fas fa-bullhorn fa-2x text-white"></i>
+            </div>
+            <div class="feature-content">
+              <h3 class="h5">Strategic <span class="h5 text-decoration-underline">Digital Marketing</span> and <span class="h5 text-decoration-underline">SEO</span> Services</h3>
+              <p class="mb-0">
+                Enhance your online presence with our comprehensive digital
+                marketing and SEO strategies, driving traffic, conversions, and
+                measurable results.
+              </p>
+              <h6 class="mt-4">Features:</h6>
+              <ul class="list-unstyled mb-0">
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i>Advanced
+                  SEO Strategies
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i>Content
+                  Marketing Mastery
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i>Social
+                  Media Savvy
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i>PPC
+                  Campaigns
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div (click)="goToService('/ui-ux-design-services')"
+            class="feature-card border border-light border-2 bg-white rounded-custom p-4"
+            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Click To View Details"
+          >
+            <div class="feature-icon rounded bg-primary mb-32">
+              <i class="fas fa-palette fa-2x text-white"></i>
+            </div>
+            <div class="feature-content">
+              <h3 class="h5">Engaging <span class="h5 text-decoration-underline">UI/UX Design</span> Services</h3>
+              <p class="mb-0">
+                Revamp your digital products with captivating UI/UX designs that
+                engage users and ensure a superior experience.
+              </p>
+              <h6 class="mt-4">Features:</h6>
+              <ul class="list-unstyled mb-0">
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i
+                  >User-Centered Design Approach
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i>Dynamic
+                  Wireframing and Prototyping
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i>Elegant
+                  and Intuitive Interfaces
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i
+                  >Responsive Design
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div (click)="goToService('/ai-chatbots')"
+            class="feature-card border border-light border-2 bg-white rounded-custom p-4"
+            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Click To View Details"
+          >
+            <div class="feature-icon rounded bg-warning mb-32">
+              <i class="fas fa-robot fa-2x text-white"></i>
+            </div>
+            <div class="feature-content">
+              <h3 class="h5">Advanced <span class="h5 text-decoration-underline">AI </span>and <span class="h5 text-decoration-underline">Chatbot</span> Development</h3>
+              <p class="mb-0">
+                Advance with AI and chatbots. Enhance engagement and streamline
+                operations with intelligent digital assistants.
+              </p>
+              <h6 class="mt-4">Features:</h6>
+              <ul class="list-unstyled mb-0">
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i>Custom AI
+                  Solutions
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i
+                  >Intelligent Chatbots
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i>Seamless
+                  Integration
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i
+                  >Data-Driven Insights
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div (click)="goToService('/software-development')"
+            class="feature-card border border-light border-2 bg-white rounded-custom p-4"
+            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Click To View Details"
+          >
+            <div class="feature-icon rounded bg-gradient mb-32">
+              <i class="fas fa-code fa-2x text-white"></i>
+            </div>
+            <div class="feature-content">
+              <h3 class="h5">Bespoke <span class="h5 text-decoration-underline">Custom Software</span> Development</h3>
+              <p class="mb-0">
+                Bring your ideas to life with custom software. Tailored for
+                efficiency, scalability, and security, we prepare you for future
+                growth.
+              </p>
+              <h6 class="mt-4">Features:</h6>
+              <ul class="list-unstyled mb-0">
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i>Tailored
+                  Solutions
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i>Scalable
+                  Architecture
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i>Advanced
+                  Security Protocols
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i>Agile
+                  Development Process
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div (click)="goToService('/tech-consulting')"
+            class="feature-card border border-light border-2 bg-white rounded-custom p-4"
+            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Click To View Details"
+          >
+            <div class="feature-icon rounded bg-accent mb-32">
+              <i class="fas fa-user-tie fa-2x text-white"></i>
+            </div>
+            <div class="feature-content">
+              <h3 class="h5">Expert <span class="h5 text-decoration-underline">Tech Consulting</span> Services</h3>
+              <p class="mb-0">
+                Master the digital world with expert tech consulting. We align
+                technology with your business goals through digital
+                transformation and system integration.
+              </p>
+              <h6 class="mt-4">Features:</h6>
+              <ul class="list-unstyled mb-0">
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i>Strategic
+                  IT Planning
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i>System
+                  Modernization Advice
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i>Cloud
+                  Computing Solutions
+                </li>
+                <li class="py-1">
+                  <i class="fas fa-check-circle me-2 text-primary"></i
+                  >Cybersecurity Consulting
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--services section end-->
+
+<app-footer></app-footer>
