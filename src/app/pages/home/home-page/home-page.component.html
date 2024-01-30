@@ -7,19 +7,19 @@
                 <div class="row align-items-center justify-content-lg-between">
                     <div class="col-xl-5 col-lg-5">
                         <div class="hero-content-wrap text-center text-xl-start text-lg-start" data-aos="fade-right">
-                            <h1 class="fw-bold display-5">Transform Your Business with Our Advanced Digital & Technological Solutions</h1>
-                            <p class="lead">Unleash Potential with Premier Digital Marketing, Cutting-Edge Software, and Innovative Tech Strategies</p>
+                            <h1 class="fw-bold display-5">{{'Home.Text1'| translate}}</h1>
+                            <p class="lead">{{'Home.Text2'| translate}}</p>
                             <div class="hero-subscribe-form-wrap pt-4 position-relative m-auto m-xl-0 d-none d-md-block d-lg-block d-xl-block">
                                 <form id="subscribe-form" name="email-form" class="hero-subscribe-form d-block d-lg-flex d-md-flex">
-                                    <input type="submit" value="Explore Our Solutions" data-wait="Please wait..." class="btn btn-primary mt-3 mt-lg-0 mt-md-0">
+                                    <input type="submit" [value]="'Home.Text3'| translate" data-wait="Please wait..." class="btn btn-primary mt-3 mt-lg-0 mt-md-0">
                                 </form>
                                 <ul class="nav subscribe-feature-list mt-3">
                                     <li class="nav-item">
-                                        <span class="ms-0"><i class="far fa-check-circle text-primary me-2"></i>Tailored Digital Excellence</span>
+                                        <span class="ms-0"><i class="far fa-check-circle text-primary me-2"></i>{{'Home.Text4'| translate}}</span>
                                     </li>
                                     <li class="nav-item">
                                         <span><i
-                                                class="far fa-check-circle text-primary me-2"></i>Innovative Tech Solutions</span>
+                                                class="far fa-check-circle text-primary me-2"></i>{{'Home.Text5'| translate}}</span>
                                     </li>
                                 </ul>
                             </div>
@@ -44,10 +44,10 @@
                             <div class="hero-img-wrap position-relative">
                                 <div class="hero-screen-wrap">
                                     <div class="phone-screen">
-                                        <img src="assets/img/screen/phone-screen.png" alt="hero image" class="position-relative img-fluid">
+                                        <img ngSrc="assets/img/screen/phone-screen.png" alt="hero image" class="position-relative img-fluid" ngOptimizedImage width="100" height="201">
                                     </div>
                                     <div class="mac-screen">
-                                        <img src="assets/img/screen/mac-screen.png" alt="hero image" class="position-relative img-fluid rounded-custom">
+                                        <img ngSrc="assets/img/marketing/laptop.png" alt="hero image" class="position-relative img-fluid rounded-custom" ngOptimizedImage width="465" height="423" priority>
                                     </div>
                                 </div>
                             </div>
@@ -64,28 +64,49 @@
                     <div class="col-lg-8 col-12">
                         <ul class="customer-logos-grid text-center list-unstyled mb-0">
                             <li>
-                                <img src="assets/img/clients/client-logo-1.svg" width="150" alt="clients logo" class="img-fluid customer-logo-gray p-1 p-md-2 p-lg-3 m-auto" data-aos="fade-up" />
+                                <a href='https://www.etisalat.ae' target='_blank'>
+                                <img src="assets/img/clients/etisalat-logo.svg" width="150" alt="clients logo" class="img-fluid customer-logo-gray p-1 p-md-2 p-lg-3 m-auto" data-aos="fade-up" />
+                                </a>
                             </li>
                             <li>
-                                <img src="assets/img/clients/client-logo-2.svg" width="150" alt="clients logo" class="img-fluid customer-logo-gray p-1 p-md-2 p-lg-3 m-auto" data-aos="fade-up" data-aos-delay="50" />
+                                <a href='https://www.ibm.com/us-en' target='_blank'>
+                                <img src="assets/img/clients/ibm-logo.svg" width="150" alt="clients logo" class="img-fluid customer-logo-gray p-1 p-md-2 p-lg-3 m-auto" data-aos="fade-up" data-aos-delay="50" />
+                            </a>
                             </li>
                             <li>
-                                <img src="assets/img/clients/client-logo-3.svg" width="150" alt="clients logo" class="img-fluid customer-logo-gray p-1 p-md-2 p-lg-3 m-auto" data-aos="fade-up" data-aos-delay="100" />
+                                <a href='https://www.jnj.com' target='_blank'>
+                                <img src="assets/img/clients/J&J.svg" width="150" alt="clients logo" class="img-fluid customer-logo-gray p-1 p-md-2 p-lg-3 m-auto" data-aos="fade-up" data-aos-delay="100" />
+                                </a>
                             </li>
                             <li>
-                                <img src="assets/img/clients/client-logo-4.svg" width="150" alt="clients logo" class="img-fluid customer-logo-gray p-1 p-md-2 p-lg-3 m-auto" data-aos="fade-up" data-aos-delay="150" />
+                                <a href='https://hsproperty.ae' target='_blank'>
+                                <img src="assets/img/clients/H&S-logo.png" width="150" alt="clients logo" class="img-fluid customer-logo-gray p-1 p-md-2 p-lg-3 m-auto" data-aos="fade-up" data-aos-delay="150" />
+                                </a>
                             </li>
                             <li>
-                                <img src="assets/img/clients/client-logo-5.svg" width="150" alt="clients logo" class="img-fluid customer-logo-gray p-1 p-md-2 p-lg-3 m-auto" data-aos="fade-up" data-aos-delay="200" />
+                                <a href='https://saddle-dubai.squarespace.com' target='_blank'>
+                                <img src="assets/img/clients/saddle-logo.png" width="150" alt="clients logo" class="img-fluid customer-logo-gray p-1 p-md-2 p-lg-3 m-auto" data-aos="fade-up" data-aos-delay="200" />
+                                </a>
                             </li>
                             <li>
-                                <img src="assets/img/clients/client-logo-6.svg" width="150" alt="clients logo" class="img-fluid customer-logo-gray p-1 p-md-2 p-lg-3 m-auto" data-aos="fade-up" data-aos-delay="250" />
+                                <a href='https://www.defacto.com/en-ma' target='_blank'>
+                                <img src="assets/img/clients/defacto.svg" width="150" alt="clients logo" class="img-fluid customer-logo-gray p-1 p-md-2 p-lg-3 m-auto" data-aos="fade-up" data-aos-delay="250" />
+                                </a>
                             </li>
                             <li>
-                                <img src="assets/img/clients/client-logo-7.svg" width="150" alt="clients logo" class="img-fluid customer-logo-gray p-1 p-md-2 p-lg-3 m-auto" data-aos="fade-up" data-aos-delay="300" />
+                                <a href='https://theelixirclinic.com' target='_blank'>
+                                <img src="assets/img/clients/Elixir-Clinic-logo.svg" width="150" alt="clients logo" class="img-fluid customer-logo-gray p-1 p-md-2 p-lg-3 m-auto" data-aos="fade-up" data-aos-delay="300" />
+                                </a>
                             </li>
                             <li>
-                                <img src="assets/img/clients/client-logo-8.svg" width="150" alt="clients logo" class="img-fluid customer-logo-gray p-1 p-md-2 p-lg-3 m-auto" data-aos="fade-up" data-aos-delay="350" />
+                                <a href='https://www.bestdentalclinic.ae' target='_blank'>
+                                <img src="assets/img/clients/BEST-DENTAL.webp" width="150" alt="clients logo" class="img-fluid customer-logo-gray p-1 p-md-2 p-lg-3 m-auto" data-aos="fade-up" data-aos-delay="350" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href='https://www.digitalocean.com/' target='_blank'>
+                                <img src="assets/img/clients/digital-ocean-logo.svg" width="150" alt="clients logo" class="img-fluid customer-logo-gray p-1 p-md-2 p-lg-3 m-auto" data-aos="fade-up" data-aos-delay="350" />
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -100,8 +121,8 @@
                 <div class="row justify-content-center">
                     <div class="col-md-10 col-lg-6">
                         <div class="section-heading text-center" data-aos="fade-up">
-                            <h2>Empowering Success: Our Clients' Outstanding Achievements</h2>
-                            <p>Experience unmatched business growth and digital innovation with Luxe Bzns. Our approach combines strategic foresight with technical expertise, delivering results that speak for themselves.</p>
+                            <h2>{{'Home.Text6'| translate}}</h2>
+                            <p>{{'Home.Text7'| translate}}</p>
                         </div>
                     </div>
                 </div>
@@ -111,10 +132,10 @@
                             <div class="promo-card-info mb-4">
                                 <h3 class="display-5 fw-bold mb-4"><i class="fas fa-fingerprint text-warning me-2"></i> 10x
                                 </h3>
-                                <p>Witness exponential growth with our tailored digital marketing strategies and tech solutions. Our clients experience a remarkable surge in efficiency and market presence, redefining their success benchmarks.</p>
+                                <p>{{'Home.Text8'| translate}}</p>
                             </div>
                             <div class="mt-auto">
-                                <img src="assets/img/clients/client-logo-4.svg" width="120" alt="clients" class="img-fluid me-auto customer-logo">
+                                <img src="assets/img/clients/J&J.svg" width="120" alt="clients" class="img-fluid me-auto customer-logo">
                             </div>
                         </div>
                     </div>
@@ -123,10 +144,10 @@
                             <div class="promo-card-info mb-4">
                                 <h3 class="display-5 fw-bold mb-4"><i class="fas fa-paper-plane text-warning me-2"></i> 5k
                                 </h3>
-                                <p>Join our extensive network of thriving businesses. Our commitment to excellence has led to a rapidly growing clientele, each benefiting from our innovative approach to digital and technological challenges.</p>
+                                <p>{{'Home.Text9'| translate}}</p>
                             </div>
                             <div class="mt-auto">
-                                <img src="assets/img/clients/client-logo-2.svg" width="120" alt="clients" class="img-fluid me-auto customer-logo">
+                                <img src="assets/img/clients/defacto.svg" width="120" alt="clients" class="img-fluid me-auto customer-logo">
                             </div>
                         </div>
                     </div>
@@ -135,10 +156,10 @@
                             <div class="promo-card-info mb-4">
                                 <h3 class="display-5 fw-bold mb-4"><i class="fas fa-chart-pie text-warning me-2"></i>
                                     95%</h3>
-                                <p>Excellence is our standard, reflected in the overwhelming satisfaction of our clients. We pride ourselves on delivering solutions that not only meet but exceed expectations, ensuring a high rate of client contentment and loyalty.</p>
+                                <p>{{'Home.Text10'| translate}}</p>
                             </div>
                             <div class="mt-auto">
-                                <img src="assets/img/clients/client-logo-3.svg" width="120" alt="clients" class="img-fluid me-auto customer-logo">
+                                <img src="assets/img/clients/Elixir-Clinic-logo.svg" width="120" alt="clients" class="img-fluid me-auto customer-logo">
                             </div>
                         </div>
                     </div>
@@ -153,19 +174,17 @@
                 <div class="row align-items-center justify-content-between">
                     <div class="col-lg-5 col-md-12">
                         <div class="section-heading" data-aos="fade-up">
-                            <h4 class="h5 text-primary">Features</h4>
-                            <h2>Powerful Solutions for Your Business Needs</h2>
-                            <p>Quickly incubate functional channels with multidisciplinary architectures authoritatively
-                                fabricate.</p>
+                            <h4 class="h5 text-primary">{{'Home.Text11'| translate}}</h4>
+                            <h2>{{'Home.Text12'| translate}}</h2>
+                            <p>{{'Home.Text13'| translate}}</p>
                             <ul class="list-unstyled mt-5">
                                 <li class="d-flex align-items-start mb-4">
                                     <div class="icon-box bg-primary rounded me-4">
                                         <i class="fas fa-bezier-curve text-white"></i>
                                     </div>
                                     <div class="icon-content">
-                                        <h3 class="h5">Pixel Perfect Design</h3>
-                                        <p>Progressively foster enterprise-wide systems whereas equity invested
-                                            web-readiness harness installed.
+                                        <h3 class="h5">{{'Home.Text14'| translate}}</h3>
+                                        <p>{{'Home.Text15'| translate}}
                                         </p>
                                     </div>
                                 </li>
@@ -174,9 +193,8 @@
                                         <i class="fas fa-fingerprint text-white"></i>
                                     </div>
                                     <div class="icon-content">
-                                        <h3 class="h5">Unique &amp; Minimal Design</h3>
-                                        <p>Dramatically administrate progressive metrics without error-free globally
-                                            simplify standardized.
+                                        <h3 class="h5">{{'Home.Text16'| translate}}</h3>
+                                        <p>{{'Home.Text17'| translate}}
                                         </p>
                                     </div>
                                 </li>
@@ -188,18 +206,18 @@
                             <ul class="img-overlay-list list-unstyled position-absolute">
                                 <li class="d-flex align-items-center bg-white rounded shadow-sm p-3" data-aos="fade-up" data-aos-delay="50">
                                     <i class="fas fa-check bg-primary text-white rounded-circle"></i>
-                                    <h6 class="mb-0">Create a Free Account</h6>
+                                    <h6 class="mb-0">{{'Home.Text18'| translate}}</h6>
                                 </li>
                                 <li class="d-flex align-items-center bg-white rounded shadow-sm p-3" data-aos="fade-up" data-aos-delay="100">
                                     <i class="fas fa-check bg-primary text-white rounded-circle"></i>
-                                    <h6 class="mb-0">Install Our Tracking Pixel</h6>
+                                    <h6 class="mb-0">{{'Home.Text19'| translate}}</h6>
                                 </li>
                                 <li class="d-flex align-items-center bg-white rounded shadow-sm p-3" data-aos="fade-up" data-aos-delay="150">
                                     <i class="fas fa-check bg-primary text-white rounded-circle"></i>
-                                    <h6 class="mb-0">Start Tracking your Website</h6>
+                                    <h6 class="mb-0">{{'Home.Text20'| translate}}</h6>
                                 </li>
                             </ul>
-                            <img src="assets/img/feature-img3.jpg" alt="feature image" class="img-fluid rounded-custom">
+                            <img ngSrc="assets/img/feature-img3.jpg" alt="feature image" class="img-fluid rounded-custom" ngOptimizedImage width="493" height="662" priority>
                         </div>
                     </div>
                 </div>
@@ -212,22 +230,22 @@
                 <div class="row align-items-center justify-content-between">
                     <div class="col-lg-6 col-md-6">
                         <div class="image-wrap mb-5 mb-md-0 mb-lg-0 mb-xl-0" data-aos="fade-up">
-                            <img src="assets/img/dashboard-img.png" alt="feature img" class="img-fluid shadow rounded-custom">
+                            <img ngSrc="assets/img/dashboard-img.png" alt="feature img" class="img-fluid shadow rounded-custom" ngOptimizedImage width="636" height="477" priority>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-6">
                         <div class="feature-content-wrap" data-aos="fade-up" data-aos-delay="50">
-                            <h4 class="h5 text-primary">Advanced Features</h4>
-                            <h2>Advanced Features for Next-Level Business Growth</h2>
-                            <p>Embracing the Forefront of Digital Evolution: Pioneering, Tailored, and Progressive Technological Solutions for Tomorrow's Business Landscape</p>
+                            <h4 class="h5 text-primary">{{'Home.Text21'| translate}}</h4>
+                            <h2>{{'Home.Text22'| translate}}</h2>
+                            <p>{{'Home.Text23'| translate}}</p>
                             <ul class="list-unstyled mt-5">
                                 <li class="d-flex align-items-start mb-4">
                                     <div class="icon-box bg-primary rounded me-4">
                                         <i class="fas fa-bezier-curve text-white"></i>
                                     </div>
                                     <div class="icon-content">
-                                        <h3 class="h5">Intelligent Analytics for Smarter Decisions</h3>
-                                        <p>Leverage the power of AI to unlock deep insights into market trends and customer behavior. Our advanced analytics tools provide real-time data analysis, helping you make informed decisions that drive business growth.
+                                        <h3 class="h5">{{'Home.Text24'| translate}}</h3>
+                                        <p>{{'Home.Text25'| translate}}
                                         </p>
                                     </div>
                                 </li>
@@ -236,8 +254,8 @@
                                         <i class="fas fa-fingerprint text-white"></i>
                                     </div>
                                     <div class="icon-content">
-                                        <h3 class="h5">Bespoke Technology Tailored to Your Needs</h3>
-                                        <p>Experience the flexibility of technology that adapts to your business. From custom software development to personalized app solutions, our team creates technology that aligns perfectly with your unique business objectives and processes.
+                                        <h3 class="h5">{{'Home.Text26'| translate}}</h3>
+                                        <p>{{'Home.Text27'| translate}}
                                         </p>
                                     </div>
                                 </li>
@@ -254,9 +272,9 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-6 col-md-10">
                         <div class="section-heading text-center" data-aos="fade-up">
-                            <h4 class="h5 text-primary">Process</h4>
-                            <h2>Crafting Digital Excellence: Our Strategic Process</h2>
-                            <p>From Vision to Reality: A Step-by-Step Journey to Transform Your Business</p>
+                            <h4 class="h5 text-primary">{{'Home.Text28'| translate}}</h4>
+                            <h2>{{'Home.Text29'| translate}}</h2>
+                            <p>{{'Home.Text30'| translate}}</p>
                         </div>
                     </div>
                 </div>
@@ -273,9 +291,9 @@
                                     <i class="fas fa-folder-tree fa-2x"></i>
                                 </div>
                                 <div class="icon-content">
-                                    <span class="text-primary h6">Step 1: Research and Content Planning</span>
-                                    <h3 class="h5 mb-2">Laying the Groundwork for Success</h3>
-                                    <p>Begin with a comprehensive analysis of your market, competitors, and audience. We meticulously plan content strategies that resonate with your target demographic, leveraging data-driven insights to set a solid foundation for your digital journey.
+                                    <span class="text-primary h6">{{'Home.Text31'| translate}}</span>
+                                    <h3 class="h5 mb-2">{{'Home.Text32'| translate}}</h3>
+                                    <p>{{'Home.Text33'| translate}}
                                     </p>
                                 </div>
                             </li>
@@ -284,9 +302,9 @@
                                     <i class="fas fa-bezier-curve fa-2x"></i>
                                 </div>
                                 <div class="icon-content">
-                                    <span class="text-primary h6">Step 2: Design and Development</span>
-                                    <h3 class="h5 mb-2">Creating with Precision and Creativity</h3>
-                                    <p>Our team of skilled designers and developers bring your vision to life. Whether it’s a cutting-edge website, a user-friendly app, or sophisticated software, we focus on delivering functional and aesthetically pleasing solutions that align with your business goals.
+                                    <span class="text-primary h6">{{'Home.Text34'| translate}}</span>
+                                    <h3 class="h5 mb-2">{{'Home.Text35'| translate}}</h3>
+                                    <p>{{'Home.Text36'| translate}}
                                     </p>
                                 </div>
                             </li>
@@ -295,9 +313,9 @@
                                     <i class="fas fa-layer-group fa-2x"></i>
                                 </div>
                                 <div class="icon-content">
-                                    <span class="text-primary h6">Step 3: Implementation and Integration</span>
-                                    <h3 class="h5 mb-2">Seamless Execution for Optimal Performance</h3>
-                                    <p>The implementation phase involves the seamless integration of our digital solutions into your existing systems. We ensure everything functions smoothly, with a focus on enhancing user experience and operational efficiency.
+                                    <span class="text-primary h6">{{'Home.Text37'| translate}}</span>
+                                    <h3 class="h5 mb-2">{{'Home.Text38'| translate}}</h3>
+                                    <p>{{'Home.Text39'| translate}}
                                     </p>
                                 </div>
                             </li>
@@ -306,9 +324,9 @@
                                     <i class="fas fa-truck fa-2x"></i>
                                 </div>
                                 <div class="icon-content">
-                                    <span class="text-primary h6">Step 4: Analysis and Optimization</span>
-                                    <h3 class="h5 mb-2">Continual Improvement for Lasting Impact</h3>
-                                    <p>Post-launch, we closely monitor performance metrics and gather feedback. This data-driven approach allows us to refine and optimize our strategies, ensuring your digital assets continue to thrive and deliver results in an ever-evolving digital landscape.
+                                    <span class="text-primary h6">{{'Home.Text40'| translate}}</span>
+                                    <h3 class="h5 mb-2">{{'Home.Text41'| translate}}</h3>
+                                    <p>{{'Home.Text42'| translate}}
                                     </p>
                                 </div>
                             </li>
@@ -319,14 +337,14 @@
         </section> <!--our work process end-->
 
         <!--customer review slider section start-->
-        <section class="testimonial-section bg-dark text-white  ptb-120">
+        <section class="testimonial-section bg-dark text-white ptb-120">
             <div class="container">
                 <div class="row justify-content-center align-content-center">
                     <div class="col-md-10 col-lg-6">
                         <div class="section-heading text-center" data-aos="fade-up">
-                            <h4 class="h5 text-warning text-primary">Testimonial</h4>
-                            <h2>What They Say About Us</h2>
-                            <p>Uniquely promote adaptive quality vectors rather than stand-alone e-markets. pontificate alternative architectures whereas iterate.</p>
+                            <h4 class="h5 text-warning text-primary">{{'Home.Text43'| translate}}</h4>
+                            <h2>{{'Home.Text44'| translate}}</h2>
+                            <p>{{'Home.Text45'| translate}}</p>
                         </div>
                     </div>
                 </div>
@@ -341,14 +359,13 @@
                                             <div class="d-flex mb-32 align-items-center">
                                                 <img src="assets/img/testimonial/1.jpg" class="img-fluid me-3 rounded" width="60" alt="user">
                                                 <div class="author-info">
-                                                    <h6 class="mb-0">Mr.Rupan Oberoi</h6>
-                                                    <small>Founder and CEO at Amaara Herbs</small>
+                                                    <h6 class="mb-0">{{'Home.Text46'| translate}}</h6>
+                                                    <small>{{'Home.Text47'| translate}}</small>
                                                 </div>
                                             </div>
                                             <blockquote>
-                                                <h6>The Best Template You Got to Have it!</h6>
-                                                Globally network long term high impact schemas
-                                                cross-media infrastructures rather than ethical core competencies.
+                                                <h6>{{'Home.Text48'| translate}}</h6>
+                                                {{'Home.Text49'| translate}}
                                             </blockquote>
                                             <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
                                                 <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
@@ -365,14 +382,13 @@
                                             <div class="d-flex mb-32 align-items-center">
                                                 <img src="assets/img/testimonial/3.jpg" class="img-fluid me-3 rounded" width="60" alt="user">
                                                 <div class="author-info">
-                                                    <h6 class="mb-0">Oberoi R.</h6>
-                                                    <small>CEO at Herbs</small>
+                                                    <h6 class="mb-0">{{'Home.Text50'| translate}}</h6>
+                                                    <small>{{'Home.Text51'| translate}}</small>
                                                 </div>
                                             </div>
                                             <blockquote>
-                                                <h6>Embarrassed by the First Version.</h6>
-                                                Dynamically create innovative core competencies with effective best
-                                                practices promote innovative infrastructures.
+                                                <h6>{{'Home.Text52'| translate}}</h6>
+                                                {{'Home.Text53'| translate}}
                                             </blockquote>
                                             <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
                                                 <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
@@ -389,13 +405,13 @@
                                             <div class="d-flex mb-32 align-items-center">
                                                 <img src="assets/img/testimonial/2.jpg" class="img-fluid me-3 rounded" width="60" alt="user">
                                                 <div class="author-info">
-                                                    <h6 class="mb-0">Mr.Rupan Oberoi</h6>
-                                                    <small>Founder and CEO</small>
+                                                    <h6 class="mb-0">{{'Home.Text54'| translate}}</h6>
+                                                    <small>{{'Home.Text55'| translate}}</small>
                                                 </div>
                                             </div>
                                             <blockquote>
-                                                <h6>Amazing Quiety template!</h6>
-                                                Appropriately negotiate interactive niches rather than parallel strategic theme premium total linkage areas.
+                                                <h6>{{'Home.Text56'| translate}}</h6>
+                                                {{'Home.Text57'| translate}}
                                             </blockquote>
                                             <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
                                                 <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
@@ -412,14 +428,13 @@
                                             <div class="d-flex mb-32 align-items-center">
                                                 <img src="assets/img/testimonial/4.jpg" class="img-fluid me-3 rounded" width="60" alt="user">
                                                 <div class="author-info">
-                                                    <h6 class="mb-0">Joan Dho</h6>
-                                                    <small>Founder and CTO</small>
+                                                    <h6 class="mb-0">{{'Home.Text58'| translate}}</h6>
+                                                    <small>{{'Home.Text59'| translate}}</small>
                                                 </div>
                                             </div>
                                             <blockquote>
-                                                <h6>Best Template for SAAS Company!</h6>
-                                                Dynamically create innovative core competencies with effective best
-                                                practices promote innovative infrastructures.
+                                                <h6>{{'Home.Text60'| translate}}</h6>
+                                                {{'Home.Text61'| translate}}
                                             </blockquote>
                                             <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
                                                 <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
@@ -436,13 +451,13 @@
                                             <div class="d-flex mb-32 align-items-center">
                                                 <img src="assets/img/testimonial/5.jpg" class="img-fluid me-3 rounded" width="60" alt="user">
                                                 <div class="author-info">
-                                                    <h6 class="mb-0">Ranu Mondal</h6>
-                                                    <small>Lead Developer</small>
+                                                    <h6 class="mb-0">{{'Home.Text62'| translate}}</h6>
+                                                    <small>{{'Home.Text63'| translate}}</small>
                                                 </div>
                                             </div>
                                             <blockquote>
-                                                <h6>It is undeniably good!</h6>
-                                                Rapidiously supply client-centric e-markets and maintainable processes progressively extend process-centric portals engineer
+                                                <h6>{{'Home.Text64'| translate}}</h6>
+                                                {{'Home.Text65'| translate}}
                                             </blockquote>
                                             <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
                                                 <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
@@ -471,15 +486,14 @@
                 <div class="row align-items-center justify-content-lg-between">
                     <div class="col-lg-6 col-md-12">
                         <div class="section-heading">
-                            <h4 class="h5 text-primary">Integration</h4>
-                            <h2>We Collaborate with Top Software Company</h2>
-                            <p>Dynamically pursue convergence rather than 24/7 process improvements
-                                develop end-to-end customer service action items.</p>
+                            <h4 class="h5 text-primary">{{'Home.Text66'| translate}}</h4>
+                            <h2>{{'Home.Text67'| translate}}</h2>
+                            <p>{{'Home.Text68'| translate}}</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12">
                         <div class="text-lg-end mb-5 mb-lg-0">
-                            <a href="integrations.html" class="btn btn-primary">View All Integrations</a>
+                            <a href="integrations.html" class="btn btn-primary">{{'Home.Text69'| translate}}</a>
                         </div>
                     </div>
                 </div>
@@ -490,114 +504,114 @@
                                 <li>
                                     <div class="single-integration bg-white">
                                         <img src="assets/img/integations/airbnb.png" alt="integration" class="img-fluid">
-                                        <h6 class="mb-0 mt-4">Brand Name</h6>
+                                        <h6 class="mb-0 mt-4">{{'Home.Text70'| translate}}</h6>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="single-integration bg-white">
                                         <img src="assets/img/integations/figma.png" alt="integration" class="img-fluid">
-                                        <h6 class="mb-0 mt-4">Brand Name</h6>
+                                        <h6 class="mb-0 mt-4">{{'Home.Text71'| translate}}</h6>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="single-integration bg-white">
                                         <img src="assets/img/integations/facebook.png" alt="integration" class="img-fluid">
-                                        <h6 class="mb-0 mt-4">Brand Name</h6>
+                                        <h6 class="mb-0 mt-4">{{'Home.Text72'| translate}}</h6>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="single-integration bg-white">
                                         <img src="assets/img/integations/sales-force.png" alt="integration" class="img-fluid">
-                                        <h6 class="mb-0 mt-4">Brand Name</h6>
+                                        <h6 class="mb-0 mt-4">{{'Home.Text73'| translate}}</h6>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="single-integration bg-white">
                                         <img src="assets/img/integations/atlassian.png" alt="integration" class="img-fluid">
-                                        <h6 class="mb-0 mt-4">Brand Name</h6>
+                                        <h6 class="mb-0 mt-4">{{'Home.Text74'| translate}}</h6>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="single-integration bg-white">
                                         <img src="assets/img/integations/dropbox-2.png" alt="integration" class="img-fluid">
-                                        <h6 class="mb-0 mt-4">Brand Name</h6>
+                                        <h6 class="mb-0 mt-4">{{'Home.Text75'| translate}}</h6>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="single-integration bg-white">
                                         <img src="assets/img/integations/dynamic-365.png" alt="integration" class="img-fluid">
-                                        <h6 class="mb-0 mt-4">Brand Name</h6>
+                                        <h6 class="mb-0 mt-4">{{'Home.Text76'| translate}}</h6>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="single-integration bg-white">
                                         <img src="assets/img/integations/erecruiter.png" alt="integration" class="img-fluid">
-                                        <h6 class="mb-0 mt-4">Brand Name</h6>
+                                        <h6 class="mb-0 mt-4">{{'Home.Text77'| translate}}</h6>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="single-integration bg-white">
                                         <img src="assets/img/integations/evernote.png" alt="integration" class="img-fluid">
-                                        <h6 class="mb-0 mt-4">Brand Name</h6>
+                                        <h6 class="mb-0 mt-4">{{'Home.Text78'| translate}}</h6>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="single-integration bg-white">
                                         <img src="assets/img/integations/google-icon.png" alt="integration" class="img-fluid">
-                                        <h6 class="mb-0 mt-4">Brand Name</h6>
+                                        <h6 class="mb-0 mt-4">{{'Home.Text79'| translate}}</h6>
                                     </div>
                                 </li>
 
                                 <li>
                                     <div class="single-integration bg-white">
                                         <img src="assets/img/integations/slack.png" alt="integration" class="img-fluid">
-                                        <h6 class="mb-0 mt-4">Brand Name</h6>
+                                        <h6 class="mb-0 mt-4">{{'Home.Text80'| translate}}</h6>
                                     </div>
                                 </li>
 
                                 <li>
                                     <div class="single-integration bg-white">
                                         <img src="assets/img/integations/google-analytics.png" alt="integration" class="img-fluid">
-                                        <h6 class="mb-0 mt-4">Brand Name</h6>
+                                        <h6 class="mb-0 mt-4">{{'Home.Text81'| translate}}</h6>
                                     </div>
                                 </li>
 
                                 <li>
                                     <div class="single-integration bg-white">
                                         <img src="assets/img/integations/google-drive.png" alt="integration" class="img-fluid">
-                                        <h6 class="mb-0 mt-4">Brand Name</h6>
+                                        <h6 class="mb-0 mt-4">{{'Home.Text82'| translate}}</h6>
                                     </div>
                                 </li>
 
                                 <li>
                                     <div class="single-integration bg-white">
                                         <img src="assets/img/integations/hubspot.png" alt="integration" class="img-fluid">
-                                        <h6 class="mb-0 mt-4">Brand Name</h6>
+                                        <h6 class="mb-0 mt-4">{{'Home.Text83'| translate}}</h6>
                                     </div>
                                 </li>
 
                                 <li>
                                     <div class="single-integration bg-white">
                                         <img src="assets/img/integations/instagram.png" alt="integration" class="img-fluid">
-                                        <h6 class="mb-0 mt-4">Brand Name</h6>
+                                        <h6 class="mb-0 mt-4">{{'Home.Text84'| translate}}</h6>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="single-integration bg-white">
                                         <img src="assets/img/integations/linkedin.png" alt="integration" class="img-fluid">
-                                        <h6 class="mb-0 mt-4">Brand Name</h6>
+                                        <h6 class="mb-0 mt-4">{{'Home.Text85'| translate}}</h6>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="single-integration bg-white">
                                         <img src="assets/img/integations/mailchimp.png" alt="integration" class="img-fluid">
-                                        <h6 class="mb-0 mt-4">Brand Name</h6>
+                                        <h6 class="mb-0 mt-4">{{'Home.Text86'| translate}}</h6>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="single-integration bg-white">
                                         <img src="assets/img/integations/marekto.png" alt="integration" class="img-fluid">
-                                        <h6 class="mb-0 mt-4">Brand Name</h6>
+                                        <h6 class="mb-0 mt-4">{{'Home.Text87'| translate}}</h6>
                                     </div>
                                 </li>
                             </ul>
@@ -614,27 +628,27 @@
                     <div class="col-lg-8 col-md-10">
                         <div class="subscribe-info-wrap text-center position-relative z-2">
                             <div class="section-heading" data-aos="fade-up">
-                                <h4 class="h5 text-warning">Let's Try! Get Free Consultant</h4>
-                                <h2>Embark on Your Digital Transformation Journey</h2>
-                                <p>Experience tailored advice, industry insights, innovative solutions, and a risk-free consultation.</p>
+                                <h4 class="h5 text-warning">{{'Home.Text88'| translate}}</h4>
+                                <h2>{{'Home.Text89'| translate}}</h2>
+                                <p>{{'Home.Text90'| translate}}</p>
                             </div>
                             <div class="form-block-banner mw-60 m-auto mt-5" data-aos="fade-up" data-aos-delay="50">
-                                <a href="contact-us.html" class="btn btn-primary">Contact with Us</a>
-                                <a href="../www.youtube.com/watchaec0.html?v=hAP2QF--2Dg" class="text-decoration-none popup-youtube d-inline-flex align-items-center watch-now-btn ms-lg-3 ms-md-3 mt-3 mt-lg-0"> <i
-                                        class="fas fa-play"></i> Watch Demo </a>
+                                <a href="contact-us.html" class="btn btn-primary">{{'Home.Text91'| translate}}</a>
+                                <a href="../www.youtube.com/watchaec0.html?v=VIIWWdU-2SQ" class="text-decoration-none popup-youtube d-inline-flex align-items-center watch-now-btn ms-lg-3 ms-md-3 mt-3 mt-lg-0"> <i
+                                        class="fas fa-play"></i> {{'Home.Text92'| translate}}</a>
                             </div>
                             <ul class="nav justify-content-center subscribe-feature-list mt-4" data-aos="fade-up" data-aos-delay="100">
                                 <li class="nav-item">
-                                    <span><i class="far fa-check-circle text-primary me-2"></i>Customized Expertise</span>
+                                    <span><i class="far fa-check-circle text-primary me-2"></i>{{'Home.Text93'| translate}}</span>
                                 </li>
                                 <li class="nav-item">
-                                    <span><i class="far fa-check-circle text-primary me-2"></i>Industry Insight</span>
+                                    <span><i class="far fa-check-circle text-primary me-2"></i>{{'Home.Text94'| translate}}</span>
                                 </li>
                                 <li class="nav-item">
-                                    <span><i class="far fa-check-circle text-primary me-2"></i>nnovative Previews</span>
+                                    <span><i class="far fa-check-circle text-primary me-2"></i>{{'Home.Text95'| translate}}</span>
                                 </li>
                                 <li class="nav-item">
-                                    <span><i class="far fa-check-circle text-primary me-2"></i>Risk-Free Advice</span>
+                                    <span><i class="far fa-check-circle text-primary me-2"></i>{{'Home.Text96'| translate}}</span>
                                 </li>
                             </ul>
                         </div>

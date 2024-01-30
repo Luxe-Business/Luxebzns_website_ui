@@ -9,7 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
 import { LocalizedLinkDirective } from '../directives/localized-link.directive';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ToastrModule } from 'ngx-toastr';
+import { HeaderSectionComponent } from './header-section/header-section.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,8 @@ import { ToastrModule } from 'ngx-toastr';
     FooterComponent,
     ContactFormComponent,
     StatisticsComponent,
-    LocalizedLinkDirective
+    LocalizedLinkDirective,
+    HeaderSectionComponent
   ],
   imports: [
     CommonModule,
@@ -32,6 +33,7 @@ import { ToastrModule } from 'ngx-toastr';
     FooterComponent,
     ContactFormComponent,
     StatisticsComponent,
+    HeaderSectionComponent
   ]
 })
 export class ComponentsModule { }

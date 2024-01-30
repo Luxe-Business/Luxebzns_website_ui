@@ -14,6 +14,7 @@ export class HeaderComponent {
   toggleLanguage(): void {
     const newLang = this.languageService.getCurrentLang() === 'en' ? 'ar' : 'en';
     this.languageService.changeLanguage(newLang);
+    window.location.reload();
   }
 
 }

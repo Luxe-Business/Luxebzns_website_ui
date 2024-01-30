@@ -2,6 +2,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-not-found',
@@ -12,11 +13,15 @@ import { RouterLink } from '@angular/router';
 })
 export class NotFoundComponent implements OnInit{
 
-  constructor(private metaTagService: Meta,private titleService: Title,
+  constructor(private metaTagService: Meta,private titleService: Title,private languageService: LanguageService,
     @Inject(PLATFORM_ID) private platformId: Object) {}
   ngOnInit() {
-    this.titleService.setTitle("404 Not Found - Luxe Bzns | Innovative IT and Software Solutions");
-    // Basic Meta Tags
+    if (this.languageService.getCurrentLang() == "en") {
+      this.titleService.setTitle("404 Not Found - Luxe Bzns | Innovative IT and Software Solutions");
+    }else{
+      this.titleService.setTitle("الصفحة غير موجودة");
+    }
+        // Basic Meta Tags
     this.metaTagService.updateTag(
       { name: 'description', content: 'Page not found. Luxe Bzns provides cutting-edge software and IT solutions. Explore our services or contact us for more information.' }
     );
