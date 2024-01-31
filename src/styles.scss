@@ -114,6 +114,10 @@ html[dir="rtl"] {
     margin-left: unset !important;
     margin-right: 0.23375rem !important;
   }
+
+  .watch-now-btn i{
+    margin-left:10px;
+  }
 }
 
 .toast-error {
@@ -158,6 +162,16 @@ html[dir="rtl"] {
       img{
         height: 100px;
       }
+    }
+  }
+}
+
+
+.list-inline-item{
+  a{
+    i{
+      height: auto;
+      max-height: 100%;
     }
   }
 }
