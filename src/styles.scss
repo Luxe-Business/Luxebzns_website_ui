@@ -11,6 +11,17 @@ a {
   border-color: #5d91f7;
 }
 
+.text-primary{
+  color: #1d69ff !important;
+  opacity: unset !important;
+}
+
+.footer-section{
+p,a{
+opacity: unset !important;
+}
+}
+
 .btn-primary {
   border: none;
   background: linear-gradient(to right bottom, #6501c8, #5d91f7);
