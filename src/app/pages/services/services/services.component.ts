@@ -20,7 +20,7 @@ export class ServicesComponent {
     this.hideTooltips();
 
     // Navigate to the new route
-    this.router.navigate(['/services/' + service]);
+    this.router.navigate([service]);
   }
 
   private hideTooltips() {

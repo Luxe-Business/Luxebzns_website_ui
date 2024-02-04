@@ -83,9 +83,9 @@
                     <li class="nav-item">
                         <a class="nav-link" routerLink="/case-studies" aria-expanded="false">{{"Header.Text12" | translate}}</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" routerLink="/blog" aria-expanded="false">{{"Header.Text13" | translate}}</a>
-                    </li>
+                    </li> -->
 
                     <li class="nav-item">
                         <a class="nav-link" routerLink="/contact" aria-expanded="false">{{"Header.Text14" | translate}}</a>
@@ -131,9 +131,10 @@
                     <div class="tt-theme-dark" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Dark"><i
                             class="flaticon-moon-1 fs-lg"></i></div>
                 </a>
-                <a class="btn btn-link text-decoration-none me-2" (click)="toggleLanguage()">
+                <!-- <a class="btn btn-link text-decoration-none me-2" (click)="toggleLanguage()">
                     {{ languageService.getCurrentLang() === 'en' ? 'العربية' : 'English' }}
-                </a>
+                </a> -->
+                <a class="btn btn-link text-decoration-none me-2"></a>
                 <a routerLink="/contact" class="btn btn-primary">{{"Header.Text20" | translate}}</a>
             </div>
         </div>
@@ -224,7 +225,7 @@
                     </div>
                 </li>
                 <li><a routerLink="/case-studies" class="nav-link">{{"Header.Text12" | translate}}</a></li>
-                <li><a routerLink="/blog" class="nav-link">{{"Header.Text13" | translate}}</a></li>
+                <!-- <li><a routerLink="/blog" class="nav-link">{{"Header.Text13" | translate}}</a></li> -->
                 <li><a routerLink="/contact" class="nav-link">{{"Header.Text14" | translate}}</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
@@ -257,8 +258,8 @@
                 </li>
             </ul>
             <div class="action-btns mt-4 ps-3">
-                <a class="btn btn-outline-primary me-2" (click)="toggleLanguage()">{{ languageService.getCurrentLang()
-                    === 'en' ? 'العربية' : 'English' }}</a>
+                <!-- <a class="btn btn-outline-primary me-2" (click)="toggleLanguage()">{{ languageService.getCurrentLang()
+                    === 'en' ? 'العربية' : 'English' }}</a> -->
                 <a routerLink="/contact" class="btn btn-primary">{{"Header.Text20" | translate}}</a>
             </div>
         </div>

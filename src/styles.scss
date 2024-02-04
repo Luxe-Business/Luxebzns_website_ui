@@ -175,3 +175,54 @@ html[dir="rtl"] {
     }
   }
 }
+
+.luxury-hover {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  display: block; /* Adjust as needed, ensure it's suitable for your layout */
+  max-width: 100%; /* Ensures the image is responsive */
+  height: auto; /* Maintains the image aspect ratio */
+  border-radius: 10px; /* Preserves your rounded-10 class styling */
+}
+
+.luxury-hover:hover {
+  transform: scale(1.03) rotate(3deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  cursor: url('./assets/img/cursor/icons8-cursor-34.svg'), auto;
+}
+
+@media screen and (max-width: 800px) {
+#tab-2-2, #tab-2-4{
+  .feature-tab-info{
+    margin-top: 30px;
+  }
+}
+}
+
+
+html[data-bs-theme="light"]
+.feature-tab-list-2 li a{
+  color: #262626;
+}
+
+html[data-bs-theme="light"]
+.feature-tab-list-2 li a:hover{
+  color: #ffffff;
+}
+
+
+html[data-bs-theme="light"] .feature-tab-list-2 li a.active{
+  color: #ffffff;
+}
+
+
+html[data-bs-theme="dark"]
+  .feature-tab-list-2 li a{
+    color: #ffffff;
+  }
+  
+  .subscribe-feature-list li span{
+    align-items: baseline;
+  }

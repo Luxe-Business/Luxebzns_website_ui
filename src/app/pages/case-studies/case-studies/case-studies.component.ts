@@ -1,12 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+import { ComponentsModule } from '../../../components/components.module';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-case-studies',
   standalone: true,
-  imports: [],
+  imports: [ComponentsModule, RouterLink],
   templateUrl: './case-studies.component.html',
-  styleUrl: './case-studies.component.scss'
+  styleUrls: ['./case-studies.component.scss']
 })
-export class CaseStudiesComponent {
+export class CaseStudiesComponent implements AfterViewInit {
 
+  ngAfterViewInit() {
+    this.muteAllVideos();
+  }
+
+  private muteAllVideos(): void {
+    // Use a timeout to ensure DOM has updated with any dynamic content
+    setTimeout(() => {
+      const videos = document.querySelectorAll('video');
+      videos.forEach(video => video.muted = true);
+    }, 0);
+  }
 }

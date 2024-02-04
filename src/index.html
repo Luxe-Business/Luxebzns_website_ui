@@ -79,8 +79,27 @@
       function () {
         (window.vaq = window.vaq || []).push(arguments);
       };
+
+      document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+}, false);
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'C' || e.key === 'J' || e.key === 'K'))) {
+    e.preventDefault();
+  }
+}, false);
+
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const videos = document.querySelectorAll('video');
+      videos.forEach(video => {
+        video.muted = true;
+      });
+    });
+  </script>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
 
