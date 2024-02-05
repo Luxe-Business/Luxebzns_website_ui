@@ -84,13 +84,25 @@ export class AppComponent implements OnInit,AfterViewInit{
   }
 
   reloadAppScript(): void {
-    if (typeof document !== 'undefined'){
-      const script = document.createElement('script');
+    if (isPlatformBrowser(this.platformId) && typeof document !== 'undefined') {
+      // Identify the script by a unique ID or class
+      const scriptId = 'app-js-script';
+      let script = document.getElementById(scriptId) as HTMLScriptElement | null;
+  
+      // If the script already exists, remove it before creating a new one
+      if (script) {
+        document.head.removeChild(script);
+      }
+  
+      // Create a new script element
+      script = document.createElement('script');
+      script.id = scriptId; // Assign the unique ID or class to the script
       script.src = 'assets/js/app.js';
       script.async = true;
       document.head.appendChild(script);
     }
   }
+  
 
 
   ngAfterViewInit() {
