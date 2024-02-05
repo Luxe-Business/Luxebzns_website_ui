@@ -194,10 +194,14 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-#tab-2-2, #tab-2-4{
+.active{
   .feature-tab-info{
     margin-top: 30px;
   }
+}
+
+video{
+  max-height: 100% !important;
 }
 }
 

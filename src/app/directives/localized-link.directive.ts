@@ -17,7 +17,6 @@ export class LocalizedLinkDirective implements OnInit {
       const newPath = `${languagePrefix}/${this.path}`;
 
       this.el.nativeElement.addEventListener('click', (event: Event) => {
-        console.log('Link clicked');
         event.preventDefault();
         this.router.navigateByUrl(newPath);
       });

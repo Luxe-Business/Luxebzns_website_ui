@@ -26,7 +26,6 @@ export class CaseStudiesComponent implements AfterViewInit {
 
   setActiveTab(tabName: string) {
     this.activeTab = tabName;
-    console.log(this.activeTab);
     this.muteAllVideos();
   }
 

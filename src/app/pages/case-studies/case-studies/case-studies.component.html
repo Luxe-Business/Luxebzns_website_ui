@@ -1,10 +1,8 @@
 <app-header></app-header>
 
 <!--page header section start-->
-<section
-  class="page-header position-relative overflow-hidden ptb-120 bg-dark"
-  style="background: url('assets/img/page-header-bg.svg') no-repeat bottom left"
->
+<section class="page-header position-relative overflow-hidden ptb-120 bg-dark"
+  style="background: url('assets/img/page-header-bg.svg') no-repeat bottom left">
   <div class="container pt-5">
     <div class="row">
       <div class="col-lg-8 col-md-12">
@@ -12,13 +10,13 @@
           Crafting Excellence in Digital Realms
         </h1>
         <p class="lead">
-          Where innovation meets luxury, Luxe Bzns elevates your digital experience with bespoke software solutions. Transforming visions into reality through our expertly crafted apps, websites, and software for a distinguished clientele.
+          Where innovation meets luxury, Luxe Bzns elevates your digital experience with bespoke software solutions.
+          Transforming visions into reality through our expertly crafted apps, websites, and software for a
+          distinguished clientele.
         </p>
       </div>
     </div>
-    <div
-      class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light right-5"
-    ></div>
+    <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light right-5"></div>
   </div>
 </section>
 <!--page header section end-->
@@ -32,74 +30,44 @@
           <h5 class="h6 text-primary">Our Projects</h5>
           <h2>Showcase of Excellence</h2>
           <p>
-            Discover how Luxe Bzns transforms ideas into digital masterpieces. A portfolio of groundbreaking apps, websites, and software solutions designed for the elite.
+            Discover how Luxe Bzns transforms ideas into digital masterpieces. A portfolio of groundbreaking apps,
+            websites, and software solutions designed for the elite.
           </p>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <ul
-          class="nav justify-content-center feature-tab-list-2 mt-4"
-          id="nav-tab-2"
-          role="tablist"
-        >
+        <ul class="nav justify-content-center feature-tab-list-2 mt-4" id="nav-tab-2" role="tablist">
           <li class="nav-item">
-            <a
-              class="nav-link"
-              [class.active]="activeTab === 'webApplications'"
-              (click)="setActiveTab('webApplications')"
-              role="tab"
-              aria-selected="false"
-            >
+            <a class="nav-link" [class.active]="activeTab === 'webApplications'"
+              (click)="setActiveTab('webApplications')" role="tab" aria-selected="false">
               Web Applicatios
             </a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              [class.active]="activeTab === 'mobileApplications'"
-              (click)="setActiveTab('mobileApplications')"
-              role="tab"
-              aria-selected="false"
-            >
+            <a class="nav-link" [class.active]="activeTab === 'mobileApplications'"
+              (click)="setActiveTab('mobileApplications')" role="tab" aria-selected="false">
               Mobile Applecations
             </a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              [class.active]="activeTab === 'Branding'"
-              (click)="setActiveTab('Branding')"
-              role="tab"
-              aria-selected="false"
-            >
+            <a class="nav-link" [class.active]="activeTab === 'Branding'" (click)="setActiveTab('Branding')" role="tab"
+              aria-selected="false">
               Branding / UI-UX
             </a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              [class.active]="activeTab === 'Advanced'"
-              (click)="setActiveTab('Advanced')"
-              role="tab"
-              aria-selected="false"
-            >
+            <a class="nav-link" [class.active]="activeTab === 'Advanced'" (click)="setActiveTab('Advanced')" role="tab"
+              aria-selected="false">
               Advanced Technology
             </a>
           </li>
         </ul>
         <div class="tab-content" id="nav-tabContent-2">
-          <div
-            class="tab-pane fade pt-60"
-            [class.active]="activeTab === 'webApplications'"
-            [class.show]="activeTab === 'webApplications'"
-            *ngIf="activeTab === 'webApplications'"
-            role="tabpanel"
-          >
-            <div
-              class="row justify-content-center align-items-center justify-content-around mt-4"
-            >
+          <div class="tab-pane fade pt-60" [class.active]="activeTab === 'webApplications'"
+            [class.show]="activeTab === 'webApplications'" *ngIf="activeTab === 'webApplications'" role="tabpanel">
+            <div class="row justify-content-center align-items-center justify-content-around mt-4">
               <div class="col-lg-5">
                 <div class="feature-tab-info">
                   <h3>Victoria Hotel Luxury Website</h3>
@@ -117,25 +85,18 @@
                     digital experiences that resonate with excellence and
                     exclusivity.
                   </p>
-                  <a
-                    routerLink="/contact"
-                    class="read-more-link text-decoration-none mt-4 d-block"
-                    >Contact Us <i class="fas fa-arrow-right ms-2"></i
-                  ></a>
+                  <a routerLink="/contact" class="read-more-link text-decoration-none mt-4 d-block">Contact Us <i
+                      class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
               <div class="col-lg-5">
-                <img
-                  src="assets/img/Victoria Hotel Luxury Website.webp"
+                <img src="assets/img/Victoria Hotel Luxury Website.webp"
                   alt="Victoria Hotel Luxury Website Designed by Luxe Bzns Company Best Website Design company in Dubai and UAE"
-                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover"
-                />
+                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover" />
               </div>
             </div>
 
-            <div
-              class="row justify-content-center align-items-center justify-content-around mt-4"
-            >
+            <div class="row justify-content-center align-items-center justify-content-around mt-4">
               <div class="col-lg-5">
                 <div class="feature-tab-info">
                   <h3>BisouLovely Jewelry Shop Website</h3>
@@ -152,25 +113,18 @@
                     collection, offering a seamless shopping experience for
                     timeless pieces that elevate any ensemble.
                   </p>
-                  <a
-                    routerLink="/contact"
-                    class="read-more-link text-decoration-none mt-4 d-block"
-                    >Contact Us <i class="fas fa-arrow-right ms-2"></i
-                  ></a>
+                  <a routerLink="/contact" class="read-more-link text-decoration-none mt-4 d-block">Contact Us <i
+                      class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
               <div class="col-lg-5">
-                <img
-                  src="assets/img/BisouLovely Jewelry Shop Website.webp"
+                <img src="assets/img/BisouLovely Jewelry Shop Website.webp"
                   alt="BisouLovely Jewelry Shop Website Designed by Luxe Bzns Company Best Website Design company in Dubai and UAE"
-                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover"
-                />
+                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover" />
               </div>
             </div>
 
-            <div
-              class="row justify-content-center align-items-center justify-content-around mt-4"
-            >
+            <div class="row justify-content-center align-items-center justify-content-around mt-4">
               <div class="col-lg-5">
                 <div class="feature-tab-info">
                   <h3>Radiant: Illuminate Your World</h3>
@@ -187,25 +141,18 @@
                     aesthetics with functionality to light up your world in ways
                     you've never imagined.
                   </p>
-                  <a
-                    routerLink="/contact"
-                    class="read-more-link text-decoration-none mt-4 d-block"
-                    >Contact Us <i class="fas fa-arrow-right ms-2"></i
-                  ></a>
+                  <a routerLink="/contact" class="read-more-link text-decoration-none mt-4 d-block">Contact Us <i
+                      class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
               <div class="col-lg-5">
-                <img
-                  src="assets/img/Radiant- Illuminate Your World.webp"
+                <img src="assets/img/Radiant- Illuminate Your World.webp"
                   alt="Radiant: Illuminate Your World Developed by Luxe Bzns Company Best Website Design company in Dubai and UAE"
-                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover"
-                />
+                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover" />
               </div>
             </div>
 
-            <div
-              class="row justify-content-center align-items-center justify-content-around mt-4"
-            >
+            <div class="row justify-content-center align-items-center justify-content-around mt-4">
               <div class="col-lg-5">
                 <div class="feature-tab-info">
                   <h3>Luxury Real Estate Website</h3>
@@ -221,25 +168,18 @@
                     high-end homes, designed for discerning clients seeking
                     extraordinary real estate experiences.
                   </p>
-                  <a
-                    routerLink="/contact"
-                    class="read-more-link text-decoration-none mt-4 d-block"
-                    >Contact Us <i class="fas fa-arrow-right ms-2"></i
-                  ></a>
+                  <a routerLink="/contact" class="read-more-link text-decoration-none mt-4 d-block">Contact Us <i
+                      class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
               <div class="col-lg-5">
-                <img
-                  src="assets/img/luxury_real_estate.webp"
+                <img src="assets/img/luxury_real_estate.webp"
                   alt="Luxury Real Estate Website Developed by Luxe Bzns Company Best Website Design company in Dubai and UAE"
-                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover"
-                />
+                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover" />
               </div>
             </div>
 
-            <div
-              class="row justify-content-center align-items-center justify-content-around mt-4"
-            >
+            <div class="row justify-content-center align-items-center justify-content-around mt-4">
               <div class="col-lg-5">
                 <div class="feature-tab-info">
                   <h3>Medical Quality Doctors: For Your Best Care</h3>
@@ -255,25 +195,18 @@
                     receive personalized, top-tier medical attention in a
                     supportive and caring environment.
                   </p>
-                  <a
-                    routerLink="/contact"
-                    class="read-more-link text-decoration-none mt-4 d-block"
-                    >Contact Us <i class="fas fa-arrow-right ms-2"></i
-                  ></a>
+                  <a routerLink="/contact" class="read-more-link text-decoration-none mt-4 d-block">Contact Us <i
+                      class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
               <div class="col-lg-5">
-                <img
-                  src="assets/img/Medical Quality Doctors.webp"
+                <img src="assets/img/Medical Quality Doctors.webp"
                   alt="Medical Quality Doctors Website Developed by Luxe Bzns Company Best Website Design company in Dubai and UAE"
-                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover"
-                />
+                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover" />
               </div>
             </div>
 
-            <div
-              class="row justify-content-center align-items-center justify-content-around mt-4"
-            >
+            <div class="row justify-content-center align-items-center justify-content-around mt-4">
               <div class="col-lg-5">
                 <div class="feature-tab-info">
                   <h3>Patient Condition Monitoring Dashboard</h3>
@@ -291,36 +224,24 @@
                     precision and proactive healthcare management, tailored for
                     optimal patient outcomes.
                   </p>
-                  <a
-                    routerLink="/contact"
-                    class="read-more-link text-decoration-none mt-4 d-block"
-                    >Contact Us <i class="fas fa-arrow-right ms-2"></i
-                  ></a>
+                  <a routerLink="/contact" class="read-more-link text-decoration-none mt-4 d-block">Contact Us <i
+                      class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
               <div class="col-lg-5">
-                <img
-                  src="assets/img/Patient Condition Monitoring Dashboard.webp"
+                <img src="assets/img/Patient Condition Monitoring Dashboard.webp"
                   alt="Patient Condition Monitoring Dashboard Developed by Luxe Bzns Company Best Website Design company in Dubai and UAE"
-                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover"
-                />
+                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover" />
               </div>
             </div>
           </div>
-          <div class="tab-pane fade pt-60"
-          [class.active]="activeTab === 'mobileApplications'"
-          [class.show]="activeTab === 'mobileApplications'"
-           *ngIf="activeTab === 'mobileApplications'" 
+          <div class="tab-pane fade pt-60" [class.active]="activeTab === 'mobileApplications'"
+            [class.show]="activeTab === 'mobileApplications'" *ngIf="activeTab === 'mobileApplications'"
             role="tabpanel">
-            <div
-              class="row justify-content-center align-items-center justify-content-around mt-4"
-            >
+            <div class="row justify-content-center align-items-center justify-content-around mt-4">
               <div class="col-lg-5">
-                <img
-                  src="assets/img/UAE Polo Federation App.webp"
-                  alt="UAE Polo Federation App"
-                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover"
-                />
+                <img src="assets/img/UAE Polo Federation App.webp" alt="UAE Polo Federation App"
+                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover" />
               </div>
               <div class="col-lg-5">
                 <div class="feature-tab-info">
@@ -338,30 +259,19 @@
                     exploring polo for the first time, our app connects you to
                     the heart of the action.
                   </p>
-                  <a
-                    routerLink="/contact"
-                    class="read-more-link text-decoration-none mt-4 d-block"
-                    >Contact Us <i class="fas fa-arrow-right ms-2"></i
-                  ></a>
+                  <a routerLink="/contact" class="read-more-link text-decoration-none mt-4 d-block">Contact Us <i
+                      class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
             </div>
 
-            <div
-              class="row justify-content-center align-items-center justify-content-around mt-4"
-            >
+            <div class="row justify-content-center align-items-center justify-content-around mt-4">
               <div class="col-lg-5">
                 <!-- <img src="https://cdn.dribbble.com/users/987543/screenshots/18158448/media/8add3e9899dea13764f146f7953514c3.mp4" alt="feature tab" class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover"> -->
-                <video
-                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover"
-                  autoplay
-                  loop
-                  muted
-                >
+                <video class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover" autoplay loop muted playsinline style="pointer-events: none;">
                   <source
-                  src="https://cdn.dribbble.com/users/987543/screenshots/18158448/media/8add3e9899dea13764f146f7953514c3.mp4"
-                    type="video/mp4"
-                  />
+                    src="https://cdn.dribbble.com/users/987543/screenshots/18158448/media/8add3e9899dea13764f146f7953514c3.mp4"
+                    type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -381,24 +291,17 @@
                     destinations quickly, elevating your shopping experience to
                     unparalleled levels of convenience and pleasure.
                   </p>
-                  <a
-                    routerLink="/contact"
-                    class="read-more-link text-decoration-none mt-4 d-block"
-                    >Contact Us <i class="fas fa-arrow-right ms-2"></i
-                  ></a>
+                  <a routerLink="/contact" class="read-more-link text-decoration-none mt-4 d-block">Contact Us <i
+                      class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
             </div>
 
-            <div
-              class="row justify-content-center align-items-center justify-content-around mt-4"
-            >
+            <div class="row justify-content-center align-items-center justify-content-around mt-4">
               <div class="col-lg-5">
                 <img
                   src="https://cdn.dribbble.com/users/4033964/screenshots/18438429/media/9dced9e7f6f1c4cf6f33854738a636a6.jpg?resize=1600x1200&vertical=center"
-                  alt="feature tab"
-                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover"
-                />
+                  alt="feature tab" class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover" />
               </div>
               <div class="col-lg-5">
                 <div class="feature-tab-info">
@@ -417,24 +320,17 @@
                     decisions with ease, powered by our intuitive, user-friendly
                     platform.
                   </p>
-                  <a
-                    routerLink="/contact"
-                    class="read-more-link text-decoration-none mt-4 d-block"
-                    >Contact Us <i class="fas fa-arrow-right ms-2"></i
-                  ></a>
+                  <a routerLink="/contact" class="read-more-link text-decoration-none mt-4 d-block">Contact Us <i
+                      class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
             </div>
 
-            <div
-              class="row justify-content-center align-items-center justify-content-around mt-4"
-            >
+            <div class="row justify-content-center align-items-center justify-content-around mt-4">
               <div class="col-lg-5">
                 <img
                   src="https://cdn.dribbble.com/users/6682392/screenshots/18020572/media/3adfc0568cf3d48ec9b3f42cbc2a676b.png?resize=1600x1200&vertical=center"
-                  alt="feature tab"
-                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover"
-                />
+                  alt="feature tab" class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover" />
               </div>
               <div class="col-lg-5">
                 <div class="feature-tab-info">
@@ -452,24 +348,17 @@
                     everyday essentials, our platform brings the mall to you,
                     anytime, anywhere.
                   </p>
-                  <a
-                    routerLink="/contact"
-                    class="read-more-link text-decoration-none mt-4 d-block"
-                    >Contact Us <i class="fas fa-arrow-right ms-2"></i
-                  ></a>
+                  <a routerLink="/contact" class="read-more-link text-decoration-none mt-4 d-block">Contact Us <i
+                      class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
             </div>
 
-            <div
-              class="row justify-content-center align-items-center justify-content-around mt-4"
-            >
+            <div class="row justify-content-center align-items-center justify-content-around mt-4">
               <div class="col-lg-5">
                 <img
                   src="https://cdn.dribbble.com/users/5236056/screenshots/15226746/media/563c7aa07d0b95ddc124382e5d1a5639.png?resize=1600x1200&vertical=center"
-                  alt="feature tab"
-                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover"
-                />
+                  alt="feature tab" class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover" />
               </div>
               <div class="col-lg-5">
                 <div class="feature-tab-info">
@@ -490,23 +379,15 @@
                     records access, and direct messaging, managing your
                     healthcare has never been more accessible.
                   </p>
-                  <a
-                    routerLink="/contact"
-                    class="read-more-link text-decoration-none mt-4 d-block"
-                    >Contact Us <i class="fas fa-arrow-right ms-2"></i
-                  ></a>
+                  <a routerLink="/contact" class="read-more-link text-decoration-none mt-4 d-block">Contact Us <i
+                      class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="tab-pane fade pt-60" 
-          [class.active]="activeTab === 'Branding'"
-          [class.show]="activeTab === 'Branding'"
-          *ngIf="activeTab === 'Branding'" 
-          role="tabpanel">
-            <div
-              class="row justify-content-center align-items-center justify-content-around mt-4"
-            >
+          <div class="tab-pane fade pt-60" [class.active]="activeTab === 'Branding'"
+            [class.show]="activeTab === 'Branding'" *ngIf="activeTab === 'Branding'" role="tabpanel">
+            <div class="row justify-content-center align-items-center justify-content-around mt-4">
               <div class="col-lg-5">
                 <div class="feature-tab-info">
                   <h3>
@@ -526,24 +407,17 @@
                     where every interaction enhances your journey to the perfect
                     property.
                   </p>
-                  <a
-                    routerLink="/contact"
-                    class="read-more-link text-decoration-none mt-4 d-block"
-                    >Contact Us <i class="fas fa-arrow-right ms-2"></i
-                  ></a>
+                  <a routerLink="/contact" class="read-more-link text-decoration-none mt-4 d-block">Contact Us <i
+                      class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
               <div class="col-lg-5">
                 <img
                   src="https://cdn.dribbble.com/userupload/9994589/file/original-f9c3c6f638dae0d9261b740814069779.png?resize=1504x902"
-                  alt="feature tab"
-                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover"
-                />
+                  alt="feature tab" class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover" />
               </div>
             </div>
-            <div
-              class="row justify-content-center align-items-center justify-content-around mt-4"
-            >
+            <div class="row justify-content-center align-items-center justify-content-around mt-4">
               <div class="col-lg-5">
                 <div class="feature-tab-info">
                   <h3>
@@ -563,24 +437,17 @@
                     journey. Explore a design that prioritizes your health
                     needs, making every interaction seamless and informative.
                   </p>
-                  <a
-                    routerLink="/contact"
-                    class="read-more-link text-decoration-none mt-4 d-block"
-                    >Contact Us <i class="fas fa-arrow-right ms-2"></i
-                  ></a>
+                  <a routerLink="/contact" class="read-more-link text-decoration-none mt-4 d-block">Contact Us <i
+                      class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
               <div class="col-lg-5">
                 <img
                   src="https://cdn.dribbble.com/userupload/8905770/file/original-3576628bc47835d65c17476de1cf23fe.png?resize=2048x1536&vertical=center"
-                  alt="feature tab"
-                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover"
-                />
+                  alt="feature tab" class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover" />
               </div>
             </div>
-            <div
-              class="row justify-content-center align-items-center justify-content-around mt-4"
-            >
+            <div class="row justify-content-center align-items-center justify-content-around mt-4">
               <div class="col-lg-5">
                 <div class="feature-tab-info">
                   <h3>
@@ -601,25 +468,18 @@
                     how we bring clarity and style to the crypto experience,
                     making it accessible and enjoyable for everyone.
                   </p>
-                  <a
-                    routerLink="/contact"
-                    class="read-more-link text-decoration-none mt-4 d-block"
-                    >Contact Us <i class="fas fa-arrow-right ms-2"></i
-                  ></a>
+                  <a routerLink="/contact" class="read-more-link text-decoration-none mt-4 d-block">Contact Us <i
+                      class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
               <div class="col-lg-5">
                 <img
                   src="https://cdn.dribbble.com/userupload/11617304/file/original-efe2104727b47951bede1aab1ef8899f.jpg?resize=2048x1536"
-                  alt="feature tab"
-                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover"
-                />
+                  alt="feature tab" class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover" />
               </div>
             </div>
 
-            <div
-              class="row justify-content-center align-items-center justify-content-around mt-4"
-            >
+            <div class="row justify-content-center align-items-center justify-content-around mt-4">
               <div class="col-lg-5">
                 <div class="feature-tab-info">
                   <h3>
@@ -638,44 +498,28 @@
                     into a fitness experience that’s not just about exercise,
                     but about transforming your lifestyle, one tap at a time.
                   </p>
-                  <a
-                    routerLink="/contact"
-                    class="read-more-link text-decoration-none mt-4 d-block"
-                    >Contact Us <i class="fas fa-arrow-right ms-2"></i
-                  ></a>
+                  <a routerLink="/contact" class="read-more-link text-decoration-none mt-4 d-block">Contact Us <i
+                      class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
               <div class="col-lg-5">
-                <video
-                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover"
-                  autoplay
-                  loop
-                  muted
-                >
+                <video class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover" autoplay loop muted playsinline style="pointer-events: none;">
                   <source
-                  src="https://cdn.dribbble.com/users/2258836/screenshots/16136966/media/8db9dee56d75fbf432382886b45b1980.mp4"
-                    type="video/mp4"
-                  />
+                    src="https://cdn.dribbble.com/users/2258836/screenshots/16136966/media/8db9dee56d75fbf432382886b45b1980.mp4"
+                    type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
             </div>
           </div>
 
-          <div class="tab-pane fade pt-60" role="tabpanel"
-          [class.active]="activeTab === 'Advanced'"
-          [class.show]="activeTab === 'Advanced'"
-           *ngIf="activeTab === 'Advanced'" 
-          role="tabpanel">
-            <div
-              class="row justify-content-center align-items-center justify-content-around mt-4"
-            >
+          <div class="tab-pane fade pt-60" role="tabpanel" [class.active]="activeTab === 'Advanced'"
+            [class.show]="activeTab === 'Advanced'" *ngIf="activeTab === 'Advanced'" role="tabpanel">
+            <div class="row justify-content-center align-items-center justify-content-around mt-4">
               <div class="col-lg-5">
                 <img
                   src="https://cdn.dribbble.com/users/1838892/screenshots/16982008/media/e1e655e8ae533d7c44abb7df7ad539b8.png?resize=1600x1200&vertical=center"
-                  alt="feature tab"
-                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover"
-                />
+                  alt="feature tab" class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover" />
               </div>
               <div class="col-lg-5">
                 <div class="feature-tab-info">
@@ -698,30 +542,19 @@
                     businesses aiming to enhance customer service, increase
                     engagement, and streamline operations.
                   </p>
-                  <a
-                    routerLink="/contact"
-                    class="read-more-link text-decoration-none mt-4 d-block"
-                    >Contact Us <i class="fas fa-arrow-right ms-2"></i
-                  ></a>
+                  <a routerLink="/contact" class="read-more-link text-decoration-none mt-4 d-block">Contact Us <i
+                      class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
             </div>
 
-            <div
-              class="row justify-content-center align-items-center justify-content-around mt-4"
-            >
+            <div class="row justify-content-center align-items-center justify-content-around mt-4">
               <div class="col-lg-5">
                 <!-- <img src="https://cdn.dribbble.com/users/987543/screenshots/18158448/media/8add3e9899dea13764f146f7953514c3.mp4" alt="feature tab" class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover"> -->
-                <video
-                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover"
-                  autoplay
-                  loop
-                  muted
-                >
+                <video class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover" autoplay loop muted playsinline style="pointer-events: none;">
                   <source
-                  src="https://cdn.dribbble.com/userupload/2801377/file/original-2ee98ab1dd486f681f9394b65e1b33e3.mp4"
-                    type="video/mp4"
-                  />
+                    src="https://cdn.dribbble.com/userupload/2801377/file/original-2ee98ab1dd486f681f9394b65e1b33e3.mp4"
+                    type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -744,24 +577,17 @@
                     looking to harness the full potential of their IoT
                     investments.
                   </p>
-                  <a
-                    routerLink="/contact"
-                    class="read-more-link text-decoration-none mt-4 d-block"
-                    >Contact Us <i class="fas fa-arrow-right ms-2"></i
-                  ></a>
+                  <a routerLink="/contact" class="read-more-link text-decoration-none mt-4 d-block">Contact Us <i
+                      class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
             </div>
 
-            <div
-              class="row justify-content-center align-items-center justify-content-around mt-4"
-            >
+            <div class="row justify-content-center align-items-center justify-content-around mt-4">
               <div class="col-lg-5">
                 <img
                   src="https://cdn.dribbble.com/users/6109291/screenshots/18009045/media/13299b98a36ecdbdc2f80ed0bfe6746c.png?resize=1600x1200&vertical=center"
-                  alt="feature tab"
-                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover"
-                />
+                  alt="feature tab" class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover" />
               </div>
               <div class="col-lg-5">
                 <div class="feature-tab-info">
@@ -784,29 +610,18 @@
                     blockchain solutions can revolutionize industries by
                     establishing unparalleled trust and efficiency.
                   </p>
-                  <a
-                    routerLink="/contact"
-                    class="read-more-link text-decoration-none mt-4 d-block"
-                    >Contact Us <i class="fas fa-arrow-right ms-2"></i
-                  ></a>
+                  <a routerLink="/contact" class="read-more-link text-decoration-none mt-4 d-block">Contact Us <i
+                      class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
             </div>
 
-            <div
-              class="row justify-content-center align-items-center justify-content-around mt-4"
-            >
+            <div class="row justify-content-center align-items-center justify-content-around mt-4">
               <div class="col-lg-5">
-                <video
-                  class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover"
-                  autoplay
-                  loop
-                  muted
-                >
+                <video class="img-fluid mt-4 mt-lg-0 mt-xl-0 rounded-10 luxury-hover" autoplay loop muted playsinline style="pointer-events: none;">
                   <source
-                  src="https://cdn.dribbble.com/userupload/3355501/file/original-d8a068ab1c2c79df9b8c07c8c39adb6c.mp4"
-                    type="video/mp4"
-                  />
+                    src="https://cdn.dribbble.com/userupload/3355501/file/original-d8a068ab1c2c79df9b8c07c8c39adb6c.mp4"
+                    type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -828,11 +643,8 @@
                     discover how we're shaping the future of digital ownership
                     and creativity.
                   </p>
-                  <a
-                    routerLink="/contact"
-                    class="read-more-link text-decoration-none mt-4 d-block"
-                    >Contact Us <i class="fas fa-arrow-right ms-2"></i
-                  ></a>
+                  <a routerLink="/contact" class="read-more-link text-decoration-none mt-4 d-block">Contact Us <i
+                      class="fas fa-arrow-right ms-2"></i></a>
                 </div>
               </div>
             </div>
