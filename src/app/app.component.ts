@@ -31,21 +31,29 @@ export class AppComponent implements OnInit,AfterViewInit{
     this.isOnline = false;
     this.modalVersion = false;
 
-  //   this.router.events.pipe(
-  //     filter(event => event instanceof NavigationEnd)
-  //   ).subscribe(() => {
-  //     this.smoothScrollToTop();
-  //   });
-  // }
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      this.enableBodyScroll();
+      this.smoothScrollToTop();
+    });
+  }
 
-  // private smoothScrollToTop() {
-  //   if (isPlatformBrowser(this.platformId)) {
-  //     window.scroll({
-  //       top: 0,
-  //       left: 0,
-  //       behavior: 'smooth'
-  //     });
-  //   }
+  private enableBodyScroll() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.document.body.style.overflow = '';
+      this.document.body.style.paddingRight = '';
+    }
+  }
+  
+  private smoothScrollToTop() {
+    if (isPlatformBrowser(this.platformId)) {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
   }
 
 
