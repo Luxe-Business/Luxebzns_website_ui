@@ -1,9 +1,4 @@
 import { Routes } from '@angular/router';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { AiChatbotsComponent } from './pages/ai-chatbots/ai-chatbots.component';
-import { TechConsultingComponent } from './pages/tech-consulting/tech-consulting.component';
-import { CrmSolutionsComponent } from './pages/crm-solutions/crm-solutions.component';
-import { UiUxDesignServicesComponent } from './pages/ui-ux-design-services/ui-ux-design-services.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -76,24 +71,31 @@ export const routes: Routes = [
     path: 'mobile-app-development',
     loadChildren: () => import('./pages/mobile-app-development/mobile-app-development.module').then(m => m.MobileAppDevelopmentComponentModule)
   },
+
   {
     path: 'ai-chatbots',
-    component: AiChatbotsComponent,
+    loadChildren: () => import('./pages/ai-chatbots/ai-chatbots.module').then(m => m.AiChatbotsModule)
   },
+
   {
     path: 'tech-consulting',
-    component: TechConsultingComponent,
+    loadChildren: () => import('./pages/tech-consulting/tech-consulting.module').then(m => m.TechConsultingModule)
   },
+
   {
     path: 'crm-and-erp-solutions',
-    component: CrmSolutionsComponent,
+    loadChildren: () => import('./pages/crm-solutions/crm-solutions.module').then(m => m.CrmSolutionsModule)
   },
+
   {
     path: 'ui-ux-design-services',
-    component: UiUxDesignServicesComponent,
+    loadChildren: () => import('./pages/ui-ux-design-services/ui-ux-design-services.module').then(m => m.UiUxDesignServicesModule)
   },
+
   {
-    path: '404', component: NotFoundComponent
+    path: '404',
+    loadChildren: () => import('./pages/not-found/not-found.module').then(m => m.NotFoundModule)
   },
+
   { path: '**', redirectTo: '404' }
 ];
