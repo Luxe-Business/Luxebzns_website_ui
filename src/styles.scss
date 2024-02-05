@@ -222,7 +222,27 @@ html[data-bs-theme="dark"]
   .feature-tab-list-2 li a{
     color: #ffffff;
   }
+
+
+  .navbar-toggler{
+    font-size: 30px;
+  }
+  html[data-bs-theme="dark"] .navbar-toggler{
+    color: #fff;
+  }
+
+  html[data-bs-theme="light"] .navbar-toggler{
+    color: #000;
+  }
   
+  html[data-bs-theme="light"] .sticky-header .navbar-toggler{
+    color: #fff;
+  }
+
+  html[data-bs-theme="light"] .affix .navbar-toggler{
+    color: #000;
+  }
+
   .subscribe-feature-list li span{
     align-items: baseline;
   }

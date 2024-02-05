@@ -12,29 +12,46 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class FaqComponent implements OnInit {
 
+
   constructor(private metaTagService: Meta,private titleService: Title,
     @Inject(PLATFORM_ID) private platformId: Object) {}
-
+  
   ngOnInit() {
-    this.titleService.setTitle("Luxe Bzns FAQ: Expert Software & IT Solutions in Dubai | Your Technology Questions Answered");
-  
-
-    // Update each meta tag
-    this.metaTagService.updateTag({ name: 'description', content: 'Find answers to common questions about Luxe Bzns software and IT solutions in Dubai. Our FAQ provides insights into our services, technology, and business solutions.' });
-    this.metaTagService.updateTag({ name: 'keywords', content: 'FAQ, Luxe Bzns, software solutions, IT services, Dubai, technology, business solutions, digital transformation, cloud computing, mobile app development' });
-    this.metaTagService.updateTag({ property: 'og:title', content: 'FAQ - Luxe Bzns: Your Software & IT Solutions Expert in Dubai' });
-    this.metaTagService.updateTag({ property: 'og:description', content: 'Explore our FAQ to get detailed information on Luxe Bzns software and IT services in Dubai, addressing your questions on technology and business solutions.' });
-
-    if (isPlatformBrowser(this.platformId)) {
-    this.metaTagService.updateTag({ property: 'og:url', content: window.location.href });
+    this.updateMetadata();
   }
-    this.metaTagService.updateTag({ property: 'og:type', content: 'website' });
-    this.metaTagService.updateTag({ property: 'og:image', content: 'URL_to_your_image' }); // Replace with the actual image URL
-    this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
-    this.metaTagService.updateTag({ name: 'twitter:title', content: 'FAQ - Luxe Bzns: Your Software & IT Solutions Expert in Dubai' });
-    this.metaTagService.updateTag({ name: 'twitter:description', content: 'Discover answers to all your queries about Luxe Bzns software and IT services in Dubai through our comprehensive FAQ section.' });
-    this.metaTagService.updateTag({ name: 'twitter:image', content: 'URL_to_your_image' }); // Replace with the actual image URL
-}
-  
 
+  updateMetadata() {
+    if (isPlatformBrowser(this.platformId)) {
+      // Get the existing meta tags from the home page
+      const existingMetaTags = Array.from(document.getElementsByTagName('meta'));
+  
+      // Copy the existing meta tags to the FAQ page
+      for (const tag of existingMetaTags) {
+        if (tag.hasAttribute('name')) {
+          this.metaTagService.updateTag({ name: tag.getAttribute('name') ?? '', content: tag.getAttribute('content') ?? '' });
+        } else if (tag.hasAttribute('property')) {
+          this.metaTagService.updateTag({ property: tag.getAttribute('property') ?? '', content: tag.getAttribute('content') ?? '' });
+        }
+      }
+  
+      // Update canonical link to the FAQ page
+      const canonicalLink = document.querySelector('link[rel="canonical"]');
+      if (canonicalLink) {
+        canonicalLink.setAttribute('href', window.location.href);
+      }
+  
+      // Update specific meta tags for the FAQ page
+      this.titleService.setTitle("FAQ - Luxe Bzns | Answers to Your Questions");
+      this.metaTagService.updateTag({ name: 'description', content: 'Explore frequently asked questions (FAQ) about Luxe Bzns services and solutions. Get answers to common questions to enhance your understanding of our offerings.' });
+      this.metaTagService.updateTag({ name: 'keywords', content: 'FAQ, frequently asked questions, Luxe Bzns FAQ, service questions, answers, Luxe Bzns solutions' });
+      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Explore frequently asked questions (FAQ) about Luxe Bzns services and solutions. Get answers to common questions to enhance your understanding of our offerings.' });
+      this.metaTagService.updateTag({ name: 'twitter:title', content: 'FAQ - Luxe Bzns' });
+      this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+      this.metaTagService.updateTag({ property: 'og:url', content: window.location.href });
+      this.metaTagService.updateTag({ property: 'og:title', content: 'FAQ - Luxe Bzns' });
+      this.metaTagService.updateTag({ property: 'og:description', content: 'Explore frequently asked questions (FAQ) about Luxe Bzns services and solutions. Get answers to common questions to enhance your understanding of our offerings.' });
+      this.metaTagService.updateTag({ property: 'og:type', content: 'website' });
+    }
+  }
+  
 }

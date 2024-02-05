@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { ComponentsModule } from '../../../components/components.module';
 import { Meta, Title } from '@angular/platform-browser';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-testimonials',
@@ -11,48 +12,46 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class TestimonialsComponent implements OnInit {
 
-  constructor(private metaTagService: Meta, private titleService: Title) {}
-
+  constructor(private metaTagService: Meta,private titleService: Title,
+    @Inject(PLATFORM_ID) private platformId: Object) {}
+  
   ngOnInit() {
-    this.titleService.setTitle("Client Testimonials - Luxe Bzns: Real Stories of Digital Success in Dubai");
-
-    // Update each meta tag
-    this.metaTagService.updateTag({ 
-      name: 'description', 
-      content: 'Explore real client testimonials and success stories at Luxe Bzns. Discover how we excel in delivering digital solutions in Dubai.' 
-    });
-    this.metaTagService.updateTag({ 
-      name: 'keywords', 
-      content: 'Client Testimonials, Luxe Bzns Reviews, Customer Success Stories, Digital Solutions, Dubai IT Services, Software Development Feedback, Dubai Client Reviews' 
-    });
-    this.metaTagService.updateTag({ 
-      property: 'og:title', 
-      content: 'Client Testimonials - Luxe Bzns: Real Stories of Digital Success in Dubai' 
-    });
-    this.metaTagService.updateTag({ 
-      property: 'og:description', 
-      content: 'Hear from our clients about their experiences and achievements with Luxe Bzns’s digital solutions and services in Dubai.' 
-    });
-    this.metaTagService.updateTag({ property: 'og:type', content: 'website' });
-    this.metaTagService.updateTag({ 
-      property: 'og:image', 
-      content: 'URL_to_your_image' // Replace with the actual image URL
-    });
-    this.metaTagService.updateTag({ 
-      name: 'twitter:card', 
-      content: 'summary_large_image' 
-    });
-    this.metaTagService.updateTag({ 
-      name: 'twitter:title', 
-      content: 'Client Testimonials - Luxe Bzns: Real Stories of Digital Success in Dubai' 
-    });
-    this.metaTagService.updateTag({ 
-      name: 'twitter:description', 
-      content: 'Discover the impact of Luxe Bzns through the words of our satisfied clients in Dubai.' 
-    });
-    this.metaTagService.updateTag({ 
-      name: 'twitter:image', 
-      content: 'URL_to_your_image' // Replace with the actual image URL
-    });
+    this.updateMetadata();
   }
+
+  updateMetadata() {
+    if (isPlatformBrowser(this.platformId)) {
+      // Get the existing meta tags from the home page
+      const existingMetaTags = Array.from(document.getElementsByTagName('meta'));
+  
+      // Copy the existing meta tags to the testimonials page
+      for (const tag of existingMetaTags) {
+        if (tag.hasAttribute('name')) {
+          this.metaTagService.updateTag({ name: tag.getAttribute('name') ?? '', content: tag.getAttribute('content') ?? '' });
+        } else if (tag.hasAttribute('property')) {
+          this.metaTagService.updateTag({ property: tag.getAttribute('property') ?? '', content: tag.getAttribute('content') ?? '' });
+        }
+      }
+  
+      // Update canonical link to the testimonials page
+      const canonicalLink = document.querySelector('link[rel="canonical"]');
+      if (canonicalLink) {
+        canonicalLink.setAttribute('href', window.location.href);
+      }
+  
+      // Update specific meta tags for the testimonials page
+      this.titleService.setTitle("Client Testimonials - Luxe Bzns | What Our Clients Say");
+      this.metaTagService.updateTag({ name: 'description', content: 'Read what our clients have to say about Luxe Bzns. Explore client testimonials and discover how we have helped businesses achieve success through our services.' });
+      this.metaTagService.updateTag({ name: 'keywords', content: 'client testimonials, Luxe Bzns reviews, customer feedback, client success stories, Luxe Bzns client experiences' });
+      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Read what our clients have to say about Luxe Bzns. Explore client testimonials and discover how we\'ve helped businesses achieve success through our services.' });
+      this.metaTagService.updateTag({ name: 'twitter:title', content: 'Client Testimonials - Luxe Bzns' });
+      this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+      this.metaTagService.updateTag({ property: 'og:url', content: window.location.href });
+      this.metaTagService.updateTag({ property: 'og:title', content: 'Client Testimonials - Luxe Bzns' });
+      this.metaTagService.updateTag({ property: 'og:description', content: 'Read what our clients have to say about Luxe Bzns. Explore client testimonials and discover how we\'ve helped businesses achieve success through our services.' });
+      this.metaTagService.updateTag({ property: 'og:type', content: 'website' });
+    }
+  }
+
+  
 }
