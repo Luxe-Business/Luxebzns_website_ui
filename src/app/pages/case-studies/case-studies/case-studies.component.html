@@ -46,10 +46,9 @@
         >
           <li class="nav-item">
             <a
-              class="nav-link active"
-              href="#tab-2-1"
-              data-bs-toggle="tab"
-              data-bs-target="#tab-2-1"
+              class="nav-link"
+              [class.active]="activeTab === 'webApplications'"
+              (click)="setActiveTab('webApplications')"
               role="tab"
               aria-selected="false"
             >
@@ -59,9 +58,8 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              href="#tab-2-2"
-              data-bs-toggle="tab"
-              data-bs-target="#tab-2-2"
+              [class.active]="activeTab === 'mobileApplications'"
+              (click)="setActiveTab('mobileApplications')"
               role="tab"
               aria-selected="false"
             >
@@ -71,9 +69,8 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              href="#tab-2-3"
-              data-bs-toggle="tab"
-              data-bs-target="#tab-2-3"
+              [class.active]="activeTab === 'Branding'"
+              (click)="setActiveTab('Branding')"
               role="tab"
               aria-selected="false"
             >
@@ -83,9 +80,8 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              href="#tab-2-4"
-              data-bs-toggle="tab"
-              data-bs-target="#tab-2-4"
+              [class.active]="activeTab === 'Advanced'"
+              (click)="setActiveTab('Advanced')"
               role="tab"
               aria-selected="false"
             >
@@ -95,8 +91,10 @@
         </ul>
         <div class="tab-content" id="nav-tabContent-2">
           <div
-            class="tab-pane fade pt-60 active show"
-            id="tab-2-1"
+            class="tab-pane fade pt-60"
+            [class.active]="activeTab === 'webApplications'"
+            [class.show]="activeTab === 'webApplications'"
+            *ngIf="activeTab === 'webApplications'"
             role="tabpanel"
           >
             <div
@@ -309,7 +307,11 @@
               </div>
             </div>
           </div>
-          <div class="tab-pane fade pt-60" id="tab-2-2" role="tabpanel">
+          <div class="tab-pane fade pt-60"
+          [class.active]="activeTab === 'mobileApplications'"
+          [class.show]="activeTab === 'mobileApplications'"
+           *ngIf="activeTab === 'mobileApplications'" 
+            role="tabpanel">
             <div
               class="row justify-content-center align-items-center justify-content-around mt-4"
             >
@@ -357,7 +359,7 @@
                   muted
                 >
                   <source
-                    src="https://cdn.dribbble.com/users/987543/screenshots/18158448/media/8add3e9899dea13764f146f7953514c3.mp4"
+                  src="https://cdn.dribbble.com/users/987543/screenshots/18158448/media/8add3e9899dea13764f146f7953514c3.mp4"
                     type="video/mp4"
                   />
                   Your browser does not support the video tag.
@@ -497,7 +499,11 @@
               </div>
             </div>
           </div>
-          <div class="tab-pane fade pt-60" id="tab-2-3" role="tabpanel">
+          <div class="tab-pane fade pt-60" 
+          [class.active]="activeTab === 'Branding'"
+          [class.show]="activeTab === 'Branding'"
+          *ngIf="activeTab === 'Branding'" 
+          role="tabpanel">
             <div
               class="row justify-content-center align-items-center justify-content-around mt-4"
             >
@@ -647,7 +653,7 @@
                   muted
                 >
                   <source
-                    src="https://cdn.dribbble.com/users/2258836/screenshots/16136966/media/8db9dee56d75fbf432382886b45b1980.mp4"
+                  src="https://cdn.dribbble.com/users/2258836/screenshots/16136966/media/8db9dee56d75fbf432382886b45b1980.mp4"
                     type="video/mp4"
                   />
                   Your browser does not support the video tag.
@@ -656,7 +662,11 @@
             </div>
           </div>
 
-          <div class="tab-pane fade pt-60" id="tab-2-4" role="tabpanel">
+          <div class="tab-pane fade pt-60" role="tabpanel"
+          [class.active]="activeTab === 'Advanced'"
+          [class.show]="activeTab === 'Advanced'"
+           *ngIf="activeTab === 'Advanced'" 
+          role="tabpanel">
             <div
               class="row justify-content-center align-items-center justify-content-around mt-4"
             >
@@ -709,7 +719,7 @@
                   muted
                 >
                   <source
-                    src="https://cdn.dribbble.com/userupload/2801377/file/original-2ee98ab1dd486f681f9394b65e1b33e3.mp4"
+                  src="https://cdn.dribbble.com/userupload/2801377/file/original-2ee98ab1dd486f681f9394b65e1b33e3.mp4"
                     type="video/mp4"
                   />
                   Your browser does not support the video tag.
@@ -794,7 +804,7 @@
                   muted
                 >
                   <source
-                    src="https://cdn.dribbble.com/userupload/3355501/file/original-d8a068ab1c2c79df9b8c07c8c39adb6c.mp4"
+                  src="https://cdn.dribbble.com/userupload/3355501/file/original-d8a068ab1c2c79df9b8c07c8c39adb6c.mp4"
                     type="video/mp4"
                   />
                   Your browser does not support the video tag.

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { MobileAppDevelopmentRoutingModule } from './mobile-app-development-routing.module';
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    MobileAppDevelopmentRoutingModule
   ]
 })
-export class MobileAppDevelopmentModule { }
+export class MobileAppDevelopmentComponentModule { }

@@ -1,9 +1,5 @@
 import { Routes } from '@angular/router';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { DigitalMarketingComponent } from './pages/digital-marketing/digital-marketing.component';
-import { SoftwareDevelopmentComponent } from './pages/software-development/software-development.component';
-import { WebsiteDesignComponent } from './pages/website-design/website-design.component';
-import { MobileAppDevelopmentComponent } from './pages/mobile-app-development/mobile-app-development.component';
 import { AiChatbotsComponent } from './pages/ai-chatbots/ai-chatbots.component';
 import { TechConsultingComponent } from './pages/tech-consulting/tech-consulting.component';
 import { CrmSolutionsComponent } from './pages/crm-solutions/crm-solutions.component';
@@ -64,19 +60,21 @@ export const routes: Routes = [
 
   {
     path: 'digital-marketing',
-    component: DigitalMarketingComponent,
+    loadChildren: () => import('./pages/digital-marketing/digital-marketing.module').then(m => m.DigitalMarketingModule)
   },
+
   {
     path: 'software-development',
-    component: SoftwareDevelopmentComponent,
+    loadChildren: () => import('./pages/software-development/software-development.module').then(m => m.SoftwareDevelopmentModule)
   },
+
   {
     path: 'website-design',
-    component: WebsiteDesignComponent,
+    loadChildren: () => import('./pages/website-design/website-design.module').then(m => m.WebsiteDesignComponentModule)
   },
   {
     path: 'mobile-app-development',
-    component: MobileAppDevelopmentComponent,
+    loadChildren: () => import('./pages/mobile-app-development/mobile-app-development.module').then(m => m.MobileAppDevelopmentComponentModule)
   },
   {
     path: 'ai-chatbots',

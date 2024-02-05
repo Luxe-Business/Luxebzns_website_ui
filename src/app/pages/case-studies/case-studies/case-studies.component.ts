@@ -1,17 +1,19 @@
 import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { ComponentsModule } from '../../../components/components.module';
 import { RouterLink } from '@angular/router';
-import { isPlatformBrowser } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-case-studies',
   standalone: true,
-  imports: [ComponentsModule, RouterLink],
+  imports: [ComponentsModule, RouterLink,CommonModule],
   templateUrl: './case-studies.component.html',
   styleUrls: ['./case-studies.component.scss']
 })
 export class CaseStudiesComponent implements AfterViewInit {
+
+  activeTab: string = 'webApplications';
 
   constructor(private metaTagService: Meta,private titleService: Title,
   @Inject(PLATFORM_ID) private platformId: Object){}
@@ -19,6 +21,13 @@ export class CaseStudiesComponent implements AfterViewInit {
   
   ngOnInit() {
     this.updateMetadata();
+  }
+
+
+  setActiveTab(tabName: string) {
+    this.activeTab = tabName;
+    console.log(this.activeTab);
+    this.muteAllVideos();
   }
 
   ngAfterViewInit() {
