@@ -2,7 +2,6 @@ import { isPlatformBrowser } from '@angular/common';
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
-import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-not-found',
