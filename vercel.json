@@ -1,5 +1,5 @@
 {
     "routes": [
-      { "src": "/Robots.txt", "dest": "/Robots.txt", "headers": { "Content-Type": "text/plain" } }
+      { "src": "/robots.txt", "dest": "/robots.txt", "headers": { "Content-Type": "text/plain" } }
     ]
   }
