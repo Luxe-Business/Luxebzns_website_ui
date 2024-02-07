@@ -32,7 +32,7 @@
               "src/assets",
               "src/manifest.webmanifest",
               "src/sitemap.xml",
-              "src/robots.txt",
+              "src/Robots.txt",
               "src/manifest.webmanifest"
             ],
             "styles": [
