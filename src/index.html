@@ -168,31 +168,12 @@
     </script>
 
 <script>
-  // This function will be called when the WhatsApp button is clicked
-  function initiateWhatsAppConversation() {
-    // Encode your welcome message
+  document.getElementById('whatsapp-button').addEventListener('click', function() {
     var message = encodeURIComponent("Hello Luxe Bzns, I am interested in learning more about your services.");
-    // Construct the WhatsApp URL with the pre-filled message
-    var whatsappUrl = 'https://wa.me/+971562455466?text=' + message;
-    // Open the WhatsApp URL in a new tab
-    window.open(whatsappUrl, '_blank');
-  }
-
-  // Listen for the DOM to be loaded before attempting to add the event listener
-  document.addEventListener('DOMContentLoaded', function() {
-    // Attempt to get the WhatsApp button by ID
-    var whatsappButton = document.getElementById('whatsapp-button');
-    if (whatsappButton) {
-      // If the button exists, add the click event listener
-      whatsappButton.addEventListener('click', initiateWhatsAppConversation);
-    } else {
-      // Log an error to the console if the button is not found
-      console.error('The WhatsApp button was not found on the page.');
-    }
+    window.open('https://wa.me/+971562455466?text=' + message, '_blank');
   });
 </script>
 
-  
     <noscript
       >Please enable JavaScript to continue using this application.</noscript
     >
