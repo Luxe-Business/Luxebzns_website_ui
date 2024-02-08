@@ -41,6 +41,7 @@ export class ServicesComponent implements OnInit{
     this.updateMetadata();
   }
 
+  
   updateMetadata() {
     if (isPlatformBrowser(this.platformId)) {
       // Get the existing meta tags from the home page
