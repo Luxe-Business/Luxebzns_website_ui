@@ -247,18 +247,15 @@ html[data-bs-theme="dark"]
     color: #000;
   }
 
+
   .subscribe-feature-list li span{
     align-items: baseline;
   }
 
-
-
-
-
   #whatsapp-button {
     position: fixed;
     font-size: 8vmin;
-    bottom: 20px;
+    bottom: 100px;
     right: 20px;
     cursor: pointer;
     background: #331a80;
@@ -269,9 +266,15 @@ html[data-bs-theme="dark"]
     radial-gradient(circle at bottom right, #0bb627, rgba(76, 217, 100, 0)),
     radial-gradient(circle at bottom left, #ff0000, rgb(255, 204, 0));
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-
   }
 
+
+  @media screen and (max-width: 800px) {
+    #whatsapp-button {
+      font-size: 10vmin;
+      bottom: 10px;
+    }
+  }
   
   #whatsapp-button:hover {
     transform: scale(1.1); /* Slight scale up effect on hover */
@@ -449,4 +452,15 @@ html[data-bs-theme="dark"]
     100% {
       transform: rotateY(180deg) skew(14deg) rotate3d(1.1, 1, 0.9, 360deg);
     }
+  }
+
+
+  .our-service-dropdown{
+    left: 40% !important;
+    border-radius:0 !important
+  }
+
+  .about-us-dropdown{
+    left: 63% !important;
+    border-radius:0 !important
   }
