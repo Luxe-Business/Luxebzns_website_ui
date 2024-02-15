@@ -1,0 +1,204 @@
+<!--register section start-->
+<section class="sign-up-in-section bg-dark ptb-120" style="background: url('assets/img/page-header-bg.svg')no-repeat bottom right">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-xl-5 col-lg-5 col-md-12 order-1 order-lg-0">
+                <div class="testimonial-tab-slider-wrap mt-5">
+                    <h1 class="fw-bold text-white display-5">{{'Contact.Text1' |translate}}</h1>
+                    <p>{{'Contact.Text2' |translate}}</p>
+                    <hr>
+                    <div class="tab-content testimonial-tab-content text-white-80" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="testimonial-tab-1" role="tabpanel">
+                            <blockquote class="blockquote">
+                                <em>"{{'Contact.Text3' |translate}}"</em>
+                            </blockquote>
+                            <div class="author-info mt-3">
+                                <span class="h6">{{'Contact.Text4' |translate}}</span>
+                                <span class="d-block small">{{'Contact.Text5' |translate}}</span>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="testimonial-tab-2" role="tabpanel">
+                            <blockquote class="blockquote">
+                                <em>"{{'Contact.Text6' |translate}}"</em>
+                            </blockquote>
+                            <div class="author-info mt-3">
+                                <span class="h6">{{'Contact.Text7' |translate}}</span>
+                                <span class="d-block small">{{'Contact.Text8' |translate}}</span>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="testimonial-tab-3" role="tabpanel">
+                            <blockquote class="blockquote">
+                                <em>"{{'Contact.Text9' |translate}}"</em>
+                            </blockquote>
+                            <div class="author-info mt-3">
+                                <span class="h6">{{'Contact.Text10' |translate}}</span>
+                                <span class="d-block small">{{'Contact.Text11' |translate}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="nav nav-pills mb-0 testimonial-tab-list mt-5" id="nav-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="active" data-bs-toggle="pill" data-bs-target="#testimonial-tab-1" type="button" role="tab" aria-selected="true">
+                                <img ngSrc="assets/img/team/Ammar Barish, CEO & Digital Strategy Visionary at Codevay.jpeg" ngOptimizedImage loading="lazy" alt="Ammar Barish, CEO & Digital Strategy Visionary at Codevay" width="55" height="55" class="img-fluid rounded-circle">
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a data-bs-toggle="pill" data-bs-target="#testimonial-tab-2" type="button" role="tab" aria-selected="false">
+                                <img ngSrc="assets/img/team/team-5.jpg" ngOptimizedImage loading="lazy" alt="Sarah Williams, CTO & AI Integration Expert" width="55" height="55" class="img-fluid rounded-circle">
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a data-bs-toggle="pill" data-bs-target="#testimonial-tab-3" type="button" role="tab" aria-selected="false">
+                                <img ngSrc="assets/img/team/team-6.jpeg" ngOptimizedImage loading="lazy" alt="Layla Karam, Head of Digital Marketing & SEO Strategist" width="55" height="55" class="img-fluid rounded-circle">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-7 col-md-12 order-0 order-lg-1">
+                <div class="register-wrap p-5 bg-white shadow rounded-custom mt-5 mt-lg-0 mt-xl-0">
+                    <h3 class="fw-medium h4">{{'Contact.Text12' |translate}}</h3>
+
+                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="mt-4 register-form">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" formControlName="name" [placeholder]="'Contact.Text13' |translate" aria-label="name">
+                                </div>
+                                <div *ngIf="contactForm.controls['name'].invalid && (contactForm.controls['name'].dirty || contactForm.controls['name'].touched)">
+                                    <small class="text-danger">{{'Contact.Text23' |translate}}</small>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 ">
+                                <div class="input-group mb-3">
+                                    <input type="email" class="form-control" formControlName="email" [placeholder]="'Contact.Text14' |translate" aria-label="email">
+                                </div>
+                                <div *ngIf="contactForm.controls['email'].invalid && (contactForm.controls['email'].dirty || contactForm.controls['email'].touched)">
+                                    <small class="text-danger">{{'Contact.Text24' |translate}}</small>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" formControlName="companyWebsite" [placeholder]="'Contact.Text15' |translate" aria-label="company-website">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="input-group mb-3">
+                                    <input type="email" class="form-control" formControlName="workEmail" [placeholder]="'Contact.Text16' |translate" aria-label="work-Email">
+                                </div>
+                                <div *ngIf="contactForm.controls['workEmail'].invalid && (contactForm.controls['workEmail'].dirty || contactForm.controls['workEmail'].touched)">
+                                    <small class="text-danger">{{'Contact.Text25' |translate}}</small>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="input-group mb-3">
+                                    <select class="form-control form-select" formControlName="budget" name="budget" id="budget" data-msg="Please select your budget.">
+                                        <option value="" selected="" disabled="">{{'Contact.Text17' | translate}}</option>
+                                        <option value="None, just getting started">{{'Contact.BudgetOptions.Option1' | translate}}</option>
+                                        <option value="Less than AED 10,000">{{'Contact.BudgetOptions.Option2' | translate}}</option>
+                                        <option value="AED 10,000 to AED 50,000">{{'Contact.BudgetOptions.Option3' | translate}}</option>
+                                        <option value="AED 50,000 to AED 100,000">{{'Contact.BudgetOptions.Option4' | translate}}</option>
+                                        <option value="AED 100,000 to AED 500,000">{{'Contact.BudgetOptions.Option5' | translate}}</option>
+                                        <option value="More than AED 500,000">{{'Contact.BudgetOptions.Option6' | translate}}</option>
+                                    </select>
+                                </div>
+                                <div *ngIf="contactForm.controls['budget'].touched && contactForm.controls['budget'].invalid">
+                                    <small class="text-danger">Budget is required.</small>
+                                  </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="input-group mb-3">
+                                    <select class="form-control form-select" formControlName="country" name="country" id="country" data-msg="Please select your country.">
+                                        <option value="" selected="" disabled="">{{'Contact.Text18' |translate}}</option>
+                                        <option value="United Arab Emirates">United Arab Emirates</option>
+                                        <option value="Saudi Arabia">Saudi Arabia</option>
+                                        <option value="Algeria">Algeria</option>
+                                        
+                                        <option value="Bahrain">Bahrain</option>
+                                        
+                                        <option value="Belgium">Belgium</option>
+                                    
+                                        <option value="Canada">Canada</option>
+                                        
+                                        <option value="Egypt">Egypt</option>
+                                       
+                                        <option value="France">France</option>
+                                        
+                                        <option value="Georgia">Georgia</option>
+                                        <option value="Germany">Germany</option>
+                                        
+                                        <option value="Iraq">Iraq</option>
+                                  
+                                        <option value="Italy">Italy</option>
+                                        
+                                        <option value="Japan">Japan</option>
+                                       
+                                        <option value="Jordan">Jordan</option>
+                                       
+                                        <option value="Kuwait">Kuwait</option>
+                                       
+                                        <option value="Lebanon">Lebanon</option>
+                                        
+                                        <option value="Libya">Libya</option>
+                                       
+                                        <option value="Morocco">Morocco</option>
+                                       
+                                        <option value="Oman">Oman</option>
+                                       
+                                        <option value="Qatar">Qatar</option>
+                                        
+                                        <option value="Russian Federation">Russian Federation</option>
+                                       
+                                        
+                                       
+                                        <option value="South Africa">South Africa</option>
+                                        
+                                        <option value="Sudan">Sudan</option>
+                                        
+                                        <option value="Swaziland">Swaziland</option>
+                                        <option value="Sweden">Sweden</option>
+                                        <option value="Switzerland">Switzerland</option>
+                                        <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                                        
+                                        <option value="Tunisia">Tunisia</option>
+                                        <option value="Turkey">Turkey</option>
+                                        
+                                        <option value="Ukraine">Ukraine</option>
+                                        
+                                        <option value="United Kingdom">United Kingdom</option>
+                                        <option value="United States">United States</option>
+                                       
+                                        <option value="Yemen">Yemen</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-group mb-3">
+                                    <textarea class="form-control textarea-contact" formControlName="projectDetails" [placeholder]="'Contact.Text19' |translate" style="height: 120px"></textarea>
+                                </div>
+                                <div *ngIf="contactForm.controls['projectDetails'].touched && contactForm.controls['projectDetails'].invalid">
+                                    <small class="text-danger">{{'Contact.Text26' |translate}}</small>
+                                  </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" formControlName="marketingConsent" value="" id="flexCheckChecked">
+                                    <label class="form-check-label small" for="flexCheckChecked">
+                                        {{'Contact.Text20' |translate}}
+                                        <a routerLink="/privacy-policy"> {{'Contact.Text21' |translate}}</a>.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary mt-4 d-block w-100" [disabled]="!contactForm.valid">{{'Contact.Text22' |translate}}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--register section end-->
