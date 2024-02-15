@@ -40,15 +40,15 @@ export class TestimonialsComponent implements OnInit {
       }
   
       // Update specific meta tags for the testimonials page
-      this.titleService.setTitle("Client Testimonials - Luxe Bzns | What Our Clients Say");
-      this.metaTagService.updateTag({ name: 'description', content: 'Read what our clients have to say about Luxe Bzns. Explore client testimonials and discover how we have helped businesses achieve success through our services.' });
-      this.metaTagService.updateTag({ name: 'keywords', content: 'client testimonials, Luxe Bzns reviews, customer feedback, client success stories, Luxe Bzns client experiences' });
-      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Read what our clients have to say about Luxe Bzns. Explore client testimonials and discover how we\'ve helped businesses achieve success through our services.' });
-      this.metaTagService.updateTag({ name: 'twitter:title', content: 'Client Testimonials - Luxe Bzns' });
+      this.titleService.setTitle("Client Testimonials - Codevay | What Our Clients Say");
+      this.metaTagService.updateTag({ name: 'description', content: 'Read what our clients have to say about Codevay. Explore client testimonials and discover how we have helped businesses achieve success through our services.' });
+      this.metaTagService.updateTag({ name: 'keywords', content: 'client testimonials, Codevay reviews, customer feedback, client success stories, Codevay client experiences' });
+      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Read what our clients have to say about Codevay. Explore client testimonials and discover how we\'ve helped businesses achieve success through our services.' });
+      this.metaTagService.updateTag({ name: 'twitter:title', content: 'Client Testimonials - Codevay' });
       this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
       this.metaTagService.updateTag({ property: 'og:url', content: window.location.href });
-      this.metaTagService.updateTag({ property: 'og:title', content: 'Client Testimonials - Luxe Bzns' });
-      this.metaTagService.updateTag({ property: 'og:description', content: 'Read what our clients have to say about Luxe Bzns. Explore client testimonials and discover how we\'ve helped businesses achieve success through our services.' });
+      this.metaTagService.updateTag({ property: 'og:title', content: 'Client Testimonials - Codevay' });
+      this.metaTagService.updateTag({ property: 'og:description', content: 'Read what our clients have to say about Codevay. Explore client testimonials and discover how we\'ve helped businesses achieve success through our services.' });
       this.metaTagService.updateTag({ property: 'og:type', content: 'website' });
     }
   }

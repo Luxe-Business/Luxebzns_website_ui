@@ -41,15 +41,15 @@ export class UiUxDesignServicesComponent {
       }
   
       // Update specific meta tags for the UI/UX Design page
-      this.titleService.setTitle("UI/UX Design Services - Luxe Bzns | Crafting Engaging Digital Experiences");
-      this.metaTagService.updateTag({ name: 'description', content: 'Elevate your digital presence with Luxe Bzns\' UI/UX design services. Our team creates intuitive, engaging designs that enhance user satisfaction and drive success.' });
-      this.metaTagService.updateTag({ name: 'keywords', content: 'UI/UX design Dubai, user interface design, user experience design, mobile app design, website design, Luxe Bzns UI/UX design' });
-      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Elevate your digital presence with Luxe Bzns\' UI/UX design services. Creating intuitive, engaging designs to enhance user satisfaction.' });
-      this.metaTagService.updateTag({ name: 'twitter:title', content: 'UI/UX Design Services - Luxe Bzns' });
+      this.titleService.setTitle("UI/UX Design Services - Codevay | Crafting Engaging Digital Experiences");
+      this.metaTagService.updateTag({ name: 'description', content: 'Elevate your digital presence with Codevay\' UI/UX design services. Our team creates intuitive, engaging designs that enhance user satisfaction and drive success.' });
+      this.metaTagService.updateTag({ name: 'keywords', content: 'UI/UX design Dubai, user interface design, user experience design, mobile app design, website design, Codevay UI/UX design' });
+      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Elevate your digital presence with Codevay\' UI/UX design services. Creating intuitive, engaging designs to enhance user satisfaction.' });
+      this.metaTagService.updateTag({ name: 'twitter:title', content: 'UI/UX Design Services - Codevay' });
       this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
       this.metaTagService.updateTag({ property: 'og:url', content: window.location.href });
-      this.metaTagService.updateTag({ property: 'og:title', content: 'UI/UX Design Services - Luxe Bzns' });
-      this.metaTagService.updateTag({ property: 'og:description', content: 'Elevate your digital presence with Luxe Bzns\' UI/UX design services. Our team creates intuitive, engaging designs that enhance user satisfaction and drive success.' });
+      this.metaTagService.updateTag({ property: 'og:title', content: 'UI/UX Design Services - Codevay' });
+      this.metaTagService.updateTag({ property: 'og:description', content: 'Elevate your digital presence with Codevay\' UI/UX design services. Our team creates intuitive, engaging designs that enhance user satisfaction and drive success.' });
       this.metaTagService.updateTag({ property: 'og:type', content: 'website' });
     }
   }

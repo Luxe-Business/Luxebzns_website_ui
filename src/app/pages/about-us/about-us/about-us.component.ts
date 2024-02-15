@@ -44,15 +44,15 @@ export class AboutUsComponent implements OnInit{
       }
   
       // Update specific meta tags for the "About Us" page
-      this.titleService.setTitle("About Us - Luxe Bzns | Learn About Our Team and Mission");
-      this.metaTagService.updateTag({ name: 'description', content: 'Discover the story behind Luxe Bzns. Learn about our team, mission, and values. Find out how we are dedicated to delivering innovative IT and software solutions.' });
-      this.metaTagService.updateTag({ name: 'keywords', content: 'About Us, Luxe Bzns team, mission, values, innovative IT solutions, software solutions' });
-      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Discover the story behind Luxe Bzns. Learn about our team, mission, and values. Find out how we are dedicated to delivering innovative IT and software solutions.' });
-      this.metaTagService.updateTag({ name: 'twitter:title', content: 'About Us - Luxe Bzns' });
+      this.titleService.setTitle("About Us - Codevay | Learn About Our Team and Mission");
+      this.metaTagService.updateTag({ name: 'description', content: 'Discover the story behind Codevay. Learn about our team, mission, and values. Find out how we are dedicated to delivering innovative IT and software solutions.' });
+      this.metaTagService.updateTag({ name: 'keywords', content: 'About Us, Codevay team, mission, values, innovative IT solutions, software solutions' });
+      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Discover the story behind Codevay. Learn about our team, mission, and values. Find out how we are dedicated to delivering innovative IT and software solutions.' });
+      this.metaTagService.updateTag({ name: 'twitter:title', content: 'About Us - Codevay' });
       this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
       this.metaTagService.updateTag({ property: 'og:url', content: window.location.href });
-      this.metaTagService.updateTag({ property: 'og:title', content: 'About Us - Luxe Bzns' });
-      this.metaTagService.updateTag({ property: 'og:description', content: 'Discover the story behind Luxe Bzns. Learn about our team, mission, and values. Find out how we are dedicated to delivering innovative IT and software solutions.' });
+      this.metaTagService.updateTag({ property: 'og:title', content: 'About Us - Codevay' });
+      this.metaTagService.updateTag({ property: 'og:description', content: 'Discover the story behind Codevay. Learn about our team, mission, and values. Find out how we are dedicated to delivering innovative IT and software solutions.' });
       this.metaTagService.updateTag({ property: 'og:type', content: 'website' });
     }
   }

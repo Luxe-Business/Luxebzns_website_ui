@@ -17,24 +17,24 @@ export class PrivacyPolicyComponent implements OnInit{
 
 
     ngOnInit() {
-      this.titleService.setTitle("Privacy Policy - Luxe Bzns: Protecting Your Data in Dubai");
+      this.titleService.setTitle("Privacy Policy - Codevay: Protecting Your Data in Dubai");
   
       // Update each meta tag
       this.metaTagService.updateTag({ 
         name: 'description', 
-        content: 'Read the Luxe Bzns Privacy Policy to understand how we handle your personal data with care and integrity in Dubai.' 
+        content: 'Read the Codevay Privacy Policy to understand how we handle your personal data with care and integrity in Dubai.' 
       });
       this.metaTagService.updateTag({ 
         name: 'keywords', 
-        content: 'Privacy Policy, Luxe Bzns, personal data protection, data privacy, user information security, Dubai' 
+        content: 'Privacy Policy, Codevay, personal data protection, data privacy, user information security, Dubai' 
       });
       this.metaTagService.updateTag({ 
         property: 'og:title', 
-        content: 'Privacy Policy - Luxe Bzns: Protecting Your Data in Dubai' 
+        content: 'Privacy Policy - Codevay: Protecting Your Data in Dubai' 
       });
       this.metaTagService.updateTag({ 
         property: 'og:description', 
-        content: 'Luxe Bzns is committed to maintaining the privacy and protection of your personal data. Learn more about our practices and policies in Dubai.' 
+        content: 'Codevay is committed to maintaining the privacy and protection of your personal data. Learn more about our practices and policies in Dubai.' 
       });
   
       if (isPlatformBrowser(this.platformId)) {
@@ -54,11 +54,11 @@ export class PrivacyPolicyComponent implements OnInit{
       });
       this.metaTagService.updateTag({ 
         name: 'twitter:title', 
-        content: 'Privacy Policy - Luxe Bzns: Protecting Your Data in Dubai' 
+        content: 'Privacy Policy - Codevay: Protecting Your Data in Dubai' 
       });
       this.metaTagService.updateTag({ 
         name: 'twitter:description', 
-        content: 'Discover how Luxe Bzns upholds the highest standards of data privacy and security for its clients in Dubai.' 
+        content: 'Discover how Codevay upholds the highest standards of data privacy and security for its clients in Dubai.' 
       });
       this.metaTagService.updateTag({ 
         name: 'twitter:image', 

@@ -40,15 +40,15 @@ export class WebsiteDesignComponent {
       }
   
       // Update specific meta tags for the website design page
-      this.titleService.setTitle("Website Design Services - Luxe Bzns | Crafting Stunning Online Experiences");
-      this.metaTagService.updateTag({ name: 'description', content: 'Elevate your online presence with Luxe Bzns\' website design services. From concept to creation, we craft stunning, user-friendly websites tailored to your brand’s needs.' });
-      this.metaTagService.updateTag({ name: 'keywords', content: 'website design Dubai, web design, responsive web design, UI/UX design, website redesign, Luxe Bzns website design' });
-      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Elevate your online presence with Luxe Bzns\' website design services. Craft stunning, user-friendly websites tailored to your brand’s needs.' });
-      this.metaTagService.updateTag({ name: 'twitter:title', content: 'Website Design Services - Luxe Bzns' });
+      this.titleService.setTitle("Website Design Services - Codevay | Crafting Stunning Online Experiences");
+      this.metaTagService.updateTag({ name: 'description', content: 'Elevate your online presence with Codevay\' website design services. From concept to creation, we craft stunning, user-friendly websites tailored to your brand’s needs.' });
+      this.metaTagService.updateTag({ name: 'keywords', content: 'website design Dubai, web design, responsive web design, UI/UX design, website redesign, Codevay website design' });
+      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Elevate your online presence with Codevay\' website design services. Craft stunning, user-friendly websites tailored to your brand’s needs.' });
+      this.metaTagService.updateTag({ name: 'twitter:title', content: 'Website Design Services - Codevay' });
       this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
       this.metaTagService.updateTag({ property: 'og:url', content: window.location.href });
-      this.metaTagService.updateTag({ property: 'og:title', content: 'Website Design Services - Luxe Bzns' });
-      this.metaTagService.updateTag({ property: 'og:description', content: 'Elevate your online presence with Luxe Bzns\' website design services. From concept to creation, we craft stunning, user-friendly websites tailored to your brand’s needs.' });
+      this.metaTagService.updateTag({ property: 'og:title', content: 'Website Design Services - Codevay' });
+      this.metaTagService.updateTag({ property: 'og:description', content: 'Elevate your online presence with Codevay\' website design services. From concept to creation, we craft stunning, user-friendly websites tailored to your brand’s needs.' });
       this.metaTagService.updateTag({ property: 'og:type', content: 'website' });
     }
   }

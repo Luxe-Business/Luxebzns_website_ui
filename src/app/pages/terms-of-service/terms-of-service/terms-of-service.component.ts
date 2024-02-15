@@ -16,24 +16,24 @@ export class TermsOfServiceComponent implements OnInit {
               @Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit() {
-    this.titleService.setTitle("Terms of Service - Luxe Bzns: Understanding Our Terms in Dubai");
+    this.titleService.setTitle("Terms of Service - Codevay: Understanding Our Terms in Dubai");
 
     // Update each meta tag
     this.metaTagService.updateTag({
       name: 'description',
-      content: 'Explore the Terms of Service for Luxe Bzns. Understand your rights and responsibilities when using our digital solutions in Dubai.'
+      content: 'Explore the Terms of Service for Codevay. Understand your rights and responsibilities when using our digital solutions in Dubai.'
     });
     this.metaTagService.updateTag({
       name: 'keywords',
-      content: 'Terms of Service, Luxe Bzns, digital solutions, Dubai, user agreement, service terms, legal obligations'
+      content: 'Terms of Service, Codevay, digital solutions, Dubai, user agreement, service terms, legal obligations'
     });
     this.metaTagService.updateTag({
       property: 'og:title',
-      content: 'Terms of Service - Luxe Bzns: Understanding Our Terms in Dubai'
+      content: 'Terms of Service - Codevay: Understanding Our Terms in Dubai'
     });
     this.metaTagService.updateTag({
       property: 'og:description',
-      content: 'Discover the Terms of Service for Luxe Bzns, outlining user responsibilities and rights for our digital solutions in Dubai.'
+      content: 'Discover the Terms of Service for Codevay, outlining user responsibilities and rights for our digital solutions in Dubai.'
     });
 
     if (isPlatformBrowser(this.platformId)) {
@@ -53,11 +53,11 @@ export class TermsOfServiceComponent implements OnInit {
     });
     this.metaTagService.updateTag({
       name: 'twitter:title',
-      content: 'Terms of Service - Luxe Bzns: Understanding Our Terms in Dubai'
+      content: 'Terms of Service - Codevay: Understanding Our Terms in Dubai'
     });
     this.metaTagService.updateTag({
       name: 'twitter:description',
-      content: 'Learn about the legal terms and conditions of using Luxe Bzns’s digital solutions in Dubai.'
+      content: 'Learn about the legal terms and conditions of using Codevay’s digital solutions in Dubai.'
     });
     this.metaTagService.updateTag({
       name: 'twitter:image',

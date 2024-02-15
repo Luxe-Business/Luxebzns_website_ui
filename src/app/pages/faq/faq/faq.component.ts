@@ -41,15 +41,15 @@ export class FaqComponent implements OnInit {
       }
   
       // Update specific meta tags for the FAQ page
-      this.titleService.setTitle("FAQ - Luxe Bzns | Answers to Your Questions");
-      this.metaTagService.updateTag({ name: 'description', content: 'Explore frequently asked questions (FAQ) about Luxe Bzns services and solutions. Get answers to common questions to enhance your understanding of our offerings.' });
-      this.metaTagService.updateTag({ name: 'keywords', content: 'FAQ, frequently asked questions, Luxe Bzns FAQ, service questions, answers, Luxe Bzns solutions' });
-      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Explore frequently asked questions (FAQ) about Luxe Bzns services and solutions. Get answers to common questions to enhance your understanding of our offerings.' });
-      this.metaTagService.updateTag({ name: 'twitter:title', content: 'FAQ - Luxe Bzns' });
+      this.titleService.setTitle("FAQ - Codevay | Answers to Your Questions");
+      this.metaTagService.updateTag({ name: 'description', content: 'Explore frequently asked questions (FAQ) about Codevay services and solutions. Get answers to common questions to enhance your understanding of our offerings.' });
+      this.metaTagService.updateTag({ name: 'keywords', content: 'FAQ, frequently asked questions, Codevay FAQ, service questions, answers, Codevay solutions' });
+      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Explore frequently asked questions (FAQ) about Codevay services and solutions. Get answers to common questions to enhance your understanding of our offerings.' });
+      this.metaTagService.updateTag({ name: 'twitter:title', content: 'FAQ - Codevay' });
       this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
       this.metaTagService.updateTag({ property: 'og:url', content: window.location.href });
-      this.metaTagService.updateTag({ property: 'og:title', content: 'FAQ - Luxe Bzns' });
-      this.metaTagService.updateTag({ property: 'og:description', content: 'Explore frequently asked questions (FAQ) about Luxe Bzns services and solutions. Get answers to common questions to enhance your understanding of our offerings.' });
+      this.metaTagService.updateTag({ property: 'og:title', content: 'FAQ - Codevay' });
+      this.metaTagService.updateTag({ property: 'og:description', content: 'Explore frequently asked questions (FAQ) about Codevay services and solutions. Get answers to common questions to enhance your understanding of our offerings.' });
       this.metaTagService.updateTag({ property: 'og:type', content: 'website' });
     }
   }

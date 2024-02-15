@@ -40,15 +40,15 @@ export class SoftwareDevelopmentComponent {
       }
   
       // Update specific meta tags for the software development page
-      this.titleService.setTitle("Software Development Services - Luxe Bzns | Building Future Technology");
-      this.metaTagService.updateTag({ name: 'description', content: 'Luxe Bzns specializes in custom software development services, offering cutting-edge solutions for mobile apps, web applications, and enterprise software. Transform your business with our technology.' });
-      this.metaTagService.updateTag({ name: 'keywords', content: 'software development Dubai, custom software, mobile app development, web application development, enterprise software solutions, Luxe Bzns software development' });
-      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Luxe Bzns specializes in custom software development services, offering cutting-edge solutions to transform your business.' });
-      this.metaTagService.updateTag({ name: 'twitter:title', content: 'Software Development Services - Luxe Bzns' });
+      this.titleService.setTitle("Software Development Services - Codevay | Building Future Technology");
+      this.metaTagService.updateTag({ name: 'description', content: 'Codevay specializes in custom software development services, offering cutting-edge solutions for mobile apps, web applications, and enterprise software. Transform your business with our technology.' });
+      this.metaTagService.updateTag({ name: 'keywords', content: 'software development Dubai, custom software, mobile app development, web application development, enterprise software solutions, Codevay software development' });
+      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Codevay specializes in custom software development services, offering cutting-edge solutions to transform your business.' });
+      this.metaTagService.updateTag({ name: 'twitter:title', content: 'Software Development Services - Codevay' });
       this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
       this.metaTagService.updateTag({ property: 'og:url', content: window.location.href });
-      this.metaTagService.updateTag({ property: 'og:title', content: 'Software Development Services - Luxe Bzns' });
-      this.metaTagService.updateTag({ property: 'og:description', content: 'Luxe Bzns specializes in custom software development services, offering cutting-edge solutions to transform your business.' });
+      this.metaTagService.updateTag({ property: 'og:title', content: 'Software Development Services - Codevay' });
+      this.metaTagService.updateTag({ property: 'og:description', content: 'Codevay specializes in custom software development services, offering cutting-edge solutions to transform your business.' });
       this.metaTagService.updateTag({ property: 'og:type', content: 'website' });
     }
   }

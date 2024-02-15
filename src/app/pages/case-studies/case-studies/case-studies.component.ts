@@ -65,15 +65,15 @@ updateMetadata() {
     }
 
     // Update specific meta tags for the Case Studies page
-    this.titleService.setTitle("Case Studies - Luxe Bzns | Explore Our Successful Projects");
-    this.metaTagService.updateTag({ name: 'description', content: 'Explore Luxe Bzns\'s case studies showcasing our successful projects. Discover how we have helped businesses achieve their goals through innovative IT and software solutions.' });
-    this.metaTagService.updateTag({ name: 'keywords', content: 'Case Studies, Luxe Bzns projects, successful projects, IT solutions, software solutions, business goals' });
-    this.metaTagService.updateTag({ name: 'twitter:description', content: 'Explore Luxe Bzns\'s case studies showcasing our successful projects. Discover how we have helped businesses achieve their goals through innovative IT and software solutions.' });
-    this.metaTagService.updateTag({ name: 'twitter:title', content: 'Case Studies - Luxe Bzns' });
+    this.titleService.setTitle("Case Studies - Codevay | Explore Our Successful Projects");
+    this.metaTagService.updateTag({ name: 'description', content: 'Explore Codevay\'s case studies showcasing our successful projects. Discover how we have helped businesses achieve their goals through innovative IT and software solutions.' });
+    this.metaTagService.updateTag({ name: 'keywords', content: 'Case Studies, Codevay projects, successful projects, IT solutions, software solutions, business goals' });
+    this.metaTagService.updateTag({ name: 'twitter:description', content: 'Explore Codevay\'s case studies showcasing our successful projects. Discover how we have helped businesses achieve their goals through innovative IT and software solutions.' });
+    this.metaTagService.updateTag({ name: 'twitter:title', content: 'Case Studies - Codevay' });
     this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
     this.metaTagService.updateTag({ property: 'og:url', content: window.location.href });
-    this.metaTagService.updateTag({ property: 'og:title', content: 'Case Studies - Luxe Bzns' });
-    this.metaTagService.updateTag({ property: 'og:description', content: 'Explore Luxe Bzns\'s case studies showcasing our successful projects. Discover how we have helped businesses achieve their goals through innovative IT and software solutions.' });
+    this.metaTagService.updateTag({ property: 'og:title', content: 'Case Studies - Codevay' });
+    this.metaTagService.updateTag({ property: 'og:description', content: 'Explore Codevay\'s case studies showcasing our successful projects. Discover how we have helped businesses achieve their goals through innovative IT and software solutions.' });
     this.metaTagService.updateTag({ property: 'og:type', content: 'website' });
   }
 }

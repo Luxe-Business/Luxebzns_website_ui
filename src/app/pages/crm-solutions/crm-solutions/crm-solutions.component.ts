@@ -41,15 +41,15 @@ export class CrmSolutionsComponent {
       }
   
       // Update specific meta tags for the CRM & ERP solutions page
-      this.titleService.setTitle("Advanced CRM & ERP Solutions - Luxe Bzns | Transforming Business Processes");
-      this.metaTagService.updateTag({ name: 'description', content: 'Empower your business with Luxe Bzns\' advanced CRM & ERP solutions. Streamline operations, enhance customer relationships, and drive efficiency with our tailored software solutions.' });
-      this.metaTagService.updateTag({ name: 'keywords', content: 'CRM solutions Dubai, ERP solutions Dubai, business process optimization, custom CRM software, custom ERP software, Luxe Bzns CRM ERP' });
-      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Empower your business with Luxe Bzns\' advanced CRM & ERP solutions. Streamline operations and drive efficiency with our tailored software solutions.' });
-      this.metaTagService.updateTag({ name: 'twitter:title', content: 'Advanced CRM & ERP Solutions - Luxe Bzns' });
+      this.titleService.setTitle("Advanced CRM & ERP Solutions - Codevay | Transforming Business Processes");
+      this.metaTagService.updateTag({ name: 'description', content: 'Empower your business with Codevay\' advanced CRM & ERP solutions. Streamline operations, enhance customer relationships, and drive efficiency with our tailored software solutions.' });
+      this.metaTagService.updateTag({ name: 'keywords', content: 'CRM solutions Dubai, ERP solutions Dubai, business process optimization, custom CRM software, custom ERP software, Codevay CRM ERP' });
+      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Empower your business with Codevay\' advanced CRM & ERP solutions. Streamline operations and drive efficiency with our tailored software solutions.' });
+      this.metaTagService.updateTag({ name: 'twitter:title', content: 'Advanced CRM & ERP Solutions - Codevay' });
       this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
       this.metaTagService.updateTag({ property: 'og:url', content: window.location.href });
-      this.metaTagService.updateTag({ property: 'og:title', content: 'Advanced CRM & ERP Solutions - Luxe Bzns' });
-      this.metaTagService.updateTag({ property: 'og:description', content: 'Empower your business with Luxe Bzns\' advanced CRM & ERP solutions. Streamline operations and drive efficiency with our tailored software solutions.' });
+      this.metaTagService.updateTag({ property: 'og:title', content: 'Advanced CRM & ERP Solutions - Codevay' });
+      this.metaTagService.updateTag({ property: 'og:description', content: 'Empower your business with Codevay\' advanced CRM & ERP solutions. Streamline operations and drive efficiency with our tailored software solutions.' });
       this.metaTagService.updateTag({ property: 'og:type', content: 'website' });
     }
   }

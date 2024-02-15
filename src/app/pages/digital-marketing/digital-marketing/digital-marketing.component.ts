@@ -40,15 +40,15 @@ export class DigitalMarketingComponent {
       }
   
       // Update specific meta tags for the digital marketing page
-      this.titleService.setTitle("Digital Marketing Services - Luxe Bzns | Empowering Your Online Presence");
-      this.metaTagService.updateTag({ name: 'description', content: 'Boost your brand with Luxe Bzns\' Digital Marketing services including SEO, social media, email marketing, and more. Empower your online presence with our tailored strategies.' });
-      this.metaTagService.updateTag({ name: 'keywords', content: 'digital marketing Dubai, SEO services, social media marketing, email marketing, content marketing, online advertising, Luxe Bzns digital marketing' });
-      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Boost your brand with Luxe Bzns\' Digital Marketing services. Empower your online presence with our tailored strategies.' });
-      this.metaTagService.updateTag({ name: 'twitter:title', content: 'Digital Marketing Services - Luxe Bzns' });
+      this.titleService.setTitle("Digital Marketing Services - Codevay | Empowering Your Online Presence");
+      this.metaTagService.updateTag({ name: 'description', content: 'Boost your brand with Codevay\' Digital Marketing services including SEO, social media, email marketing, and more. Empower your online presence with our tailored strategies.' });
+      this.metaTagService.updateTag({ name: 'keywords', content: 'digital marketing Dubai, SEO services, social media marketing, email marketing, content marketing, online advertising, Codevay digital marketing' });
+      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Boost your brand with Codevay\' Digital Marketing services. Empower your online presence with our tailored strategies.' });
+      this.metaTagService.updateTag({ name: 'twitter:title', content: 'Digital Marketing Services - Codevay' });
       this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
       this.metaTagService.updateTag({ property: 'og:url', content: window.location.href });
-      this.metaTagService.updateTag({ property: 'og:title', content: 'Digital Marketing Services - Luxe Bzns' });
-      this.metaTagService.updateTag({ property: 'og:description', content: 'Boost your brand with Luxe Bzns\' Digital Marketing services. Empower your online presence with our tailored strategies.' });
+      this.metaTagService.updateTag({ property: 'og:title', content: 'Digital Marketing Services - Codevay' });
+      this.metaTagService.updateTag({ property: 'og:description', content: 'Boost your brand with Codevay\' Digital Marketing services. Empower your online presence with our tailored strategies.' });
       this.metaTagService.updateTag({ property: 'og:type', content: 'website' });
     }
   }

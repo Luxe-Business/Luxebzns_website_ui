@@ -41,15 +41,15 @@ export class MobileAppDevelopmentComponent {
       }
   
       // Update specific meta tags for the mobile apps development page
-      this.titleService.setTitle("Mobile Apps Development - Luxe Bzns | Innovating Mobile Experiences");
-      this.metaTagService.updateTag({ name: 'description', content: 'Transform your business with Luxe Bzns\' mobile apps development services. We specialize in creating innovative, user-centric mobile applications tailored to your business needs.' });
-      this.metaTagService.updateTag({ name: 'keywords', content: 'mobile apps development Dubai, iOS development, Android development, mobile app design, custom mobile apps, Luxe Bzns mobile apps' });
-      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Transform your business with Luxe Bzns\' mobile apps development services. Creating innovative, user-centric mobile applications tailored to your needs.' });
-      this.metaTagService.updateTag({ name: 'twitter:title', content: 'Mobile Apps Development - Luxe Bzns' });
+      this.titleService.setTitle("Mobile Apps Development - Codevay | Innovating Mobile Experiences");
+      this.metaTagService.updateTag({ name: 'description', content: 'Transform your business with Codevay\' mobile apps development services. We specialize in creating innovative, user-centric mobile applications tailored to your business needs.' });
+      this.metaTagService.updateTag({ name: 'keywords', content: 'mobile apps development Dubai, iOS development, Android development, mobile app design, custom mobile apps, Codevay mobile apps' });
+      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Transform your business with Codevay\' mobile apps development services. Creating innovative, user-centric mobile applications tailored to your needs.' });
+      this.metaTagService.updateTag({ name: 'twitter:title', content: 'Mobile Apps Development - Codevay' });
       this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
       this.metaTagService.updateTag({ property: 'og:url', content: window.location.href });
-      this.metaTagService.updateTag({ property: 'og:title', content: 'Mobile Apps Development - Luxe Bzns' });
-      this.metaTagService.updateTag({ property: 'og:description', content: 'Transform your business with Luxe Bzns\' mobile apps development services. We specialize in creating innovative, user-centric mobile applications tailored to your business needs.' });
+      this.metaTagService.updateTag({ property: 'og:title', content: 'Mobile Apps Development - Codevay' });
+      this.metaTagService.updateTag({ property: 'og:description', content: 'Transform your business with Codevay\' mobile apps development services. We specialize in creating innovative, user-centric mobile applications tailored to your business needs.' });
       this.metaTagService.updateTag({ property: 'og:type', content: 'website' });
     }
   }

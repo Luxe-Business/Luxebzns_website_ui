@@ -41,15 +41,15 @@ export class ContactComponent implements OnInit{
       }
   
       // Update specific meta tags for the Contact page
-      this.titleService.setTitle("Contact Us - Luxe Bzns | Get in Touch for Innovative IT Solutions");
-      this.metaTagService.updateTag({ name: 'description', content: 'Contact Luxe Bzns for innovative IT and software solutions. Reach out to our team to discuss your project or inquire about our services. We are here to assist you.' });
-      this.metaTagService.updateTag({ name: 'keywords', content: 'Contact Us, get in touch, Luxe Bzns, IT solutions, software solutions, project inquiry' });
-      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Contact Luxe Bzns for innovative IT and software solutions. Reach out to our team to discuss your project or inquire about our services. We are here to assist you.' });
-      this.metaTagService.updateTag({ name: 'twitter:title', content: 'Contact Us - Luxe Bzns' });
+      this.titleService.setTitle("Contact Us - Codevay | Get in Touch for Innovative IT Solutions");
+      this.metaTagService.updateTag({ name: 'description', content: 'Contact Codevay for innovative IT and software solutions. Reach out to our team to discuss your project or inquire about our services. We are here to assist you.' });
+      this.metaTagService.updateTag({ name: 'keywords', content: 'Contact Us, get in touch, Codevay, IT solutions, software solutions, project inquiry' });
+      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Contact Codevay for innovative IT and software solutions. Reach out to our team to discuss your project or inquire about our services. We are here to assist you.' });
+      this.metaTagService.updateTag({ name: 'twitter:title', content: 'Contact Us - Codevay' });
       this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
       this.metaTagService.updateTag({ property: 'og:url', content: window.location.href });
-      this.metaTagService.updateTag({ property: 'og:title', content: 'Contact Us - Luxe Bzns' });
-      this.metaTagService.updateTag({ property: 'og:description', content: 'Contact Luxe Bzns for innovative IT and software solutions. Reach out to our team to discuss your project or inquire about our services. We are here to assist you.' });
+      this.metaTagService.updateTag({ property: 'og:title', content: 'Contact Us - Codevay' });
+      this.metaTagService.updateTag({ property: 'og:description', content: 'Contact Codevay for innovative IT and software solutions. Reach out to our team to discuss your project or inquire about our services. We are here to assist you.' });
       this.metaTagService.updateTag({ property: 'og:type', content: 'website' });
     }
   }
