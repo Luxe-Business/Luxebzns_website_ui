@@ -5,7 +5,7 @@ import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideServiceWorker } from '@angular/service-worker';
 
-import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { provideAnimations } from '@angular/platform-browser/animations';
@@ -22,7 +22,7 @@ export const appConfig: ApplicationConfig = {
         enabled: !isDevMode(),
         registrationStrategy: 'registerWhenStable:30000'
     }),
-    provideAnimations(), provideHttpClient(),
+    provideAnimations(), provideHttpClient(withFetch()),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

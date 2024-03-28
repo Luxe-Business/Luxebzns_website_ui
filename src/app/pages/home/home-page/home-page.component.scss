@@ -1,3 +1,9 @@
 .hero-section{
     padding-top: 190px;
 }
+
+@media screen and (max-width: 800px) {
+    .hero-section{
+        padding-top: 100px;
+    }
+  }
