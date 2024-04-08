@@ -19,12 +19,12 @@ export const routes: Routes = [
     loadChildren: () => import('./pages/case-studies/case-studies.module').then(m => m.CaseStudiesModule)
   },
   {
-    path: 'blog',
+    path: 'blogs',
     loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogModule)
   },
 
   {
-    path: 'blog/:id',
+    path: 'blogs/:id',
     loadChildren: () => import('./pages/blog-detail/blog-detail.module').then(m => m.BlogDetailsModule)
   },
 

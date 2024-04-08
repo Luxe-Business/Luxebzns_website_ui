@@ -5,7 +5,6 @@ import { isPlatformBrowser, NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 
-
 @Component({
   selector: 'app-home-page',
   standalone: true,

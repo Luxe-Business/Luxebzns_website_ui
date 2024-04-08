@@ -10,6 +10,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { LocalizedLinkDirective } from '../directives/localized-link.directive';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderSectionComponent } from './header-section/header-section.component';
+import { TrustpilotComponent } from './global/trustpilot/trustpilot.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HeaderSectionComponent } from './header-section/header-section.componen
     ContactFormComponent,
     StatisticsComponent,
     LocalizedLinkDirective,
-    HeaderSectionComponent
+    HeaderSectionComponent,
+    TrustpilotComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +35,8 @@ import { HeaderSectionComponent } from './header-section/header-section.componen
     FooterComponent,
     ContactFormComponent,
     StatisticsComponent,
-    HeaderSectionComponent
+    HeaderSectionComponent,
+    TrustpilotComponent
   ]
 })
 export class ComponentsModule { }
