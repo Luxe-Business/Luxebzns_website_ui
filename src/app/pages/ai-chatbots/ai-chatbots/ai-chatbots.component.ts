@@ -41,15 +41,15 @@ export class AiChatbotsComponent {
       }
   
       // Update specific meta tags for the AI & Chatbots page
-      this.titleService.setTitle("AI & Chatbot Solutions - Codevay | Revolutionizing Customer Engagement");
-      this.metaTagService.updateTag({ name: 'description', content: 'Elevate your customer service with Codevay\' AI & chatbot solutions. Our cutting-edge technology provides personalized, efficient customer interactions to enhance your business operations.' });
-      this.metaTagService.updateTag({ name: 'keywords', content: 'AI solutions Dubai, chatbot development, artificial intelligence, machine learning, customer service automation, Codevay AI chatbots' });
-      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Elevate your customer service with Codevay\' AI & chatbot solutions. Providing personalized, efficient customer interactions to enhance your operations.' });
+      this.titleService.setTitle("AI & Chatbot Solutions - Codevay | Revolutionizing client Engagement");
+      this.metaTagService.updateTag({ name: 'description', content: 'Elevate your client service with Codevay\' AI & chatbot solutions. Our cutting-edge technology provides personalized, efficient client interactions to enhance your business operations.' });
+      this.metaTagService.updateTag({ name: 'keywords', content: 'AI solutions Dubai, chatbot development, artificial intelligence, machine learning, client service automation, Codevay AI chatbots' });
+      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Elevate your client service with Codevay\' AI & chatbot solutions. Providing personalized, efficient client interactions to enhance your operations.' });
       this.metaTagService.updateTag({ name: 'twitter:title', content: 'AI & Chatbot Solutions - Codevay' });
       this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
       this.metaTagService.updateTag({ property: 'og:url', content: window.location.href });
       this.metaTagService.updateTag({ property: 'og:title', content: 'AI & Chatbot Solutions - Codevay' });
-      this.metaTagService.updateTag({ property: 'og:description', content: 'Elevate your customer service with Codevay\' AI & chatbot solutions. Our cutting-edge technology provides personalized, efficient customer interactions to enhance your business operations.' });
+      this.metaTagService.updateTag({ property: 'og:description', content: 'Elevate your client service with Codevay\' AI & chatbot solutions. Our cutting-edge technology provides personalized, efficient client interactions to enhance your business operations.' });
       this.metaTagService.updateTag({ property: 'og:type', content: 'website' });
     }
   }

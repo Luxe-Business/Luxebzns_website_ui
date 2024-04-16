@@ -42,7 +42,7 @@ export class TestimonialsComponent implements OnInit {
       // Update specific meta tags for the testimonials page
       this.titleService.setTitle("Client Testimonials - Codevay | What Our Clients Say");
       this.metaTagService.updateTag({ name: 'description', content: 'Read what our clients have to say about Codevay. Explore client testimonials and discover how we have helped businesses achieve success through our services.' });
-      this.metaTagService.updateTag({ name: 'keywords', content: 'client testimonials, Codevay reviews, customer feedback, client success stories, Codevay client experiences' });
+      this.metaTagService.updateTag({ name: 'keywords', content: 'client testimonials, Codevay reviews, client feedback, client success stories, Codevay client experiences' });
       this.metaTagService.updateTag({ name: 'twitter:description', content: 'Read what our clients have to say about Codevay. Explore client testimonials and discover how we\'ve helped businesses achieve success through our services.' });
       this.metaTagService.updateTag({ name: 'twitter:title', content: 'Client Testimonials - Codevay' });
       this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
