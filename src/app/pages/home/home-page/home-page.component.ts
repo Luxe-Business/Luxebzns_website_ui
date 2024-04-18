@@ -1,4 +1,4 @@
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, ElementRef, Inject, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { ComponentsModule } from '../../../components/components.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { isPlatformBrowser, NgOptimizedImage } from '@angular/common';
@@ -16,10 +16,45 @@ export class HomePageComponent{
 
 
   constructor(private metaTagService: Meta,private titleService: Title,
+    private renderer: Renderer2,
+    private el: ElementRef,
     @Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit() {
     this.updateMetadataForMobileAppsDevelopment();
+    if (isPlatformBrowser(this.platformId)) {
+      this.addStructuredData();
+    }
+  }
+
+  addStructuredData() {
+    const script = this.renderer.createElement('script');
+    this.renderer.setAttribute(script, 'type', 'application/ld+json');
+    script.textContent = JSON.stringify({
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Codevay",
+      "url": window.location.href,
+      "logo": "assets/img/logo.svg",
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+971 562 455 466",
+        "contactType": "customer service",
+        "areaServed": "AE",
+        "availableLanguage": ["English", "Arabic"]
+      }],
+      "sameAs": [
+        "https://www.facebook.com/codevayweb/",
+        "https://www.instagram.com/codevay_web/",
+        "https://www.linkedin.com/company/codevay/"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "3389"
+      }
+    });
+    this.renderer.appendChild(this.el.nativeElement, script);
   }
 
   updateMetadataForMobileAppsDevelopment() {
@@ -44,8 +79,8 @@ export class HomePageComponent{
   
       // Update specific meta tags for the mobile apps development page
       this.titleService.setTitle("Codevay - Premier Software & IT Solutions in Dubai");
-      this.metaTagService.updateTag({ name: 'description', content: 'Codevay offers cutting-edge Website Development, Mobile Apps Development, Tech Consulting, CRM & ERP Solutions, Custom Software, AI Chatbots, and UI/UX Design services tailored for Dubai market.' });
-      this.metaTagService.updateTag({ name: 'keywords', content: 'website development Dubai, mobile apps development Dubai, tech consulting Dubai, CRM solutions Dubai, ERP solutions Dubai, custom software Dubai, AI chatbot Dubai, UI/UX design Dubai' });
+      this.metaTagService.updateTag({ name: 'description', content: 'Explore top-notch IT solutions tailored for your business needs in Dubai. Specializing in mobile apps, web development, and system integration.' });
+      this.metaTagService.updateTag({ name: 'keywords', content: 'IT solutions Dubai, mobile apps development, web development services, system integration Dubai' });
       this.metaTagService.updateTag({ name: 'twitter:description', content: 'Codevay offers cutting-edge Website Development, Mobile Apps Development, Tech Consulting, CRM & ERP Solutions, Custom Software, AI Chatbots, and UI/UX Design services tailored for Dubai market.' });
       this.metaTagService.updateTag({ name: 'twitter:title', content: 'Codevay - Premier Software & IT Solutions in Dubai' });
       this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
