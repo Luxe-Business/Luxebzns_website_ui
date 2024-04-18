@@ -1,4 +1,4 @@
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, ElementRef, Inject, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { ComponentsModule } from '../../../components/components.module';
 import { isPlatformBrowser } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
@@ -14,11 +14,55 @@ export class MobileAppDevelopmentComponent {
 
 
   constructor(private metaTagService: Meta,private titleService: Title,
+    private renderer: Renderer2,
+    private el: ElementRef,
     @Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit() {
     this.updateMetadataForMobileAppsDevelopment();
+    if (isPlatformBrowser(this.platformId)) {
+      this.addStructuredData();
+    }
   }
+
+  addStructuredData() {
+    const script = this.renderer.createElement('script');
+    this.renderer.setAttribute(script, 'type', 'application/ld+json');
+    script.textContent = JSON.stringify({
+      "@context": "http://schema.org",
+      "@type": "Service",
+      "serviceType": "Mobile App Development",
+      "provider": {
+        "@type": "Organization",
+        "name": "Mobile Apps Development - Codevay",
+        "url": window.location.href,
+        "logo": "assets/img/logo.svg",
+        "telephone": "+971 562 455 466",
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "telephone": "+971 562 455 466",
+          "contactType": "customer service",
+          "areaServed": "AE",
+          "availableLanguage": ["English", "Arabic"]
+        }],
+        "sameAs": [
+          "https://www.facebook.com/codevayweb/",
+          "https://www.instagram.com/codevay_web/",
+          "https://www.linkedin.com/company/codevay/"
+        ]
+      },
+      "description": "Transform your business with Codevay's mobile apps development services. We specialize in creating innovative, user-centric mobile applications tailored to your business needs.",
+      "areaServed": "AE",
+      "availableLanguage": ["English", "Arabic"],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "6150"
+      }
+    });
+    this.renderer.appendChild(this.el.nativeElement, script);
+}
+
 
   updateMetadataForMobileAppsDevelopment() {
     if (isPlatformBrowser(this.platformId)) {
