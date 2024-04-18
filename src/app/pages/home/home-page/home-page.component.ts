@@ -50,8 +50,8 @@ export class HomePageComponent{
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "3389"
+        "ratingValue": "5.0",
+        "reviewCount": "6389"
       }
     });
     this.renderer.appendChild(this.el.nativeElement, script);
