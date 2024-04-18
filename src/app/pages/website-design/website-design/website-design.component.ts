@@ -24,40 +24,49 @@ export class WebsiteDesignComponent {
     }
   }
 
-addStructuredData() {
-  const script = this.renderer.createElement('script');
-  this.renderer.setAttribute(script, 'type', 'application/ld+json');
-  script.textContent = JSON.stringify({
-    "@context": "http://schema.org",
-    "@type": "Service",
-    "serviceType": "Web Design",
-    "provider": {
-      "@type": "Organization",
-      "name": "Codevay",
-      "url": "https://www.codevay.com/website-design",
-      "logo": "assets/img/logo.svg"
-    },
-    "name": "Website Design Services",
-    "description": "Elevate your online presence with Codevay's website design services. From concept to creation, we craft stunning, user-friendly websites tailored to your brand’s needs.",
-    "areaServed": "AE",
-    "availableLanguage": ["English", "Arabic"],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "itemReviewed": {
+
+  addStructuredData() {
+    const script = this.renderer.createElement('script');
+    this.renderer.setAttribute(script, 'type', 'application/ld+json');
+    script.textContent = JSON.stringify({
+      "@context": "http://schema.org",
+      "@type": "Service",
+      "serviceType": "Web Design",
+      "provider": {
+        "@type": "Organization",
+        "name": "Codevay",
+        "url": "https://www.codevay.com/website-design",
+        "logo": "https://www.codevay.com/assets/img/luxe-bzns-logo.png",
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "telephone": "+971 562 455 466",
+          "contactType": "customer service",
+          "areaServed": "AE",
+          "availableLanguage": ["English", "Arabic"]
+        }]
+      },
+      "name": "Website Design Services",
+      "description": "Elevate your online presence with Codevay's website design services. From concept to creation, we craft stunning, user-friendly websites tailored to your brand’s needs.",
+      "areaServed": "AE",
+      "availableLanguage": ["English", "Arabic"],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "6120",
+        "itemReviewed": {
           "@type": "Service",
           "name": "Website Design Services"
+        }
       },
-      "ratingValue": "5.0",
-      "reviewCount": "6120"
-    },
-    "sameAs": [
-      "https://www.facebook.com/codevayweb/",
-      "https://www.instagram.com/codevay_web/",
-      "https://www.linkedin.com/company/codevay/"
-    ]
-  });
-  this.renderer.appendChild(this.el.nativeElement, script);
-}
+      "sameAs": [
+        "https://www.facebook.com/codevayweb/",
+        "https://www.instagram.com/codevay_web/",
+        "https://www.linkedin.com/company/codevay/"
+      ]
+    });
+    this.renderer.appendChild(this.el.nativeElement, script);
+  }
+  
 
 
   updateMetadataForWebsiteDesign() {

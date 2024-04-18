@@ -36,14 +36,13 @@ export class MobileAppDevelopmentComponent {
         "@type": "Organization",
         "name": "Codevay",
         "url": "https://www.codevay.com/mobile-app-development",
-        "logo": "assets/img/logo.svg",
+        "logo": "https://www.codevay.com/assets/img/luxe-bzns-logo.png",
         "telephone": "+971 562 455 466",
         "contactPoint": [{
           "@type": "ContactPoint",
           "telephone": "+971 562 455 466",
           "contactType": "customer service",
-          "areaServed": "AE",
-          "availableLanguage": ["English", "Arabic"]
+          "areaServed": "AE"
         }],
         "sameAs": [
           "https://www.facebook.com/codevayweb/",
@@ -54,7 +53,6 @@ export class MobileAppDevelopmentComponent {
       "name": "Mobile Apps Development Services",
       "description": "Transform your business with Codevay's mobile apps development services. We specialize in creating innovative, user-centric mobile applications tailored to your business needs.",
       "areaServed": "AE",
-      "availableLanguage": ["English", "Arabic"],
       "aggregateRating": {
         "@type": "AggregateRating",
         "itemReviewed": {
@@ -66,7 +64,8 @@ export class MobileAppDevelopmentComponent {
       }
     });
     this.renderer.appendChild(this.el.nativeElement, script);
-}
+  }
+  
 
 
 
