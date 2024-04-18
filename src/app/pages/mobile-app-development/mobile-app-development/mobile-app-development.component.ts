@@ -34,8 +34,8 @@ export class MobileAppDevelopmentComponent {
       "serviceType": "Mobile App Development",
       "provider": {
         "@type": "Organization",
-        "name": "Mobile Apps Development - Codevay",
-        "url": window.location.href,
+        "name": "Codevay",
+        "url": "https://www.codevay.com/mobile-app-development",
         "logo": "assets/img/logo.svg",
         "telephone": "+971 562 455 466",
         "contactPoint": [{
@@ -51,17 +51,23 @@ export class MobileAppDevelopmentComponent {
           "https://www.linkedin.com/company/codevay/"
         ]
       },
+      "name": "Mobile Apps Development Services",
       "description": "Transform your business with Codevay's mobile apps development services. We specialize in creating innovative, user-centric mobile applications tailored to your business needs.",
       "areaServed": "AE",
       "availableLanguage": ["English", "Arabic"],
       "aggregateRating": {
         "@type": "AggregateRating",
+        "itemReviewed": {
+            "@type": "Service",
+            "name": "Mobile Apps Development Services"
+        },
         "ratingValue": "5.0",
         "reviewCount": "6150"
       }
     });
     this.renderer.appendChild(this.el.nativeElement, script);
 }
+
 
 
   updateMetadataForMobileAppsDevelopment() {
