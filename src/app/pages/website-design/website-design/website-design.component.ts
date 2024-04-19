@@ -64,7 +64,7 @@ export class WebsiteDesignComponent {
         "postalCode": "83163",
         "addressCountry": "AE"
       },
-      "priceRange": "Starting from AED 3,779",
+      "priceRange": "$$$",
       "telephone": "+971 562 455 466",
       "aggregateRating": {
         "@type": "AggregateRating",

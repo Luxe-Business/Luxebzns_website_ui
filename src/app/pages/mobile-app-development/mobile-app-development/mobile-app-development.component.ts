@@ -56,7 +56,7 @@ export class MobileAppDevelopmentComponent {
       "description": "Transform your business with Codevay's mobile apps development services. We specialize in creating innovative, user-centric mobile applications tailored to your business needs.",
       "areaServed": "AE",
       "availableLanguage": ["English", "Arabic"],
-      "priceRange": "Starting from AED 7,999",
+      "priceRange": "$$$",
       "aggregateRating": {
         "@type": "AggregateRating",
         "itemReviewed": {
