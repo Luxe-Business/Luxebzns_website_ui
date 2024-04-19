@@ -37,32 +37,31 @@ export class WebsiteDesignComponent {
         "name": "Codevay",
         "url": "https://www.codevay.com/website-design",
         "logo": "https://www.codevay.com/assets/img/luxe-bzns-logo.png",
+        "telephone": "+971 562 455 466",
         "contactPoint": [{
           "@type": "ContactPoint",
           "telephone": "+971 562 455 466",
           "contactType": "customer service",
-          "areaServed": "AE",
-          "availableLanguage": ["English", "Arabic"]
-        }]
+          "areaServed": "AE"
+        }],
+        "sameAs": [
+          "https://www.facebook.com/codevayweb/",
+          "https://www.instagram.com/codevay_web/",
+          "https://www.linkedin.com/company/codevay/"
+        ]
       },
       "name": "Website Design Services",
       "description": "Elevate your online presence with Codevay's website design services. From concept to creation, we craft stunning, user-friendly websites tailored to your brand’s needs.",
       "areaServed": "AE",
-      "availableLanguage": ["English", "Arabic"],
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "6120",
         "itemReviewed": {
           "@type": "Service",
           "name": "Website Design Services"
-        }
+        },
+        "ratingValue": "5.0",
+        "reviewCount": "6120",
       },
-      "sameAs": [
-        "https://www.facebook.com/codevayweb/",
-        "https://www.instagram.com/codevay_web/",
-        "https://www.linkedin.com/company/codevay/"
-      ]
     });
     this.renderer.appendChild(this.el.nativeElement, script);
   }
