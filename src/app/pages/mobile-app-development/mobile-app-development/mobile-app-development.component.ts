@@ -30,29 +30,32 @@ export class MobileAppDevelopmentComponent {
     this.renderer.setAttribute(script, 'type', 'application/ld+json');
     script.textContent = JSON.stringify({
       "@context": "http://schema.org",
-      "@type": "Service",
+      "@type": "ProfessionalService",  // Changed to a more specific type
+      "name": "Mobile Apps Development Services - Codevay",
       "serviceType": "Mobile App Development",
       "provider": {
-        "@type": "Organization",
+        "@type": "LocalBusiness",  // Changed to LocalBusiness for better local SEO
         "name": "Codevay",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Al Masraf Building - Baniyas Rd - Deira - Al Rigga",
+          "addressLocality": "Dubai",
+          "addressRegion": "Dubai",
+          "postalCode": "",
+          "addressCountry": "AE"
+        },
+        "telephone": "+971 562 455 466",
         "url": "https://www.codevay.com/mobile-app-development",
         "logo": "https://www.codevay.com/assets/img/luxe-bzns-logo.png",
-        "telephone": "+971 562 455 466",
-        "contactPoint": [{
-          "@type": "ContactPoint",
-          "telephone": "+971 562 455 466",
-          "contactType": "customer service",
-          "areaServed": "AE"
-        }],
         "sameAs": [
           "https://www.facebook.com/codevayweb/",
           "https://www.instagram.com/codevay_web/",
           "https://www.linkedin.com/company/codevay/"
         ]
       },
-      "name": "Mobile Apps Development Services",
       "description": "Transform your business with Codevay's mobile apps development services. We specialize in creating innovative, user-centric mobile applications tailored to your business needs.",
       "areaServed": "AE",
+      "availableLanguage": ["English", "Arabic"],
       "aggregateRating": {
         "@type": "AggregateRating",
         "itemReviewed": {
@@ -61,10 +64,12 @@ export class MobileAppDevelopmentComponent {
         },
         "ratingValue": "5.0",
         "reviewCount": "6150"
-      }
+      },
+      "image": "https://www.codevay.com/assets/img/luxe-bzns-logo.png"
     });
     this.renderer.appendChild(this.el.nativeElement, script);
   }
+  
   
 
 

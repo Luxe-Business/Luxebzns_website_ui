@@ -30,41 +30,46 @@ export class WebsiteDesignComponent {
     this.renderer.setAttribute(script, 'type', 'application/ld+json');
     script.textContent = JSON.stringify({
       "@context": "http://schema.org",
-      "@type": "Service",
+      "@type": "ProfessionalService",  // Changed to a more specific type
+      "name": "Website Design Services - Codevay",
       "serviceType": "Web Design",
       "provider": {
-        "@type": "Organization",
+        "@type": "LocalBusiness",  // Changed to LocalBusiness for better local SEO
         "name": "Codevay",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Al Masraf Building - Baniyas Rd - Deira - Al Rigga",
+          "addressLocality": "Dubai",
+          "addressRegion": "Dubai",
+          "postalCode": "",
+          "addressCountry": "AE"
+        },
+        "telephone": "+971 562 455 466",
         "url": "https://www.codevay.com/website-design",
         "logo": "https://www.codevay.com/assets/img/luxe-bzns-logo.png",
-        "telephone": "+971 562 455 466",
-        "contactPoint": [{
-          "@type": "ContactPoint",
-          "telephone": "+971 562 455 466",
-          "contactType": "customer service",
-          "areaServed": "AE"
-        }],
         "sameAs": [
           "https://www.facebook.com/codevayweb/",
           "https://www.instagram.com/codevay_web/",
           "https://www.linkedin.com/company/codevay/"
         ]
       },
-      "name": "Website Design Services",
       "description": "Elevate your online presence with Codevay's website design services. From concept to creation, we craft stunning, user-friendly websites tailored to your brand’s needs.",
       "areaServed": "AE",
+      "availableLanguage": ["English", "Arabic"],
       "aggregateRating": {
         "@type": "AggregateRating",
         "itemReviewed": {
-          "@type": "Service",
-          "name": "Website Design Services"
+            "@type": "Service",
+            "name": "Website Design Services"
         },
         "ratingValue": "5.0",
-        "reviewCount": "6120",
+        "reviewCount": "6120"
       },
+      "image": "https://www.codevay.com/assets/img/luxe-bzns-logo.png"
     });
     this.renderer.appendChild(this.el.nativeElement, script);
   }
+  
   
 
 
