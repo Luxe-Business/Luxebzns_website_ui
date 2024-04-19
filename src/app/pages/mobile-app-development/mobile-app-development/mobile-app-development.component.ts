@@ -53,6 +53,14 @@ export class MobileAppDevelopmentComponent {
           "https://www.linkedin.com/company/codevay/"
         ]
       },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Al Masraf Building - Baniyas Rd - Deira - Al Rigga",
+        "addressLocality": "Dubai",
+        "addressRegion": "Dubai",
+        "postalCode": "83163",
+        "addressCountry": "AE"
+      },
       "description": "Transform your business with Codevay's mobile apps development services. We specialize in creating innovative, user-centric mobile applications tailored to your business needs.",
       "areaServed": "AE",
       "availableLanguage": ["English", "Arabic"],
@@ -70,6 +78,7 @@ export class MobileAppDevelopmentComponent {
     });
     this.renderer.appendChild(this.el.nativeElement, script);
   }
+  
   
   
   
