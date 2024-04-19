@@ -30,18 +30,18 @@ export class MobileAppDevelopmentComponent {
     this.renderer.setAttribute(script, 'type', 'application/ld+json');
     script.textContent = JSON.stringify({
       "@context": "http://schema.org",
-      "@type": "ProfessionalService",  // Changed to a more specific type
+      "@type": "ProfessionalService",
       "name": "Mobile Apps Development Services - Codevay",
       "serviceType": "Mobile App Development",
       "provider": {
-        "@type": "LocalBusiness",  // Changed to LocalBusiness for better local SEO
+        "@type": "LocalBusiness",
         "name": "Codevay",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Al Masraf Building - Baniyas Rd - Deira - Al Rigga",
           "addressLocality": "Dubai",
           "addressRegion": "Dubai",
-          "postalCode": "",
+          "postalCode": "83163",
           "addressCountry": "AE"
         },
         "telephone": "+971 562 455 466",
@@ -56,11 +56,12 @@ export class MobileAppDevelopmentComponent {
       "description": "Transform your business with Codevay's mobile apps development services. We specialize in creating innovative, user-centric mobile applications tailored to your business needs.",
       "areaServed": "AE",
       "availableLanguage": ["English", "Arabic"],
+      "priceRange": "Starting from AED 7,999",
       "aggregateRating": {
         "@type": "AggregateRating",
         "itemReviewed": {
-            "@type": "Service",
-            "name": "Mobile Apps Development Services"
+          "@type": "Service",
+          "name": "Mobile Apps Development Services"
         },
         "ratingValue": "5.0",
         "reviewCount": "6150"
@@ -69,6 +70,7 @@ export class MobileAppDevelopmentComponent {
     });
     this.renderer.appendChild(this.el.nativeElement, script);
   }
+  
   
   
 

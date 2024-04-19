@@ -24,24 +24,27 @@ export class WebsiteDesignComponent {
     }
   }
 
-
   addStructuredData() {
     const script = this.renderer.createElement('script');
     this.renderer.setAttribute(script, 'type', 'application/ld+json');
     script.textContent = JSON.stringify({
       "@context": "http://schema.org",
-      "@type": "ProfessionalService",  // Changed to a more specific type
-      "name": "Website Design Services - Codevay",
+      "@type": "ProfessionalService",
       "serviceType": "Web Design",
+      "name": "Website Design Services - Codevay",
+      "description": "Elevate your online presence with Codevay's website design services. From concept to creation, we craft stunning, user-friendly websites tailored to your brand’s needs.",
+      "areaServed": "AE",
+      "availableLanguage": ["English", "Arabic"],
+      "image": "https://www.codevay.com/assets/img/luxe-bzns-logo.png",
       "provider": {
-        "@type": "LocalBusiness",  // Changed to LocalBusiness for better local SEO
+        "@type": "LocalBusiness",
         "name": "Codevay",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Al Masraf Building - Baniyas Rd - Deira - Al Rigga",
           "addressLocality": "Dubai",
           "addressRegion": "Dubai",
-          "postalCode": "",
+          "postalCode": "83163",
           "addressCountry": "AE"
         },
         "telephone": "+971 562 455 466",
@@ -53,22 +56,29 @@ export class WebsiteDesignComponent {
           "https://www.linkedin.com/company/codevay/"
         ]
       },
-      "description": "Elevate your online presence with Codevay's website design services. From concept to creation, we craft stunning, user-friendly websites tailored to your brand’s needs.",
-      "areaServed": "AE",
-      "availableLanguage": ["English", "Arabic"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Al Masraf Building - Baniyas Rd - Deira - Al Rigga",
+        "addressLocality": "Dubai",
+        "addressRegion": "Dubai",
+        "postalCode": "83163",
+        "addressCountry": "AE"
+      },
+      "priceRange": "Starting from AED 3,779",
+      "telephone": "+971 562 455 466",
       "aggregateRating": {
         "@type": "AggregateRating",
         "itemReviewed": {
-            "@type": "Service",
-            "name": "Website Design Services"
+          "@type": "Service",
+          "name": "Website Design Services"
         },
         "ratingValue": "5.0",
         "reviewCount": "6120"
-      },
-      "image": "https://www.codevay.com/assets/img/luxe-bzns-logo.png"
+      }
     });
     this.renderer.appendChild(this.el.nativeElement, script);
   }
+  
   
   
 

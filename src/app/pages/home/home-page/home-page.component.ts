@@ -35,7 +35,7 @@ export class HomePageComponent{
       "@type": "Organization",
       "name": "Codevay",
       "url": window.location.href,
-      "logo": "assets/img/logo.svg",
+      "logo": "https://www.codevay.com/assets/img/luxe-bzns-logo.png",
       "contactPoint": [{
         "@type": "ContactPoint",
         "telephone": "+971 562 455 466",
