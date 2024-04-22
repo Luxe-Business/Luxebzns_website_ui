@@ -93,7 +93,7 @@ export const routes: Routes = [
   },
 
   {
-    path: 'arabic-تصميم-مواقع-dubai',
+    path: 'تصميم-مواقع-الكترونية',
     loadChildren: () => import('./pages/ar-website-design/ar-website-design.module').then(m => m.ArabicWebDesignModule)
   },
 

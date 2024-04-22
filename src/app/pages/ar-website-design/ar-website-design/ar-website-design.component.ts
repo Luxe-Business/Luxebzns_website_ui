@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2 } from '@angular/core';
 import { ComponentsModule } from '../../../components/components.module';
 import { RouterLink } from '@angular/router';
 import { NgOptimizedImage, isPlatformBrowser } from '@angular/common';
@@ -15,20 +15,85 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class ArabicWebDesignComponent implements OnInit{
 
+  
 
   constructor(private metaTagService: Meta,private titleService: Title,
+    private renderer: Renderer2,
+    private el: ElementRef,
     @Inject(PLATFORM_ID) private platformId: Object) {}
-  
+
   ngOnInit() {
-    this.updateMetadata();
+    this.updateMetadataForWebsiteDesign();
+    if (isPlatformBrowser(this.platformId)) {
+      this.addStructuredData();
+    }
   }
 
-  updateMetadata() {
+  addStructuredData() {
+    const script = this.renderer.createElement('script');
+    this.renderer.setAttribute(script, 'type', 'application/ld+json');
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "serviceType": "Web Design",
+      "name": "Codevay تصميم مواقع الكترونية",
+      "description": "   تصميم مواقع الكترونية احترافية في دبي. تقدم Codevay خدمات تصميم مواقع ويب تركز على الابتكار والتصاميم الجذابة التي تعزز تفاعل المستخدم.",
+      "areaServed": "AE",
+      "availableLanguage": ["English", "Arabic"],
+      "image": "https://www.codevay.com/assets/img/luxe-bzns-logo.png",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Codevay",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Al Masraf Building - Baniyas Rd - Deira - Al Rigga",
+          "addressLocality": "Dubai",
+          "addressRegion": "Dubai",
+          "postalCode": "83163",
+          "addressCountry": "AE"
+        },
+        "telephone": "+971 562 455 466",
+        "url": "https://www.codevay.com/تصميم-مواقع-الكترونية",
+        "logo": "https://www.codevay.com/assets/img/luxe-bzns-logo.png",
+        "sameAs": [
+          "https://www.facebook.com/codevayweb/",
+          "https://www.instagram.com/codevay_web/",
+          "https://www.linkedin.com/company/codevay/"
+        ]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Al Masraf Building - Baniyas Rd - Deira - Al Rigga",
+        "addressLocality": "Dubai",
+        "addressRegion": "Dubai",
+        "postalCode": "83163",
+        "addressCountry": "AE"
+      },
+      "priceRange": "$$$",
+      "telephone": "+971 562 455 466",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "itemReviewed": {
+          "@type": "Service",
+          "name": "تصميم وتطوير مواقع الكترونية"
+        },
+        "ratingValue": "5.0",
+        "reviewCount": "6120"
+      }
+    });
+    this.renderer.appendChild(this.el.nativeElement, script);
+  }
+  
+  
+  
+
+
+  updateMetadataForWebsiteDesign() {
     if (isPlatformBrowser(this.platformId)) {
       // Get the existing meta tags from the home page
       const existingMetaTags = Array.from(document.getElementsByTagName('meta'));
   
-      // Copy the existing meta tags to the "About Us" page
+      // Copy the existing meta tags to the website design page
       for (const tag of existingMetaTags) {
         if (tag.hasAttribute('name')) {
           this.metaTagService.updateTag({ name: tag.getAttribute('name') ?? '', content: tag.getAttribute('content') ?? '' });
@@ -37,24 +102,24 @@ export class ArabicWebDesignComponent implements OnInit{
         }
       }
   
-      // Update canonical link to the "About Us" page
+      // Update canonical link to the website design page
       const canonicalLink = document.querySelector('link[rel="canonical"]');
       if (canonicalLink) {
         canonicalLink.setAttribute('href', window.location.href);
       }
   
-      // Update specific meta tags for the "About Us" page
-      this.titleService.setTitle("About Us - Codevay | Learn About Our Team and Mission");
-      this.metaTagService.updateTag({ name: 'description', content: 'Discover the story behind Codevay. Learn about our team, mission, and values. Find out how we are dedicated to delivering innovative IT and software solutions.' });
-      this.metaTagService.updateTag({ name: 'keywords', content: 'About Us, Codevay team, mission, values, innovative IT solutions, software solutions' });
-      this.metaTagService.updateTag({ name: 'twitter:description', content: 'Discover the story behind Codevay. Learn about our team, mission, and values. Find out how we are dedicated to delivering innovative IT and software solutions.' });
-      this.metaTagService.updateTag({ name: 'twitter:title', content: 'About Us - Codevay' });
+      // Update specific meta tags for the website design page
+      this.titleService.setTitle("تصميم مواقع الكترونية في دبي | Codevay");
+      this.metaTagService.updateTag({ name: 'description', content: 'المواقع الإلكترونية من Codevay في دبي. نحن نقدم حلول تصميم ويب مبتكرة ومصممة خصيصًا لتعزيز تجربة المستخدم.' });
+      this.metaTagService.updateTag({ name: 'keywords', content: 'تصميم مواقع, تصميم مواقع الكترونية, تطوير ويب, دبي, Codevay' });
+      this.metaTagService.updateTag({ name: 'twitter:description', content: 'اكتشف خدمات تصميم المواقع الإلكترونية من Codevay في دبي. نحن نقدم حلول تصميم ويب مبتكرة ومصممة خصيصًا لتعزيز تجربة المستخدم.' });
+      this.metaTagService.updateTag({ name: 'twitter:title', content: 'تصميم مواقع الكترونية في دبي | Codevay' });
       this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
       this.metaTagService.updateTag({ property: 'og:url', content: window.location.href });
-      this.metaTagService.updateTag({ property: 'og:title', content: 'About Us - Codevay' });
-      this.metaTagService.updateTag({ property: 'og:description', content: 'Discover the story behind Codevay. Learn about our team, mission, and values. Find out how we are dedicated to delivering innovative IT and software solutions.' });
+      this.metaTagService.updateTag({ property: 'og:title', content: 'تصميم مواقع الكترونية في دبي | Codevay' });
+      this.metaTagService.updateTag({ property: 'og:description', content: 'اكتشف خدمات تصميم المواقع الإلكترونية من Codevay في دبي. نحن نقدم حلول تصميم ويب مبتكرة ومصممة خصيصًا لتعزيز تجربة المستخدم.' });
       this.metaTagService.updateTag({ property: 'og:type', content: 'website' });
     }
   }
-  
+
 }

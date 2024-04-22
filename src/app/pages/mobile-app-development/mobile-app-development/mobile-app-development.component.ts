@@ -29,7 +29,7 @@ export class MobileAppDevelopmentComponent {
     const script = this.renderer.createElement('script');
     this.renderer.setAttribute(script, 'type', 'application/ld+json');
     script.textContent = JSON.stringify({
-      "@context": "http://schema.org",
+      "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Mobile Apps Development Services - Codevay",
       "serviceType": "Mobile App Development",

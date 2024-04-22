@@ -28,7 +28,7 @@ export class WebsiteDesignComponent {
     const script = this.renderer.createElement('script');
     this.renderer.setAttribute(script, 'type', 'application/ld+json');
     script.textContent = JSON.stringify({
-      "@context": "http://schema.org",
+      "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "serviceType": "Web Design",
       "name": "Website Design Services - Codevay",
