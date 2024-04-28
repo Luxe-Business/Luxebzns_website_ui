@@ -77,47 +77,65 @@ export class ArabicBlogComponent implements OnInit{
   }
 
 
-parseRichTextContent(content: any[] | undefined): string {
-  if (!content) {
-    return ''; // Return empty string if content is undefined
-  }
-
-  let html = '';
-  content.forEach(block => {
-    switch (block.type) {
-      case 'paragraph':
-        html += `<p>${this.parseTextContent(block.children)}</p>`; // Display paragraph content
-        break;
-      case 'heading':
-        html += `<h${block.level}>${this.parseTextContent(block.children)}</h${block.level}>`; // Display heading content
-        break;
-      case 'list':
-        html += `<${block.format === 'ordered' ? 'ol' : 'ul'}>${this.parseListItems(block.children)}</${block.format === 'ordered' ? 'ol' : 'ul'}>`; // Display list content
-        break;
-      case 'image':
-        html += `<img src="${block.image.url}" alt="${block.image.alternativeText}" class="img-fluid mb-5 rounded-custom shadow">`; // Display image
-        break;
-      case 'quote':
-        html += `<blockquote>${this.parseTextContent(block.children)}</blockquote>`; // Display quote
-        break;
-      case 'code':
-        html += `<code>${this.parseTextContent(block.children)}</code>`; // Display code block
-        break;
-      default:
-        // Handle other block types if needed
-        break;
+  parseRichTextContent(content: any[] | undefined): string {
+    if (!content) {
+      return ''; // Return empty string if content is undefined
     }
-  });
-  return html;
-}
-
-parseTextContent(children: any[]): string {
-  return children.map(child => child.text).join('');
-}
-
-parseListItems(items: any[]): string {
-  return items.map(item => `<li>${this.parseTextContent(item.children)}</li>`).join('');
-}
+  
+    let html = '';
+    content.forEach(block => {
+      switch (block.type) {
+        case 'paragraph':
+          html += `<p>${this.parseTextContent(block.children)}</p>`; // Display paragraph content
+          break;
+        case 'heading':
+          html += `<h${block.level}>${this.parseTextContent(block.children)}</h${block.level}>`; // Display heading content
+          break;
+        case 'list':
+          html += `<${block.format === 'ordered' ? 'ol' : 'ul'}>${this.parseListItems(block.children)}</${block.format === 'ordered' ? 'ol' : 'ul'}>`; // Display list content
+          break;
+        case 'image':
+          html += `<img src="${block.image.url}" alt="${block.image.alternativeText}" class="img-fluid mb-5 rounded-custom shadow">`; // Display image
+          break;
+        case 'quote':
+          html += `<blockquote>${this.parseTextContent(block.children)}</blockquote>`; // Display quote
+          break;
+        case 'code':
+          html += `<code>${this.parseTextContent(block.children)}</code>`; // Display code block
+          break;
+        default:
+          // Handle other block types if needed
+          break;
+      }
+    });
+    return html;
+  }
+  
+  parseTextContent(children: any[]): string {
+    return children.map(child => {
+      switch (child.type) {
+        case 'text':
+          return child.text; // Return text content
+        case 'link':
+          // Check if child has children and extract text from it
+          const linkText = child.children?.map((c: { text: any; }) => c.text).join('') || '';
+          if (linkText && child.url) {
+            return `<a href="${child.url}" target="_blank" rel="noopener noreferrer">${linkText}</a>`; // Construct and return a link with extracted text
+          } else {
+            console.warn('Link object missing text or URL:', child);
+            return linkText || ''; // Fallback to text if present, otherwise empty string
+          }
+        default:
+          console.warn('Unhandled content type:', child.type);
+          return ''; // Return an empty string if the type is not handled
+      }
+    }).join('');
+  }
+  
+  
+  parseListItems(items: any[]): string {
+    return items.map(item => `<li>${this.parseTextContent(item.children)}</li>`).join('');
+  }
 
 
 addStructuredData() {
