@@ -99,7 +99,7 @@ parseRichTextContent(content: any[] | undefined): string {
         html += `<${block.format === 'ordered' ? 'ol' : 'ul'}>${this.parseListItems(block.children)}</${block.format === 'ordered' ? 'ol' : 'ul'}>`; // Display list content
         break;
       case 'image':
-        html += `<img src="${block.image.url}" alt="${block.image.alternativeText}">`; // Display image
+        html += `<img src="${block.image.url}" alt="${block.image.alternativeText}" class="img-fluid mb-5 rounded-custom shadow">`; // Display image
         break;
       case 'quote':
         html += `<blockquote>${this.parseTextContent(block.children)}</blockquote>`; // Display quote
