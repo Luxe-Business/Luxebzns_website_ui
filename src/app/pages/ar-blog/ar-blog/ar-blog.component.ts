@@ -62,19 +62,15 @@ export class ArabicBlogComponent implements OnInit{
         this.loadBlogDetails();
   }
 
-  ngAfterViewInit() {
-    this.updateMetadataForWebsiteDesign();
-    if (isPlatformBrowser(this.platformId)) {
-      this.addStructuredData();
-    }
-  }
-
-
   loadBlogDetails(): void {
     this.http.get<{ data: BlogDetail[] }>(`https://codevaycms-production.up.railway.app/api/blogs?filters[Slug][$eq]=${this.slug}&populate=*`).subscribe({
       next: (response) => {
         this.blog = response.data;
         this.structuredData = response.data[0].attributes?.seo?.structuredData; 
+        if (isPlatformBrowser(this.platformId)) {
+          this.addStructuredData();
+          this.updateMetadataForWebsiteDesign();
+        }
       },
       error: (error) => console.error('Error fetching blog detail:', error)
     });
@@ -153,7 +149,7 @@ addStructuredData() {
         canonicalLink.setAttribute('href', window.location.href);
       }
 
-      if (this.blog) {
+      if (this.blog && this.blog.length > 0) {
         const { metaTitle, metaDescription, keywords, canonicalURL } = this.blog[0].attributes?.seo ?? {};        
         this.titleService.setTitle(metaTitle ?? '');
         this.metaTagService.updateTag({ name: 'description', content: metaDescription ?? '' });
