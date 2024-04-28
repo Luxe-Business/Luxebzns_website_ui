@@ -57,7 +57,7 @@ export class BlogComponent {
   }
 
   loadBlogs(): void {
-    this.http.get<BlogResponse>('https://codevaycms-production.up.railway.app//api/blogs?populate=*').subscribe({
+    this.http.get<BlogResponse>('https://codevaycms-production.up.railway.app/api/blogs?populate=*').subscribe({
       next: (response) => {
         this.blogs = response.data;
         this.currentPage = response.meta.pagination.page;

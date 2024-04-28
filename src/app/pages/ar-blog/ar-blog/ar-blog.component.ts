@@ -69,7 +69,7 @@ export class ArabicBlogComponent implements OnInit{
 
 
   loadBlogDetails(): void {
-    this.http.get<{ data: BlogDetail[] }>(`https://codevaycms-production.up.railway.app//api/blogs?filters[Slug][$eq]=${this.slug}&populate=*`).subscribe({
+    this.http.get<{ data: BlogDetail[] }>(`https://codevaycms-production.up.railway.app/api/blogs?filters[Slug][$eq]=${this.slug}&populate=*`).subscribe({
       next: (response) => {
         this.blog = response.data;
         this.structuredData = response.data[0].attributes?.seo?.structuredData; 
