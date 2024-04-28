@@ -73,8 +73,6 @@ export class ArabicBlogComponent implements OnInit{
       next: (response) => {
         this.blog = response.data;
         this.structuredData = response.data[0].attributes?.seo?.structuredData; 
-        console.log('this.blog', this.blog);
-        console.log('this.structuredData', this.structuredData);
       },
       error: (error) => console.error('Error fetching blog detail:', error)
     });
@@ -160,10 +158,7 @@ addStructuredData() {
       }
 
       if (this.blog) {
-        console.log('dasdasdasd');
-        
         const { metaTitle, metaDescription, keywords, canonicalURL } = this.blog[0].attributes?.seo ?? {};
-
         this.titleService.setTitle(metaTitle ?? '');
         this.metaTagService.updateTag({ name: 'description', content: metaDescription ?? '' });
         this.metaTagService.updateTag({ name: 'keywords', content: keywords ?? '' });

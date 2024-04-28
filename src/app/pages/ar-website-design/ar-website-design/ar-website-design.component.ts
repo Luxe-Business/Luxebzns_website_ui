@@ -15,8 +15,6 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class ArabicWebDesignComponent implements OnInit{
 
-  
-
   constructor(private metaTagService: Meta,private titleService: Title,
     private renderer: Renderer2,
     private el: ElementRef,
@@ -84,10 +82,6 @@ export class ArabicWebDesignComponent implements OnInit{
     this.renderer.appendChild(this.el.nativeElement, script);
   }
   
-  
-  
-
-
   updateMetadataForWebsiteDesign() {
     if (isPlatformBrowser(this.platformId)) {
       // Get the existing meta tags from the home page
