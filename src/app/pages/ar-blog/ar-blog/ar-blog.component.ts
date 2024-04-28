@@ -60,10 +60,13 @@ export class ArabicBlogComponent implements OnInit{
   ngOnInit() {
     this.slug = this.route.snapshot.params['slug'];
         this.loadBlogDetails();
-        this.updateMetadataForWebsiteDesign();
-        if (isPlatformBrowser(this.platformId)) {
-          this.addStructuredData();
-        }
+  }
+
+  ngAfterViewInit() {
+    this.updateMetadataForWebsiteDesign();
+    if (isPlatformBrowser(this.platformId)) {
+      this.addStructuredData();
+    }
   }
 
 
@@ -151,9 +154,7 @@ addStructuredData() {
       }
 
       if (this.blog) {
-        const { metaTitle, metaDescription, keywords, canonicalURL } = this.blog[0].attributes?.seo ?? {};
-        console.log('metaTitle',metaTitle);
-        
+        const { metaTitle, metaDescription, keywords, canonicalURL } = this.blog[0].attributes?.seo ?? {};        
         this.titleService.setTitle(metaTitle ?? '');
         this.metaTagService.updateTag({ name: 'description', content: metaDescription ?? '' });
         this.metaTagService.updateTag({ name: 'keywords', content: keywords ?? '' });
