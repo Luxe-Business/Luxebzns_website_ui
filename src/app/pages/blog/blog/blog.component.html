@@ -25,7 +25,7 @@
                         <div class="single-article rounded-custom my-3">
                             <a [href]="'/blog/' + blog.attributes.Slug" class="article-img">
                                 <img *ngIf="blog.attributes.Featured_Image && blog.attributes.Featured_Image.data && blog.attributes.Featured_Image.data.length > 0"
-                                     [src]="'https://codevaycms-production.up.railway.app/' + blog.attributes.Featured_Image.data[0].attributes.formats.small.url"
+                                     [src]="'https://codevaycms-production.up.railway.app' + blog.attributes.Featured_Image.data[0].attributes.formats.small.url"
                                      [alt]="blog.attributes.Featured_Image.data[0].attributes.alternativeText || 'Blog Image'"
                                      class="img-fluid">
                                 <ng-container *ngIf="!blog.attributes.Featured_Image || (blog.attributes.Featured_Image && !blog.attributes.Featured_Image.data) || (blog.attributes.Featured_Image && blog.attributes.Featured_Image.data && blog.attributes.Featured_Image.data.length === 0)">
