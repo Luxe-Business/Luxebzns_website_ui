@@ -1,0 +1,90 @@
+
+<app-header></app-header>
+<div dir="rtl">
+<!--page header section start-->
+        <section class="page-header position-relative overflow-hidden ptb-120 bg-dark" style="background: url('assets/img/page-header-bg.svg')no-repeat bottom left">
+            <div class="container pt-5">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12" *ngIf="blog && blog.length > 0">
+                        <h1 class="display-5 fw-bold">{{blog[0].attributes?.Title}}</h1>
+                        <p class="lead">{{blog[0].attributes?.Excerpt}}</p>
+                    </div>
+                </div>
+                <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light right-5"></div>
+            </div>
+        </section>
+        <!--page header section end-->
+
+
+
+                <!--blog details section start-->
+                <section class="blog-details ptb-120">
+                    <div class="container">
+                        <div class="row justify-content-between">
+                            <div class="col-lg-8 pe-lg-5">
+                                <div class="blog-details-wrap" *ngIf="blog && blog.length > 0">
+                                    <div *ngIf="blog[0]?.attributes?.Content">
+                                        <div [innerHTML]="parseRichTextContent(blog[0].attributes?.Content)"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="author-wrap text-center bg-light-subtle p-5 sticky-sidebar rounded-custom mt-5 mt-lg-0">
+                                    <img src="assets/img/Ammar Barish, CEO & Digital Strategy Visionary at Codevay.webp" alt="Ammar Barish Best Software Engineer In Dubai and UAE" width="120" class="img-fluid shadow-sm rounded-circle">
+                                    <div class="author-info my-4">
+                                        <h5 class="mb-0">عمار باريش</h5>
+                                        <span class="small"> الرئيس التنفيذي لشركة CodeVay</span>
+                                    </div>
+                                    <p>✨ مهمتي هي تعزيز الأعمال التجارية بحلول التكنولوجيا المتقدمة.</p>
+                                    <ul class="list-unstyled author-social-list list-inline mt-3 mb-0">
+                                        <li class="list-inline-item"><a href="https://www.linkedin.com/in/ammar-barish/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li class="list-inline-item"><a href="https://www.instagram.com/ammar_barish/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                        <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100069006291914&mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--blog details section end-->
+        
+
+
+                            <!--cat subscribe start-->
+        <section class="cta-subscribe bg-dark text-white ptb-120 position-relative overflow-hidden">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10">
+                        <div class="subscribe-info-wrap text-center position-relative z-2">
+                            <div class="section-heading" data-aos="fade-up">
+                                <h4 class="h5 text-warning">جرب الآن! استشارة مجانية</h4>
+                                <h2>انطلق في رحلة التحول الرقمي الخاصة بك</h2>
+                                <p>استمتع بالنصائح المصممة خصيصًا لك، الرؤى الصناعية، الحلول المبتكرة، والاستشارات بدون أي مخاطر</p>
+                            </div>
+                            <div class="form-block-banner mw-60 m-auto mt-5" data-aos="fade-up" data-aos-delay="50">
+                                <a routerLink="/contact" class="btn btn-primary">احصل على استشارة مجانية</a>
+                            </div>
+                            <ul class="nav justify-content-center subscribe-feature-list mt-4" data-aos="fade-up" data-aos-delay="100">
+                                <li class="nav-item">
+                                    <span><i class="far fa-check-circle text-primary ms-2"></i>أفكار وحلول مجانية</span>
+                                </li>
+                                <li class="nav-item">
+                                    <span><i class="far fa-check-circle text-primary ms-2"></i>توفير الجهد والوقت</span>
+                                </li>
+                                <li class="nav-item">
+                                    <span><i class="far fa-check-circle text-primary ms-2"></i>تقنيات جديدة ومبتكرة</span>
+                                </li>
+                                <li class="nav-item">
+                                    <span><i class="far fa-check-circle text-primary ms-2"></i>استشارات بدون مخاطر</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light left-5"></div>
+                <div class="bg-circle rounded-circle circle-shape-1 position-absolute bg-warning right-5"></div>
+            </div>
+        </section> <!--cat subscribe end-->
+
+        <app-footer></app-footer>
+    </div>

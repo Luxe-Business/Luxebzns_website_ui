@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { ArabicBlogComponent } from './pages/ar-blog/ar-blog/ar-blog.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -17,15 +18,6 @@ export const routes: Routes = [
   {
     path: 'case-studies',
     loadChildren: () => import('./pages/case-studies/case-studies.module').then(m => m.CaseStudiesModule)
-  },
-  {
-    path: 'blogs',
-    loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogModule)
-  },
-
-  {
-    path: 'blogs/:id',
-    loadChildren: () => import('./pages/blog-detail/blog-detail.module').then(m => m.BlogDetailsModule)
   },
 
   {
@@ -95,6 +87,15 @@ export const routes: Routes = [
   {
     path: 'تصميم-مواقع-الكترونية',
     loadChildren: () => import('./pages/ar-website-design/ar-website-design.module').then(m => m.ArabicWebDesignModule)
+  },
+
+  {
+    path: 'blogs',
+    loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogModule)
+  },
+
+  {
+    path: 'blog/:slug', component:ArabicBlogComponent
   },
 
   {
