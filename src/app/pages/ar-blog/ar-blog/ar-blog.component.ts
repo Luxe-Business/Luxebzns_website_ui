@@ -198,7 +198,7 @@ export class ArabicBlogComponent implements OnInit{
       }
 
       if (this.blog && this.blog.length > 0) {
-        const { metaTitle, metaDescription, keywords, canonicalURL } = this.blog[0].attributes?.seo ?? {};
+        const { metaTitle, metaDescription, keywords } = this.blog[0].attributes?.seo ?? {};
         const blogData = this.blog[0].attributes;
         const imageUrl = blogData?.Featured_Image?.data[0]?.attributes?.url;
         const fullImageUrl = imageUrl ? `https://codevaycms-production.up.railway.app${imageUrl}` : '';
@@ -211,7 +211,7 @@ export class ArabicBlogComponent implements OnInit{
         this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
         this.metaTagService.updateTag({ name: 'twitter:image', content: fullImageUrl });
 
-        this.metaTagService.updateTag({ property: 'og:url', content: canonicalURL ?? window.location.href });
+        this.metaTagService.updateTag({ property: 'og:url', content: window.location.href });
         this.metaTagService.updateTag({ property: 'og:title', content: metaTitle ?? '' });
         this.metaTagService.updateTag({ property: 'og:description', content: metaDescription ?? '' });
         this.metaTagService.updateTag({ property: 'og:type', content: 'article' });
