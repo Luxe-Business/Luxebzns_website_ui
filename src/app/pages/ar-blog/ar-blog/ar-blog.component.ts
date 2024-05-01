@@ -229,9 +229,9 @@ export class ArabicBlogComponent implements OnInit{
   }
   
   shareOnTwitter(): void {
-    const text = encodeURIComponent("Discover why Codevay is leading in innovation with this insightful article!");
     const baseUrl = window.location.origin;
     const pathName = decodeURIComponent(window.location.pathname);
+    const text = encodeURIComponent("Discover why Codevay is leading in innovation with this insightful article!");
     const fullUrl = `${baseUrl}${pathName}`;
     const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(fullUrl)}&text=${text}`;
     window.open(twitterUrl, '_blank');
@@ -239,12 +239,12 @@ export class ArabicBlogComponent implements OnInit{
   
   shareOnLinkedIn(): void {
     const baseUrl = window.location.origin;
-    const pathName = decodeURIComponent(window.location.pathname);
+    const pathName = encodeURIComponent(window.location.pathname); // Encode the pathname
     const fullUrl = `${baseUrl}${pathName}`;
     const title = encodeURIComponent("Explore Codevay's Latest Innovations in Our Newest Article!");
-    const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(fullUrl)}&title=${title}`;
+    const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${fullUrl}&title=${title}`; // Use encoded URL and title
     window.open(linkedInUrl, '_blank');
-  }
+}
   
 
 }
