@@ -6,6 +6,8 @@ import { TranslateModule } from '@ngx-translate/core';
 import { OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
+declare const window: any;
+import { HostListener } from '@angular/core';
 
 interface BlogDetail {
   id: number;
@@ -61,6 +63,29 @@ export class ArabicBlogComponent implements OnInit{
     this.slug = this.route.snapshot.params['slug'];
         this.loadBlogDetails();
   }
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    // Get the element that marks the end of the content
+    const contentEndElement = document.querySelector('.blog-details-wrap');
+    const shareButtons = document.querySelector('.social-share-buttons') as HTMLElement;
+  
+    if (contentEndElement && shareButtons) {
+      // Calculate the position where the content ends
+      const contentEndPosition = contentEndElement.getBoundingClientRect().bottom + window.pageYOffset;
+      
+      // Calculate the window's current bottom position
+      const windowBottomPosition = window.pageYOffset + window.innerHeight;
+  
+      // Logic to show/hide the share buttons
+      if (windowBottomPosition >= contentEndPosition && windowBottomPosition <= contentEndPosition + 600) { // 100 pixels grace area below content end
+        shareButtons.style.display = 'flex'; // Show buttons when within end of content
+      } else {
+        shareButtons.style.display = 'none'; // Hide buttons when not near end of content
+      }
+    }
+  }
+  
 
   loadBlogDetails(): void {
     this.http.get<{ data: BlogDetail[] }>(`https://codevaycms-production.up.railway.app/api/blogs?filters[Slug][$eq]=${this.slug}&populate=*`).subscribe({
@@ -138,14 +163,19 @@ export class ArabicBlogComponent implements OnInit{
   }
 
 
-addStructuredData() {
-  if (this.structuredData) {
-    const script = this.renderer.createElement('script');
-    this.renderer.setAttribute(script, 'type', 'application/ld+json');
-    script.textContent = JSON.stringify(this.structuredData);
-    this.renderer.appendChild(this.el.nativeElement, script);
+  addStructuredData(): void {
+    if (this.structuredData) {
+      let script = this.el.nativeElement.querySelector('script[type="application/ld+json"]');
+      if (script) {
+        this.renderer.removeChild(this.el.nativeElement, script);
+      }
+      script = this.renderer.createElement('script');
+      this.renderer.setAttribute(script, 'type', 'application/ld+json');
+      script.textContent = JSON.stringify(this.structuredData);
+      this.renderer.appendChild(this.el.nativeElement, script);
+    }
   }
-}
+  
 
   updateMetadataForWebsiteDesign() {
     if (isPlatformBrowser(this.platformId)) {
@@ -168,20 +198,53 @@ addStructuredData() {
       }
 
       if (this.blog && this.blog.length > 0) {
-        const { metaTitle, metaDescription, keywords, canonicalURL } = this.blog[0].attributes?.seo ?? {};        
+        const { metaTitle, metaDescription, keywords, canonicalURL } = this.blog[0].attributes?.seo ?? {};
+        const blogData = this.blog[0].attributes;
+        const imageUrl = blogData?.Featured_Image?.data[0]?.attributes?.url;
+        const fullImageUrl = imageUrl ? `https://codevaycms-production.up.railway.app${imageUrl}` : '';
+
         this.titleService.setTitle(metaTitle ?? '');
         this.metaTagService.updateTag({ name: 'description', content: metaDescription ?? '' });
         this.metaTagService.updateTag({ name: 'keywords', content: keywords ?? '' });
         this.metaTagService.updateTag({ name: 'twitter:description', content: metaDescription ?? '' });
         this.metaTagService.updateTag({ name: 'twitter:title', content: metaTitle ?? '' });
         this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+        this.metaTagService.updateTag({ name: 'twitter:image', content: fullImageUrl });
+
         this.metaTagService.updateTag({ property: 'og:url', content: canonicalURL ?? window.location.href });
         this.metaTagService.updateTag({ property: 'og:title', content: metaTitle ?? '' });
         this.metaTagService.updateTag({ property: 'og:description', content: metaDescription ?? '' });
-        this.metaTagService.updateTag({ property: 'og:type', content: 'website' });
-  
+        this.metaTagService.updateTag({ property: 'og:type', content: 'article' });
+        this.metaTagService.updateTag({ property: 'og:image', content: fullImageUrl });
       }
     }
   }
+
+  shareOnFacebook(): void {
+    const baseUrl = window.location.origin; // Get base URL like 'http://localhost:4200'
+    const pathName = decodeURIComponent(window.location.pathname); // Decode the pathname to keep it clean
+    const fullUrl = `${baseUrl}${pathName}`; // Reconstruct the full URL
+    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(fullUrl)}`;
+    window.open(facebookUrl, '_blank');
+  }
+  
+  shareOnTwitter(): void {
+    const text = encodeURIComponent("Discover why Codevay is leading in innovation with this insightful article!");
+    const baseUrl = window.location.origin;
+    const pathName = decodeURIComponent(window.location.pathname);
+    const fullUrl = `${baseUrl}${pathName}`;
+    const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(fullUrl)}&text=${text}`;
+    window.open(twitterUrl, '_blank');
+  }
+  
+  shareOnLinkedIn(): void {
+    const baseUrl = window.location.origin;
+    const pathName = decodeURIComponent(window.location.pathname);
+    const fullUrl = `${baseUrl}${pathName}`;
+    const title = encodeURIComponent("Explore Codevay's Latest Innovations in Our Newest Article!");
+    const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(fullUrl)}&title=${title}`;
+    window.open(linkedInUrl, '_blank');
+  }
+  
 
 }

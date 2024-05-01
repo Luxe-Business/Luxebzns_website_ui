@@ -1,0 +1,28 @@
+.blog-section-share{
+    position: relative;
+}
+.social-share-buttons {
+    position: fixed;
+    right: 10px; /* Adjust as per your layout's padding/margin */
+    top: 50%; /* Center vertically or adjust accordingly */
+    transform: translateY(-50%); /* Align center from the top position */
+    display: flex;
+    flex-direction: column; /* Stack icons vertically */
+}
+
+.social-share-buttons a.btn {
+    display: block;
+    padding: 7px;
+    color: #fff; /* White icons */
+    border-radius: 50%; /* Circular buttons */
+    width: 40px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px; /* Space between buttons */
+    text-align: center;
+}
+
+.social-share-buttons a.btn i {
+    margin: 0;
+}

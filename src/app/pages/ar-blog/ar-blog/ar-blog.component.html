@@ -21,12 +21,19 @@
                 <section class="blog-details ptb-120">
                     <div class="container">
                         <div class="row justify-content-between">
-                            <div class="col-lg-8 pe-lg-5">
+                            <div class="col-lg-8 pe-lg-5 blog-section-share">
                                 <div class="blog-details-wrap" *ngIf="blog && blog.length > 0">
                                     <div *ngIf="blog[0]?.attributes?.Content">
                                         <div [innerHTML]="parseRichTextContent(blog[0].attributes?.Content)"></div>
                                     </div>
                                 </div>
+
+                                <div class="social-share-buttons">
+                                    <a href="javascript:void(0)" (click)="shareOnFacebook()" class="btn btn-icon btn-primary" aria-label="Share on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                                    <a href="javascript:void(0)" (click)="shareOnTwitter()" class="btn btn-icon btn-info" aria-label="Share on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="javascript:void(0)" (click)="shareOnLinkedIn()" class="btn btn-icon btn-secondary" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in text-dark-blue" aria-hidden="true"></i></a>
+                                </div>
+   
                                 <div class="blog-details-wrap d-flex justify-content-center align-items-center">
                                     <a href="https://wa.me/+971562455466?text=مرحباً%20شركة%20كوديفاي،%20أود%20الاستعانة%20بخدماتكم%20لتحقيق%20مشروعي" target="_blank" class="btn btn-primary mt-4 d-block w-auto">ابدأ مشروعك معنا اليوم 🎉</a>
                                 </div>
@@ -92,3 +99,4 @@
         </section> <!--cat subscribe end-->
     </div>
         <app-footer></app-footer>
+        
