@@ -1,5 +1,24 @@
 {
-    "routes": [
-      { "src": "/robots.txt", "dest": "/robots.txt", "headers": { "Content-Type": "text/plain" } }
-    ]
-  }
+  "routes": [
+    { 
+      "src": "/robots.txt", 
+      "dest": "/robots.txt", 
+      "headers": { "Content-Type": "text/plain" } 
+    },
+    {
+      "src": "http://(.*)",
+      "status": 301,
+      "headers": { "Location": "https://www.codevay.com/$1" }
+    },
+    {
+      "src": "^https://(?!www\\.)",
+      "status": 301,
+      "headers": { "Location": "https://www.codevay.com/$1" }
+    },
+    {
+      "src": "^http://www\\.(.*)",
+      "status": 301,
+      "headers": { "Location": "https://www.codevay.com/$1" }
+    }
+  ]
+}
