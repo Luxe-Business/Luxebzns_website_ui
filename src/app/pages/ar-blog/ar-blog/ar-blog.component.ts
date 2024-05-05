@@ -194,7 +194,7 @@ export class ArabicBlogComponent implements OnInit{
       // Update canonical link to the website design page
       const canonicalLink = document.querySelector('link[rel="canonical"]');
       if (canonicalLink) {
-        canonicalLink.setAttribute('href', window.location.href);
+        canonicalLink.setAttribute('href', `https://www.codevay.com/blog/${this.slug}`);
       }
 
       if (this.blog && this.blog.length > 0) {
@@ -211,7 +211,7 @@ export class ArabicBlogComponent implements OnInit{
         this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
         this.metaTagService.updateTag({ name: 'twitter:image', content: fullImageUrl });
 
-        this.metaTagService.updateTag({ property: 'og:url', content: window.location.href });
+        this.metaTagService.updateTag({ property: 'og:url', content: `https://www.codevay.com/blog/${this.slug}` });
         this.metaTagService.updateTag({ property: 'og:title', content: metaTitle ?? '' });
         this.metaTagService.updateTag({ property: 'og:description', content: metaDescription ?? '' });
         this.metaTagService.updateTag({ property: 'og:type', content: 'article' });
@@ -221,7 +221,7 @@ export class ArabicBlogComponent implements OnInit{
   }
 
   shareOnFacebook(): void {
-    const baseUrl = window.location.origin; // Get base URL like 'http://localhost:4200'
+    const baseUrl = window.location.origin; 
     const pathName = decodeURIComponent(window.location.pathname); // Decode the pathname to keep it clean
     const fullUrl = `${baseUrl}${pathName}`; // Reconstruct the full URL
     const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(fullUrl)}`;
