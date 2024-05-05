@@ -35,7 +35,7 @@ export class ArabicWebDesignComponent implements OnInit{
       "@type": "ProfessionalService",
       "serviceType": "Web Design",
       "name": "Codevay تصميم مواقع الكترونية",
-      "description": "   تصميم مواقع الكترونية احترافية في دبي. تقدم Codevay خدمات تصميم مواقع ويب تركز على الابتكار والتصاميم الجذابة التي تعزز تفاعل المستخدم.",
+      "description": "تصميم مواقع الكترونية احترافية في دبي. تقدم Codevay خدمات تصميم مواقع ويب تركز على الابتكار، التصاميم الجذابة والمتجاوبة التي تعزز تفاعل المستخدم وتوفر تجربة فريدة في السوق الإماراتية.",
       "areaServed": "AE",
       "availableLanguage": ["English", "Arabic"],
       "image": "https://www.codevay.com/assets/img/luxe-bzns-logo.png",
@@ -104,15 +104,52 @@ export class ArabicWebDesignComponent implements OnInit{
   
       // Update specific meta tags for the website design page
       this.titleService.setTitle("تصميم مواقع الكترونية في دبي | Codevay");
-      this.metaTagService.updateTag({ name: 'description', content: 'المواقع الإلكترونية من Codevay في دبي. نحن نقدم حلول تصميم ويب مبتكرة ومصممة خصيصًا لتعزيز تجربة المستخدم.' });
-      this.metaTagService.updateTag({ name: 'keywords', content: 'تصميم مواقع, تصميم مواقع الكترونية, تطوير ويب, دبي, Codevay' });
-      this.metaTagService.updateTag({ name: 'twitter:description', content: 'اكتشف خدمات تصميم المواقع الإلكترونية من Codevay في دبي. نحن نقدم حلول تصميم ويب مبتكرة ومصممة خصيصًا لتعزيز تجربة المستخدم.' });
-      this.metaTagService.updateTag({ name: 'twitter:title', content: 'تصميم مواقع الكترونية في دبي | Codevay' });
-      this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
-      this.metaTagService.updateTag({ property: 'og:url', content: window.location.href });
-      this.metaTagService.updateTag({ property: 'og:title', content: 'تصميم مواقع الكترونية في دبي | Codevay' });
-      this.metaTagService.updateTag({ property: 'og:description', content: 'اكتشف خدمات تصميم المواقع الإلكترونية من Codevay في دبي. نحن نقدم حلول تصميم ويب مبتكرة ومصممة خصيصًا لتعزيز تجربة المستخدم.' });
-      this.metaTagService.updateTag({ property: 'og:type', content: 'website' });
+
+this.metaTagService.updateTag({
+  name: 'description',
+  content: 'استكشف تصميم مواقع الكترونية مبتكرة في دبي مع Codevay. نقدم حلول ويب تفاعلية تعزز تجربة المستخدم وتساهم في نجاح عملك.'
+});
+
+this.metaTagService.updateTag({
+  name: 'keywords',
+  content: 'تصميم مواقع, تصميم مواقع دبي, تطوير ويب دبي, تصميم مواقع الكترونية, Codevay'
+});
+
+this.metaTagService.updateTag({
+  name: 'twitter:description',
+  content: 'اكتشف خدمات تصميم المواقع الإلكترونية المبتكرة من Codevay في دبي، التي تعزز من تجربة المستخدم وتفاعله.'
+});
+
+this.metaTagService.updateTag({
+  name: 'twitter:title',
+  content: 'تصميم مواقع الكترونية في دبي | Codevay'
+});
+
+this.metaTagService.updateTag({
+  name: 'twitter:card',
+  content: 'summary_large_image'
+});
+
+this.metaTagService.updateTag({
+  property: 'og:url',
+  content: window.location.href
+});
+
+this.metaTagService.updateTag({
+  property: 'og:title',
+  content: 'تصميم مواقع الكترونية في دبي | Codevay'
+});
+
+this.metaTagService.updateTag({
+  property: 'og:description',
+  content: 'اكتشف خدمات تصميم وتطوير المواقع الإلكترونية المبتكرة من Codevay في دبي، وكيف يمكن لتلك الحلول تعزيز تجربة المستخدم.'
+});
+
+this.metaTagService.updateTag({
+  property: 'og:type',
+  content: 'website'
+});
+
     }
   }
 
