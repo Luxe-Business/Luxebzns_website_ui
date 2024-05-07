@@ -90,6 +90,11 @@ export const routes: Routes = [
   },
 
   {
+    path: 'تطوير-تطبيقات-الجوال',
+    loadChildren: () => import('./pages/ar-app-design/ar-app-design.module').then(m => m.ArabicAppDesignModule)
+  },
+
+  {
     path: 'blogs',
     loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogModule)
   },
