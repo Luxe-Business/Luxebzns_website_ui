@@ -26,5 +26,17 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "blog-api",
+      "urls": ["/api/blogs/**"],
+      "cacheConfig": {
+        "maxSize": 100,
+        "maxAge": "3d",
+        "timeout": "10s",
+        "strategy": "performance"
+      }
+    }
   ]
 }

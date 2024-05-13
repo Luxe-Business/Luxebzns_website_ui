@@ -100,7 +100,8 @@ export const routes: Routes = [
   },
 
   {
-    path: 'blog/:slug', component:ArabicBlogComponent
+    path: 'blog/:slug',
+    loadChildren: () => import('./pages/ar-blog/ar-blog.module').then(m => m.ArabicBlogModule)
   },
 
   {

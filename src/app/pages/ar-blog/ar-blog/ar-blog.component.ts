@@ -8,6 +8,7 @@ import { Meta, Title } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 declare const window: any;
 import { HostListener } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 interface BlogDetail {
   id: number;
@@ -57,7 +58,21 @@ export class ArabicBlogComponent implements OnInit{
     private renderer: Renderer2,
     private el: ElementRef,
     @Inject(PLATFORM_ID) private platformId: Object,
+    @Inject(DOCUMENT) private document: Document,
     private http: HttpClient, private route: ActivatedRoute) {}
+
+    updateCanonicalUrl(): void {
+      const canonicalLink = this.document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null; // Adjusted type annotation
+      if (canonicalLink) {
+        canonicalLink.href = `https://www.codevay.com/blog/${encodeURIComponent(this.slug)}`;
+      } else {
+        // If no canonical link is found, create a new one
+        const link: HTMLLinkElement = this.renderer.createElement('link');
+        this.renderer.setAttribute(link, 'rel', 'canonical');
+        this.renderer.setAttribute(link, 'href', `https://www.codevay.com/blog/${encodeURIComponent(this.slug)}`);
+        this.renderer.appendChild(this.document.head, link);
+      }
+    }
 
   ngOnInit() {
     this.slug = this.route.snapshot.params['slug'];
@@ -95,6 +110,7 @@ export class ArabicBlogComponent implements OnInit{
         if (isPlatformBrowser(this.platformId)) {
           this.addStructuredData();
           this.updateMetadataForWebsiteDesign();
+          this.updateCanonicalUrl(); 
         }
       },
       error: (error) => console.error('Error fetching blog detail:', error)
