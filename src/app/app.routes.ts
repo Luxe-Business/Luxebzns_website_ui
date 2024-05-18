@@ -95,6 +95,11 @@ export const routes: Routes = [
   },
 
   {
+    path: 'expert-web-development-dubai',
+    loadChildren: () => import('./pages/landing-website-design/landing-website-design.module').then(m => m.ArabicWebDesignModule)
+  },
+
+  {
     path: 'blogs',
     loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogModule)
   },
