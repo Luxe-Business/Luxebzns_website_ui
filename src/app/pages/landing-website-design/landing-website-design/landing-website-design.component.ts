@@ -27,6 +27,13 @@ export class LandingWebDesignComponent implements OnInit{
     }
   }
 
+  goToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   addStructuredData() {
     const script = this.renderer.createElement('script');
     this.renderer.setAttribute(script, 'type', 'application/ld+json');
