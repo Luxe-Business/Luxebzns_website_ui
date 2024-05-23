@@ -76,6 +76,7 @@ export class ArabicBlogComponent implements OnInit{
 
   ngOnInit() {
     this.slug = this.route.snapshot.params['slug'];
+        this.updateCanonicalUrl()
         this.loadBlogDetails();
   }
 
@@ -110,7 +111,6 @@ export class ArabicBlogComponent implements OnInit{
         if (isPlatformBrowser(this.platformId)) {
           this.addStructuredData();
           this.updateMetadataForWebsiteDesign();
-          this.updateCanonicalUrl(); 
         }
       },
       error: (error) => console.error('Error fetching blog detail:', error)
@@ -205,12 +205,6 @@ export class ArabicBlogComponent implements OnInit{
         } else if (tag.hasAttribute('property')) {
           this.metaTagService.updateTag({ property: tag.getAttribute('property') ?? '', content: tag.getAttribute('content') ?? '' });
         }
-      }
-  
-      // Update canonical link to the website design page
-      const canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (canonicalLink) {
-        canonicalLink.setAttribute('href', `https://www.codevay.com/blog/${this.slug}`);
       }
 
       if (this.blog && this.blog.length > 0) {
