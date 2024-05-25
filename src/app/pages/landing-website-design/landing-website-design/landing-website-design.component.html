@@ -1,12 +1,35 @@
 <div dir="rtl">
+
+  <header class="main-header position-absolute w-100 z-10">
+    <nav class="navbar navbar-expand-xl navbar-light sticky-header">
+      <div class="container d-flex align-items-center justify-content-center position-relative">
+        <a routerLink="/" class="navbar-brand d-flex align-items-center mb-md-0 text-decoration-none">
+          <img ngSrc="assets/img/luxe-bzns-logo-light.png" alt="logo" class="logo-white" width="170" height="49"
+              ngOptimizedImage priority />
+          <img ngSrc="assets/img/luxe-bzns-logo-dark.png" alt="logo" class="logo-color" width="170" height="49"
+              ngOptimizedImage priority />
+      </a>
+
+      <!-- <button (click)="goToSection('booking-section')" class="btn btn-primary mt-3"> ابدأ معنا الان</button>       -->
+      </div>
+  </nav>
+  </header>
+
+
+
+
+
   <!--page header section start-->
   <section class="page-header position-relative overflow-hidden ptb-120 bg-dark"
     style="background: url('assets/img/page-header-bg.svg') no-repeat bottom left">
     <div class="container pt-5">
       <div class="row justify-content-center text-center">
         <div class="col-lg-8 col-md-12">
-          <h1 class="display-5 fw-bold">انطلق بعملك إلى آفاق جديدة مع أفضل شركة تصميم مواقع في الإمارات</h1>
-          <p class="lead">في Codevay، نقدم حلول تصميم وبرمجة مواقع إلكترونية مبتكرة تُضاعف مبيعاتك وتجذب العملاء بفضل تصميماتنا الاستثنائية وتجربة المستخدم الفريدة. اجعل موقعك الإلكتروني يتحدث عنك ويعكس هوية علامتك التجارية بشكل لا ينسى.</p>
+          <h1 class="display-5 fw-bold">ارفع مستوى أعمالك مع أفضل خدمات تصميم المواقع في الإمارات</h1>
+          <p class="lead">هل تبحث عن تصميم موقع إلكتروني يميزك عن المنافسين ويزيد من مبيعاتك؟ نحن نقدم لك حلولاً مخصصة
+            تجمع بين الجمال والوظائف، لتجذب العملاء وتحول الزوار إلى عملاء دائمين. نحن مميزون بتحويل المواقع إلى أدوات
+            فعالة تحقق لك زيادة في المبيعات والأرباح.
+          </p>
           <button (click)="goToSection('booking-section')" class="btn btn-primary mt-3">احصل على استشارة مجانية الآن
             🎉</button>
         </div>
@@ -22,32 +45,48 @@
       <div class="row align-items-lg-center justify-content-between">
         <div class="col-lg-5 order-lg-2 mb-7 mb-lg-0">
           <div class="mb-4">
-            <h2>خدمات تصميم وتطوير المواقع الإلكترونية في الإمارات</h2>
-            <p>حيث تتحد الفعالية والجمالية في التصميم الإلكتروني من أفضل شركة تصميم مواقع في دبي. نقدم تصميمات فريدة تعكس هوية علامتك التجارية وتجذب جمهورك المستهدف، مع التركيز على إنشاء تجربة مستخدم مميزة وتفاعلية تضمن تفاعل الزوار وزيادة المبيعات.</p>
+            <h2>لماذا تختار خدماتنا؟</h2>
+            <p>
+              نحن ندرك أن موقعك الإلكتروني هو واجهة عملك الرقمية، ولذلك نقدم حلولًا مبتكرة تعكس هوية علامتك التجارية
+              وتحقق أهدافك. بفضل فريقنا المتخصص وخبراتنا الواسعة، نضمن لك التميز والتفوق على المنافسين.
+
+            </p>
           </div>
           <ul class="list-unstyled d-flex flex-wrap list-two-col mt-5">
             <li>
               <span><i class="fas fa-paint-brush fa-2x text-primary mb-4"></i></span>
-              <h3 class="h5">تصميم خاص ومخصص</h3>
-              <p>تصميمات فريدة تعكس هوية علامتك التجارية وتجذب جمهورك المستهدف، مع التركيز على إنشاء تجربة مستخدم مميزة وتفاعلية.</p>
+              <h3 class="h5">تصميمات مبتكرة وجذابة
+              </h3>
+              <p>نقدم لك تصميمات عصرية وجذابة تجذب انتباه العملاء وتبقيهم متفاعلين مع موقعك.
+              </p>
             </li>
             <li>
               <span><i class="fas fa-chart-line fa-2x text-primary mb-4"></i></span>
-              <h3 class="h5">تقنيات SEO متقدمة</h3>
-              <p>تطبيق أحدث استراتيجيات تحسين محركات البحث لتعزيز رؤية موقعك وتحسين ترتيبه، مما يضمن تفوقك في السوق الرقمية وزيادة حركة المرور على موقعك</p>
+              <h3 class="h5">تحسين محركات البحث (SEO)
+              </h3>
+              <p>
+                نضمن تحسين موقعك لمحركات البحث لزيادة ظهوره وجذب المزيد من الزوار.
+
+              </p>
             </li>
 
 
             <li>
               <span><i class="fas fa-book fa-2x text-primary mb-4"></i></span>
               <h3 class="h5">صفحات شاملة ومفصلة</h3>
-              <p>إنشاء صفحات تغطي جميع جوانب عملك بدقة، مما يوفر معلومات غنية ومفيدة تعزز من تفاعل الزائرين وتحفزهم على اتخاذ الإجراءات المطلوبة.</p>
+              <p>
+                ننشئ صفحات تغطي جميع جوانب عملك بدقة، مما يعزز تفاعل الزائرين وتحفيزهم.
+
+              </p>
             </li>
 
             <li>
               <span><i class="fas fa-hand-pointer fa-2x text-primary mb-4"></i></span>
               <h3 class="h5">واجهة مستخدم وتجربة استخدام تفاعلية</h3>
-              <p>نضمن واجهات سهلة الاستخدام تتميز بالبساطة والفعالية، مما يجعل تجربة الزائرين لموقعك فريدة ولا تُنسى ويشجعهم على العودة مجددًا.</p>
+              <p>
+                نوفر واجهات سهلة الاستخدام تتميز بالبساطة والفعالية، مما يجعل تجربة الزائرين فريدة ويشجعهم على العودة.
+
+              </p>
             </li>
 
           </ul>
@@ -70,7 +109,6 @@
   </section>
   <!--feature section end-->
 
-
   <!--Advance feature section start-->
   <section class="feature-section pt-20 pb-120">
     <div class="container">
@@ -84,25 +122,35 @@
             <li>
               <span><i class="fas fa-mobile-alt fa-2x text-primary mb-4"></i></span>
               <h3 class="h5">تصميم متكيف</h3>
-              <p>يتماشى مع جميع الأجهزة: نضمن أن يقدم موقعك تجربة سلسة على الحواسيب المكتبية، الأجهزة اللوحية، والهواتف
-                المحمولة.</p>
+              <p>
+                نضمن تجربة سلسة على الحواسيب المكتبية، الأجهزة اللوحية، والهواتف المحمولة.
+
+              </p>
             </li>
             <li>
               <span><i class="fas fa-sync fa-2x text-primary mb-4"></i></span>
               <h3 class="h5">المحتوى الديناميكي</h3>
-              <p>محتوى حديث وجذاب: نستخدم المحتوى الذي يتكيف مع سلوكيات وتفضيلات المستخدم لتقديم تجربة شخصية فريدة.</p>
+              <p>
+                نستخدم محتوى يتكيف مع تفضيلات المستخدم لتقديم تجربة شخصية فريدة.
+
+              </p>
             </li>
 
             <li>
               <span><i class="fas fa-shield-alt fa-2x text-primary mb-4"></i></span>
               <h3 class="h5">بروتوكولات الأمان</h3>
-              <p>حماية موقعك: تطبيق تدابير أمان قوية لحماية موقعك وبيانات المستخدمين من التهديدات الإلكترونية.</p>
+              <p>
+                نطبق تدابير أمان قوية لحماية موقعك وبيانات المستخدمين من التهديدات الإلكترونية.
+
+              </p>
             </li>
 
             <li>
               <span><i class="fas fa-cogs fa-2x text-primary mb-4"></i></span>
               <h3 class="h5">تقنيات متقدمة</h3>
-              <p>حلول مستعدة للمستقبل: نستفيد من أحدث التقنيات الويب للحفاظ على تقدم موقعك وقابليته للتوسع.</p>
+              <p>
+                نستفيد من أحدث تقنيات الويب للحفاظ على تقدم موقعك وقابليته للتوسع.
+              </p>
             </li>
           </ul>
         </div>
@@ -122,17 +170,114 @@
           </div>
         </div>
       </div>
+      <div class="row align-items-lg-center justify-content-between">
+        <div class="col-lg-12 text-center mt-4">
+          <button (click)="goToSection('booking-section')" class="btn btn-primary mt-3">احصل على استشارة مجانية الآن
+            🎉</button>
+        </div>
+      </div>
     </div>
   </section>
   <!-- Advance feature section end-->
 
+    <!--cat subscribe start-->
+    <section class="cta-subscribe bg-dark text-white ptb-120 position-relative overflow-hidden">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10">
+            <div class="subscribe-info-wrap text-center position-relative z-2">
+              <div class="section-heading" data-aos="fade-up">
+                <h4 class="h5 text-warning">
+                  فوائد مميزة لتحقيق نجاحك
+                </h4>
+                <h2>استفد من خبرتنا على مدار ١٤ سنة
+                </h2>
+                <p>
+                  استمتع بالنصائح المخصصة، الرؤى العملية، والحلول المتطورة لتحسين أعمالك بلا مخاطر.
+                </p>
+              </div>
+              <div class="form-block-banner mw-60 m-auto mt-5" data-aos="fade-up" data-aos-delay="50">
+                <button (click)="goToSection('booking-section')" class="btn btn-primary mt-3">احصل على استشارة مجانية الآن
+                  🎉</button>
+              </div>
+              <ul class="nav justify-content-center subscribe-feature-list mt-4" data-aos="fade-up" data-aos-delay="100">
+                <li class="nav-item">
+                  <span><i class="far fa-check-circle text-primary ms-2"></i>نصائح استراتيجية مخصصة</span>
+                </li>
+                <li class="nav-item">
+                  <span><i class="far fa-check-circle text-primary ms-2"></i>توفير الجهد والوقت</span>
+                </li>
+                <li class="nav-item">
+                  <span><i class="far fa-check-circle text-primary ms-2"></i>تقنيات جديدة ومبتكرة</span>
+                </li>
+                <li class="nav-item">
+                  <span><i class="far fa-check-circle text-primary ms-2"></i>راحة البال</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light left-5"></div>
+        <div class="bg-circle rounded-circle circle-shape-1 position-absolute bg-warning right-5"></div>
+      </div>
+    </section> <!--cat subscribe end-->
+    
+
+          <!--promo section start-->
+  <section class="promo-section ptb-80 bg-light-subtle">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-6">
+          <div class="section-heading text-center">
+            <h2>مدفوعون بالشغف، مثبتون بالنتائج</h2>
+            <p>نجاحكم،هو التزامنا</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div
+            class="promo-card-wrap promo-border-hover border border-2 bg-white rounded-custom p-5 mb-4 mb-lg-0 mb-md-4">
+            <div class="promo-card-info">
+              <h3 class="display-5 fw-medium mb-4">150+</h3>
+              <h2 class="h5">أكثر من 150 مشروعاً مكتملاً</h2>
+              <p class="mb-0">التميز في التنفيذ: نبرهن خبرتنا بسجل حافل بالمشاريع التي أُنجزت بنجاح.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div
+            class="promo-card-wrap promo-border-hover border border-2 bg-white rounded-custom p-5 mb-4 mb-lg-0 mb-md-4">
+            <div class="promo-card-info">
+              <h3 class="display-5 fw-medium mb-4">1.5k</h3>
+              <h2 class="h5">أكثر من 1500 عميل راضٍ</h2>
+              <p class="mb-0">أولويتنا هي رضا العميل: ملتزمون بتجاوز التوقعات لبناء شراكات دائمة.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div
+            class="promo-card-wrap promo-border-hover border border-2 bg-white rounded-custom p-5 mb-4 mb-lg-0 mb-md-0">
+            <div class="promo-card-info">
+              <h3 class="display-5 fw-medium mb-4">90%</h3>
+              <h2 class="h5">دعم 24/7 بنسبة 90%</h2>
+              <p class="mb-0">دائمًا في خدمتكم: نقدم الدعم على مدار الساعة لتلبية احتياجاتكم وضمان استمرارية الخدمة.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--promo section end-->
+
   <!--Website Types section start-->
-  <section class="feature-tab-section ptb-120 bg-light-subtle" dir="ltr">
+  <section class="feature-tab-section ptb-80 bg-light-subtle" dir="ltr">
     <div class="container">
       <div class="row justify-content-center align-content-center">
         <div class="col-md-10 col-lg-8">
           <div class="section-heading text-center mb-4">
-            <h5 class="h6 text-primary">أنواع المواقع التي نصممها</h5>
+            <h5 class="h6 text-primary">أنواع المواقع التي نصممها
+            </h5>
             <h2>تصميم مواقع متنوعة لكافة الاحتياجات</h2>
             <p>
               في كوديفي، نوفر تصاميم مواقع ويب مبتكرة تلبي متطلبات مختلف القطاعات والمهن. من مواقع التجارة الإلكترونية
@@ -147,7 +292,7 @@
           <ul class="nav justify-content-center feature-tab-list-2 mt-4" id="nav-tab-2" role="tablist">
             <li class="nav-item mb-4">
               <a class="nav-link" role="tab">
-                متاجر الكترونية
+                متاجر إلكترونية
               </a>
             </li>
             <li class="nav-item mb-4">
@@ -230,119 +375,585 @@
                 منصات الدورات والتدريب عبر الإنترنت
               </a>
             </li>
+
+            <li class="nav-item mb-4">
+              <a class="nav-link" role="tab">
+                مواقع الشركات
+              </a>
+            </li>
+
+            <li class="nav-item mb-4">
+              <a class="nav-link" role="tab">
+                مواقع الخدمات المهنية
+              </a>
+            </li>
+
+            <li class="nav-item mb-4">
+              <a class="nav-link" role="tab">
+                مواقع الحرفيين والمبدعين
+              </a>
+            </li>
+
+            <li class="nav-item mb-4">
+              <a class="nav-link" role="tab">
+                مواقع الوساطة التجارية
+              </a>
+            </li>
+
           </ul>
         </div>
       </div>
+      <div class="row align-items-lg-center justify-content-between">
+        <div class="col-lg-12 text-center mt-4">
+          <button (click)="goToSection('booking-section')" class="btn btn-primary mt-3">
+            🎉 احصل على موقعك الخاص الآن
+          </button>
+        </div>
+      </div>
+
     </div>
   </section>
   <!--Website Types section end-->
 
-  <!--promo section start-->
-  <section class="promo-section ptb-120 bg-light-subtle">
+
+    <!--pricing section start-->
+    <section class="pricing-section ptb-120">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-10">
+            <div class="section-heading text-center">
+              <h2>احجز موعدك بسهولة
+              </h2>
+              <p>
+                اكتشف كيف يمكن لحلولنا الرقمية أن تعزز من نمو عملك. احجز موعدك الآن للتحدث مع أحد خبرائنا والحصول على استشارة مصممة خصيصًا لاحتياجاتك.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="booking-section">
+          <div class="col-lg-12 col-md-12">
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/codevay/website?hide_gdpr_banner=1"
+              style="min-width:320px;height:700px;"></div>
+            <!-- Calendly inline widget end -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--pricing section end-->
+
+
+  <!--customer review slider section start-->
+  <section class="testimonial-section bg-dark text-white ptb-120">
     <div class="container">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center align-content-center">
         <div class="col-md-10 col-lg-6">
-          <div class="section-heading text-center">
-            <h2>مدفوعون بالشغف، مثبتون بالنتائج</h2>
-            <p>نجاحكم، التزامنا</p>
+          <div class="section-heading text-center" data-aos="fade-up">
+            <h4 class="h5 text-warning text-primary">
+              ماذا قال عملاؤنا
+            </h4>
+            <h2>آراء عملائنا تعكس تميزنا
+            </h2>
+            <p>
+              نحن نفتخر بتقديم خدمات عالية الجودة تلبي توقعات عملائنا. إليك بعض ما قاله عملاؤنا عن تجربتهم معنا:
+            </p>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6 col-lg-4">
-          <div
-            class="promo-card-wrap promo-border-hover border border-2 bg-white rounded-custom p-5 mb-4 mb-lg-0 mb-md-4">
-            <div class="promo-card-info">
-              <h3 class="display-5 fw-medium mb-4">150+</h3>
-              <h2 class="h5">أكثر من 150 مشروعاً مكتملاً</h2>
-              <p class="mb-0">التميز في التنفيذ: نبرهن خبرتنا بسجل حافل بالمشاريع التي أُنجزت بنجاح.</p>
+        <div class="col-12">
+          <div class="position-relative w-100" data-aos="fade-up" data-aos-delay="50">
+            <div class="swiper testimonialSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="bg-custom-light text-white p-5 rounded-custom position-relative">
+                    <img src="assets/img/testimonial/quotes-dot.svg" alt="Quotes - Testimonial" width="100"
+                      class="img-fluid position-absolute left-0 top-0 z--1 p-3">
+                    <div class="d-flex mb-32 align-items-center">
+                      <img src="assets/img/testimonial/5.jpg" class="img-fluid ms-3 rounded" width="60" height="60"
+                        loading="lazy" alt="User - Testimonial">
+                      <div class="author-info">
+                        <h6 class="mb-0">الدكتورة منى</h6>
+                        <small>طبيبة تجميل في السعودية</small>
+                      </div>
+                    </div>
+                    <blockquote>
+                      تجربتنا مع كوديفي كانت رائعة. التصميم المبتكر وسهولة الاستخدام ساعدا في جذب المزيد من العملاء
+                      وزيادة مبيعاتنا.
+                    </blockquote>
+                    <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="bg-custom-light text-white p-5 rounded-custom position-relative">
+                    <img src="assets/img/testimonial/quotes-dot.svg" alt="Quotes - Testimonial" width="100"
+                      class="img-fluid position-absolute left-0 top-0 z--1 p-3">
+                    <div class="d-flex mb-32 align-items-center">
+                      <img src="assets/img/testimonial/2.jpg" class="img-fluid ms-3 rounded" width="60" height="60"
+                        loading="lazy" alt="User - Testimonial">
+                      <div class="author-info">
+                        <h6 class="mb-0">المهندس محمد</h6>
+                        <small>مستثمر عقاري في دبي</small>
+                      </div>
+                    </div>
+                    <blockquote>
+
+                      الخدمات المقدمة كانت ممتازة وساعدتنا في تعزيز وجودنا الرقمي بشكل كبير. الفريق كان متعاونًا
+                      ومحترفًا للغاية.
+                    </blockquote>
+                    <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="bg-custom-light text-white  p-5 rounded-custom position-relative">
+                    <img src="assets/img/testimonial/quotes-dot.svg" alt="Quotes - Testimonial" width="100"
+                      class="img-fluid position-absolute left-0 top-0 z--1 p-3">
+                    <div class="d-flex mb-32 align-items-center">
+                      <img src="assets/img/testimonial/3.jpg" class="img-fluid ms-3 rounded" width="60" height="60"
+                        loading="lazy" alt="User - Testimonial">
+                      <div class="author-info">
+                        <h6 class="mb-0">الدكتور أحمد</h6>
+                        <small>مستشار قانوني - الإمارات
+                        </small>
+                      </div>
+                    </div>
+                    <blockquote>
+                      كوديفي قدموا لنا موقعًا يعكس احترافية شركتنا بشكل مثالي. العمل معهم كان سهلًا وفعالًا.
+                    </blockquote>
+                    <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="bg-custom-light text-white  p-5 rounded-custom position-relative">
+                    <img src="assets/img/testimonial/quotes-dot.svg" alt="Quotes - Testimonial" width="100"
+                      class="img-fluid position-absolute left-0 top-0 z--1 p-3">
+                    <div class="d-flex mb-32 align-items-center">
+                      <img src="assets/img/testimonial/4.jpg" class="img-fluid ms-3 rounded" width="60" height="60"
+                        loading="lazy" alt="User - Testimonial">
+                      <div class="author-info">
+                        <h6 class="mb-0">الدكتورة نورة</h6>
+                        <small>مؤسسة تعليمية - السعودية
+                        </small>
+                      </div>
+                    </div>
+                    <blockquote>
+                      التصميم التعليمي الذي قدمته كوديفي فاق توقعاتنا. الموقع سهل الاستخدام وجذاب للغاية لطلابنا.
+                    </blockquote>
+                    <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="bg-custom-light text-white  p-5 rounded-custom position-relative">
+                    <img src="assets/img/testimonial/quotes-dot.svg" alt="Quotes - Testimonial" width="100"
+                      class="img-fluid position-absolute left-0 top-0 z--1 p-3">
+                    <div class="d-flex mb-32 align-items-center">
+                      <img src="assets/img/testimonial/author3.jpg" class="img-fluid ms-3 rounded" width="60"
+                        height="60" loading="lazy" alt="User - Testimonial">
+                      <div class="author-info">
+                        <h6 class="mb-0">السيدة فاطمة</h6>
+                        <small>مديرة شركة - الإمارات
+                        </small>
+                      </div>
+                    </div>
+                    <blockquote>
+                      التزام كوديفي بالمواعيد وجودة العمل كان له أثر كبير في نجاح مشروعنا الرقمي. ننصح بهم بشدة.
+                    </blockquote>
+                    <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                      <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-nav-control">
+              <span class="swiper-button-next"></span>
+              <span class="swiper-button-prev"></span>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
-          <div
-            class="promo-card-wrap promo-border-hover border border-2 bg-white rounded-custom p-5 mb-4 mb-lg-0 mb-md-4">
-            <div class="promo-card-info">
-              <h3 class="display-5 fw-medium mb-4">1.5k</h3>
-              <h2 class="h5">أكثر من 1500 عميل راضٍ</h2>
-              <p class="mb-0">أولويتنا هي رضا العميل: ملتزمون بتجاوز التوقعات لبناء شراكات دائمة.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div
-            class="promo-card-wrap promo-border-hover border border-2 bg-white rounded-custom p-5 mb-4 mb-lg-0 mb-md-0">
-            <div class="promo-card-info">
-              <h3 class="display-5 fw-medium mb-4">90%</h3>
-              <h2 class="h5">دعم 24/7 بنسبة 90%</h2>
-              <p class="mb-0">دائمًا في خدمتكم: نقدم الدعم على مدار الساعة لتلبية احتياجاتكم وضمان استمرارية الخدمة.</p>
-            </div>
-          </div>
+      </div>
+      <div class="row align-items-lg-center justify-content-between">
+        <div class="col-lg-12 text-center mt-4">
+          <button (click)="goToSection('booking-section')" class="btn btn-primary mt-3">احصل على استشارة مجانية الآن
+            🎉</button>
         </div>
       </div>
     </div>
-  </section>
-  <!--promo section end-->
+  </section> <!--customer review slider section end-->
 
-
-  <!--pricing section start-->
-  <section class="pricing-section ptb-120">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-10">
-          <div class="section-heading text-center">
-            <h2>اكتشف أسعارنا القيّمة</h2>
-            <p>خدمات متكاملة بتسعير مرن يتناسب مع جميع احتياجاتك الرقمية. النمو بكفاءة وفعالية مع حلولنا الإلكترونية
-              المتقدمة.</p>
-          </div>
-        </div>
+          <!--faq section start-->
+<section class="faq-section ptb-80 bg-light-subtle">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7 col-12">
+          <div class="section-heading mb-5 text-center">
+              <h5 class="h6 text-primary">الأسئلة الشائعة حول تصميم المواقع الإلكترونية</h5>
+              <h2>أسئلة متكررة حول خدمات تصميم وتطوير المواقع </h2>
+              <p>
+                اكتشف كيف يمكن لـ Codevay، أفضل شركة تصميم مواقع في الامارات، تحويل تواجدك الرقمي وتعزيز تفاعل المستخدمين في السوق الخليجية. تعرّف على أفضل ممارساتنا وكيف نساعد الأعمال على النجاح في العصر الرقمي.              </p>
+          </div>            
       </div>
-      <div class="row" id="booking-section">
-        <div class="col-lg-12 col-md-12">
-          <!-- Calendly inline widget begin -->
-          <div class="calendly-inline-widget" data-url="https://calendly.com/codevay/website?hide_gdpr_banner=1"
-            style="min-width:320px;height:700px;"></div>
-          <!-- Calendly inline widget end -->
+    </div>
+    <div class="row justify-content-center" dir="rtl">
+      <div class="col-lg-7 col-12">
+        <div class="accordion faq-accordion" id="accordionExample">
+          <div class="accordion-item border border-2 active">
+              <h5 class="accordion-header" id="faq-1">
+                  <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse-1"
+                      aria-expanded="true"
+                      aria-controls="collapse-1"
+                  >
+                  ما هي أهمية تصميم المواقع الإلكترونية للأعمال في دبي؟
+                  </button>
+              </h5>
+              <div
+                  id="collapse-1"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="faq-1"
+                  data-bs-parent="#accordionExample"
+              >
+                  <div class="accordion-body">
+                      تعد دبي مركزًا تجاريًا رئيسيًا في الإمارات، وتصميم موقع إلكتروني جذاب يمكن أن يعزز من وجودك الرقمي بشكل كبير. في Codevay، نقدم تصميمات تفاعلية تساعد على جذب العملاء وتعزيز التفاعل مع المحتوى، مما يسهم في تحقيق أهداف الأعمال التجارية بفعالية. تركز خدماتنا على إنشاء مواقع سهلة الاستخدام، سريعة الاستجابة، ومتوافقة مع أحدث معايير SEO، مما يضمن تحسين التواجد على الإنترنت وزيادة معدلات التحويل.
+                  </div>
+              </div>
+          </div>
+          
+          <div class="accordion-item border border-2">
+              <h5 class="accordion-header" id="faq-2">
+                  <button
+                      class="accordion-button collapsed text-end"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse-2"
+                      aria-expanded="false"
+                      aria-controls="collapse-2"
+                  >
+                  كيف يمكن لتصميم المواقع تحسين عمليات البيع للشركات في أبو ظبي؟
+                  </button>
+              </h5>
+              <div
+                  id="collapse-2"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faq-2"
+                  data-bs-parent="#accordionExample"
+              >
+                  <div class="accordion-body">
+                      في أبو ظبي، حيث تتنافس الأعمال للحصول على انتباه العملاء في سوق تنافسي، يلعب تصميم الموقع دورًا حاسمًا في تحسين تجربة المستخدم وزيادة المبيعات. في Codevay، نستخدم أحدث تقنيات تصميم وتطوير الويب لإنشاء مواقع جذابة ومتفاعلة تحفز العملاء على القيام بالإجراءات المرغوبة. تشمل خدماتنا تصميم مواقع سريعة الاستجابة توفر تجربة سلسة على جميع الأجهزة، وتحسين التنقل على الموقع لتسهيل الوصول إلى المعلومات والمنتجات، مما يؤدي إلى تحسين معدلات التحويل وزيادة العائدات.
+                  </div>
+              </div>
+          </div>
+          
+          <div class="accordion-item border border-2">
+            <h5 class="accordion-header" id="faq-3">
+              <button
+                class="accordion-button collapsed text-end"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-3"
+                aria-expanded="false"
+              >
+              ما هي الخدمات التي تقدمها Codevay لتحسين SEO لمواقع الإلكترونية في الشارقة؟
+          </button>
+            </h5>
+            <div
+              id="collapse-3"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq-3"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                  في Codevay، نقدم مجموعة شاملة من خدمات تحسين محركات البحث (SEO) التي تساعد الشركات في الشارقة على تحسين ترتيبها في نتائج البحث. خدماتنا تشمل تحليل الكلمات الرئيسية لفهم أفضل للسوق المحلي، تحسين المحتوى لتعزيز الرؤية والوصول، واستراتيجيات بناء الروابط التي تركز على زيادة السلطة والثقة لموقعك الإلكتروني. نحن نستخدم أيضًا تقنيات تحليل المنافسين لضمان أن تظل أعمالك تنافسية في سوق الشارقة المتطور باستمرار. كل هذه الجهود مصممة لضمان أن تكون مواقعنا الإلكترونية ليست فقط مرئية بشكل أفضل ولكن أيضًا توفر تجربة مستخدم استثنائية تشجع على التفاعل والتحويل.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border border-2">
+            <h5 class="accordion-header" id="faq-4">
+              <button
+                class="accordion-button collapsed text-end"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-4"
+                aria-expanded="false"
+              >
+              ما هي فوائد اختيار شركة تصميم مواقع في العين؟
+              </button>
+            </h5>
+            <div
+              id="collapse-4"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq-4"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                  اختيار Codevay لتصميم موقعك الإلكتروني في العين يعني التعاون مع شركة تتمتع بفهم عميق للسوق المحلي وتحدياته الفريدة. نحن نقدم حلول تصميم مواقع مبتكرة تلائم بشكل مثالي متطلبات وتوقعات عملائنا في العين، سواء كانوا شركات ناشئة أو مؤسسات كبيرة. خدماتنا تشمل تصميمات متجاوبة تتكيف مع جميع الأجهزة والشاشات، مما يضمن تجربة مستخدم ممتازة وتحسين تفاعل العملاء. بالإضافة إلى ذلك، نحن نركز على إنشاء مواقع ويب سريعة الأداء وسهلة الاستخدام، مع مراعاة أفضل الممارسات في SEO لتعزيز وجودك على الإنترنت بشكل فعال. اختيار Codevay يعني ضمان أن تكون تجربتك الرقمية ليست فقط جذابة ولكن أيضًا فعالة في تحقيق النتائج.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border border-2">
+            <h5 class="accordion-header" id="faq-5">
+              <button
+                class="accordion-button collapsed text-end"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-5"
+                aria-expanded="false"
+              >
+              كيف تضمن Codevay أمان البرمجيات وحلول تكنولوجيا المعلومات في دبي؟
+              </button>
+            </h5>
+            <div
+              id="collapse-5"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq-5"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                  في Codevay، نولي أهمية قصوى لضمان أمان برمجياتنا وحلول تكنولوجيا المعلومات، خاصةً في سوق ديناميكي وسريع التطور مثل دبي. نعتمد استراتيجية أمان متعددة الطبقات تشمل أحدث تقنيات التشفير، تدقيقات الأمان الصارمة، والامتثال للمعايير الدولية لأمان السيبراني. يبدأ نهجنا بممارسات البرمجة الآمنة لمنع الثغرات في مرحلة التطوير، بالإضافة إلى تنفيذ تحديثات وتصحيحات دورية للحماية من التهديدات الجديدة، وتدابير حماية البيانات القوية التي تضمن سلامة وخصوصية بيانات العملاء. كما يقوم فريقنا بالمراقبة المستمرة واكتشاف التهديدات في الوقت الحقيقي للتصدي بسرعة لأي حوادث أمنية. هذا الإطار الشامل للأمان لا يحمي عملاءنا في دبي فحسب، بل يعزز أيضًا ثقتهم في قدرتنا على تقديم حلول تكنولوجيا المعلومات آمنة وموثوقة.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border border-2">
+            <h5 class="accordion-header" id="faq-6">
+              <button
+                class="accordion-button collapsed text-end"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-6"
+                aria-expanded="false"
+              >
+              ما هي خدمات الدعم التي تقدمها Codevay لعملائها في دبي؟
+              </button>
+            </h5>
+            <div
+              id="collapse-6"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq-6"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                  في Codevay، نعتبر الدعم الفني جزءاً لا يتجزأ من التزامنا تجاه عملائنا في دبي، وهو ما يميزنا كأفضل شركة برمجة في المنطقة. نقدم خدمات دعم شاملة تتضمن مساعدة فنية على مدار الساعة، تحديثات برمجية منتظمة، وتدريبات مفصلة للمستخدمين لضمان الاستفادة القصوى من حلولنا التكنولوجية. فريق الدعم لدينا مكون من خبراء تقنيين مؤهلين يتمتعون بفهم عميق للتحديات التي قد تواجه الأعمال في دبي، وهم دائماً جاهزون لتقديم الحلول السريعة والفعالة. من خلال تقديم استجابات سريعة ودقيقة، نضمن عدم تأثر أعمالكم بأي تحديات تقنية، مما يعكس التزامنا الراسخ بتقديم خدمة لا تضاهى.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border border-2">
+            <h5 class="accordion-header" id="faq-7">
+              <button
+                class="accordion-button collapsed text-end"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-7"
+                aria-expanded="false"
+              >كيف تقوم Codevay بتكييف حلولها التكنولوجية للشركات الناشئة والمؤسسات الصغيرة والمتوسطة في دبي؟
+          </button>
+            </h5>
+            <div
+              id="collapse-7"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq-7"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                  في Codevay، نفهم التحديات الفريدة التي تواجه الشركات الناشئة والمؤسسات الصغيرة والمتوسطة في دبي، ونقدم حلولاً تكنولوجية مصممة خصيصًا لتلبية احتياجاتهم. كشركة برمجة رائدة، نستخدم نهجاً مرناً يسمح بتطوير الحلول التكنولوجية التي يمكن أن تنمو وتتطور مع الأعمال. نقدم منصات متكاملة تسهل العمليات، تعزز الكفاءة، وتقلل التكاليف. حلولنا مصممة لتكون سهلة الاستخدام، مما يتيح للشركات الصغيرة والمتوسطة التنافس بفاعلية في السوق الديناميكي. بالإضافة إلى ذلك، نقدم دعماً فنياً وتدريباً مستمراً لضمان أن تكون الشركات قادرة على استغلال تكنولوجيا المعلومات بأقصى طاقة ممكنة.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border border-2">
+            <h5 class="accordion-header" id="faq-8">
+              <button
+                class="accordion-button collapsed text-end"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-8"
+                aria-expanded="false"
+              >
+              كيف تقوم Codevay بتكييف حلول البرمجيات لتناسب بيئة الأعمال الفريدة في دبي؟
+              </button>
+            </h5>
+            <div
+              id="collapse-8"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq-8"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                  في Codevay، نتفهم بعمق الطبيعة المتميزة والمتطلبات الخاصة لبيئة الأعمال في دبي، مما يجعلنا شركة برمجة مثالية لتلبية هذه الاحتياجات. نحن نقدم حلول برمجيات مصممة خصيصاً لتتناسب مع التحديات والفرص التي تواجهها الشركات في هذه المدينة النابضة بالحياة. يشمل ذلك تطوير برمجيات قابلة للتطوير بما يتماشى مع النمو السريع للأعمال، وتأمين البيانات لحماية المعلومات الحساسة، وتوفير حلول تكاملية تسمح بالتفاعل السلس بين مختلف الأنظمة والتطبيقات. نعتمد في تقديم خدماتنا على فهم شامل للمعايير التنظيمية المحلية وأفضل الممارسات العالمية، لضمان أن تكون كل حلولنا متوافقة وفعالة في دعم عملائنا بدبي لتحقيق أهدافهم الاستراتيجية.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border border-2">
+            <h5 class="accordion-header" id="faq-9">
+              <button
+                class="accordion-button collapsed text-end"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-9"
+                aria-expanded="false"
+              >
+              ما الذي يميز خدمات الحوسبة السحابية التي تقدمها Codevay في دبي؟
+              </button>
+            </h5>
+            <div
+              id="collapse-9"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq-9"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                  في Codevay، نبرز كأفضل شركة برمجة وتصميم مواقع في الإمارات بفضل خدمات الحوسبة السحابية المتقدمة التي نقدمها. خدماتنا السحابية مصممة لتعزيز القدرات التشغيلية للأعمال التجارية في دبي، وتسهيل إنشاء وإدارة المتاجر الإلكترونية والمواقع بكفاءة. نحن نوفر حلولاً سحابية قابلة للتطوير تدعم كل من المشاريع الصغيرة والكبيرة، وتضمن الأمان الكامل والوصول السريع للبيانات من أي مكان في العالم. تشتمل خدماتنا على الاستضافة السحابية الموثوقة، النسخ الاحتياطي الآلي للبيانات، والتكامل السلس مع منصات التجارة الإلكترونية، مما يمكن عملاءنا من تحقيق أفضل استفادة من تقنيات السوق الرقمية.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border border-2">
+            <h5 class="accordion-header" id="faq-10">
+              <button
+                class="accordion-button collapsed text-end"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-10"
+                aria-expanded="false"
+              >
+              كيف تساعد Codevay الشركات في دبي على تنفيذ استراتيجيات التحول الرقمي؟
+              </button>
+            </h5>
+            <div
+              id="collapse-10"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq-10"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                  في Codevay، نتبنى دور الرائد في مجال التحول الرقمي في دبي، حيث نساعد الشركات على دمج التقنيات الرقمية في جميع جوانب عملياتها. نحن نقدم استراتيجيات مبتكرة تعمل على تغيير الطريقة التي تعمل بها الشركات وتقدم القيمة لعملائها، مما يسهم في تحسين الكفاءة وزيادة الإنتاجية. استراتيجياتنا تشمل تحليلات متقدمة، الذكاء الاصطناعي، أتمتة العمليات، وحلول البيانات الكبيرة، والتي تم تصميمها لتسريع نمو الشركات وتعزيز قدرتها التنافسية في السوق الرقمي السريع التطور في دبي.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border border-2">
+            <h5 class="accordion-header" id="faq-11">
+              <button
+                class="accordion-button collapsed text-end"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-11"
+                aria-expanded="false"
+              >
+              كيف تضمن Codevay أن تطوير التطبيقات الجوالة يلبي متطلبات السوق التكنولوجي المتقدم في دبي؟
+              </button>
+            </h5>
+            <div
+              id="collapse-11"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq-11"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                  في Codevay، ندرك أهمية تلبية توقعات سوق دبي المتقدم تكنولوجياً، ولذلك نتبنى أحدث المعايير في تطوير التطبيقات الجوالة. نحن نركز على إنشاء تطبيقات تتميز بالجاذبية البصرية، سهولة الاستخدام، والأداء العالي، مما يضمن تجربة مستخدم مثالية. التطبيقات التي نطورها مصممة لتكون متوافقة مع أحدث التقنيات وأنظمة التشغيل، مع تأكيد خاص على الأمان والتكامل السلس مع أنظمة الأعمال الأخرى. نحن نقدم حلولاً مخصصة تعزز التفاعل الرقمي وتحقق أقصى استفادة من البيانات المتاحة لتعزيز نمو الشركات في السوق الحيوية في دبي.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border border-2">
+            <h5 class="accordion-header" id="faq-12">
+              <button
+                class="accordion-button collapsed text-end"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-12"
+                aria-expanded="false"
+              >
+              كيف تدعم Codevay ربط بوابات الدفع لمتاجر الكترونية؟
+            </button>
+            </h5>
+            <div
+              id="collapse-12"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq-12"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                في Codevay، نفهم الحاجة إلى توفير خيارات دفع سلسة وآمنة لمتاجر الكترونية، ولذلك نقدم حلولاً متكاملة لربط بوابات الدفع. نعمل مع مجموعة واسعة من البوابات المعروفة مثل PayPal، Stripe، وVisa Checkout، بالإضافة إلى دعم البوابات الإقليمية مثل PayTabs وTelr لتلبية متطلبات سوق الشرق الأوسط. تأتي خدماتنا مع تأمين قوي لعمليات الدفع، وضمان التوافق التام مع الأنظمة المصرفية الدولية والمحلية، مما يتيح للشركات تحسين تجارب العملاء وزيادة الثقة في العلامة التجارية.
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
-  </section>
-  <!--pricing section end-->
-
-  <!--cat subscribe start-->
-  <section class="cta-subscribe bg-dark text-white ptb-120 position-relative overflow-hidden">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 col-md-10">
-          <div class="subscribe-info-wrap text-center position-relative z-2">
-            <div class="section-heading" data-aos="fade-up">
-              <h4 class="h5 text-warning">جرب الآن! استشارة مجانية</h4>
-              <h2>انطلق في رحلة التحول الرقمي الخاصة بك</h2>
-              <p>استمتع بالنصائح المصممة خصيصًا لك، الرؤى الصناعية، الحلول المبتكرة، والاستشارات بدون أي مخاطر</p>
-            </div>
-            <div class="form-block-banner mw-60 m-auto mt-5" data-aos="fade-up" data-aos-delay="50">
-              <a routerLink="/contact" class="btn btn-primary">احصل على استشارة مجانية</a>
-            </div>
-            <ul class="nav justify-content-center subscribe-feature-list mt-4" data-aos="fade-up" data-aos-delay="100">
-              <li class="nav-item">
-                <span><i class="far fa-check-circle text-primary ms-2"></i>أفكار وحلول مجانية</span>
-              </li>
-              <li class="nav-item">
-                <span><i class="far fa-check-circle text-primary ms-2"></i>توفير الجهد والوقت</span>
-              </li>
-              <li class="nav-item">
-                <span><i class="far fa-check-circle text-primary ms-2"></i>تقنيات جديدة ومبتكرة</span>
-              </li>
-              <li class="nav-item">
-                <span><i class="far fa-check-circle text-primary ms-2"></i>استشارات بدون مخاطر</span>
-              </li>
-            </ul>
-          </div>
-        </div>
+    <div class="row align-items-lg-center justify-content-between">
+      <div class="col-lg-12 text-center mt-4">
+        <button (click)="goToSection('booking-section')" class="btn btn-primary mt-3">احصل على استشارة مجانية الآن
+          🎉</button>
       </div>
-      <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light left-5"></div>
-      <div class="bg-circle rounded-circle circle-shape-1 position-absolute bg-warning right-5"></div>
     </div>
-  </section> <!--cat subscribe end-->
+  </div>
+</section>
+<!--faq section end-->
 
+
+
+        <!--footer section start-->
+        <footer class="footer-section" dir="ltr">
+          <!--footer top start-->
+          <!--footer bottom start-->
+          <div class="footer-bottom footer-light py-4">
+              <div class="container">
+                  <div class="row justify-content-between align-items-center">
+                      <div class="col-md-7 col-lg-7">
+                          <div class="copyright-text">
+                              <p class="mb-lg-0 mb-md-0">&copy; {{'Footer.Text16' |translate}}</p>
+                          </div>
+                      </div>
+                      <div class="col-md-4 col-lg-4">
+                          <div class="footer-single-col text-start text-lg-end text-md-end">
+                              <ul class="list-unstyled list-inline footer-social-list mb-0">
+                                  <li class="list-inline-item"><a href="https://www.facebook.com/codevayweb/" target="_blank" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                  <li class="list-inline-item"><a href="https://www.instagram.com/codevay_company" target="_blank" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a></li>
+                                  <li class="list-inline-item"><a href="https://linkedin.com/company/codevay" target="_blank" aria-label="Follow us on Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                                  <li class="list-inline-item"><a href="https://www.threads.net/@codevay_company" target="_blank" aria-label="Follow us on Threads"><i class="fab fa-at"></i></a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!--footer bottom end-->
+      </footer> <!--footer section end-->
 </div>
