@@ -49,7 +49,7 @@ export class MobileAppDevelopmentComponent {
         "logo": "https://www.codevay.com/assets/img/luxe-bzns-logo.png",
         "sameAs": [
           "https://www.facebook.com/codevayweb/",
-          "https://www.instagram.com/codevay_web/",
+          "https://www.instagram.com/codevay_company",
           "https://www.linkedin.com/company/codevay/"
         ]
       },
