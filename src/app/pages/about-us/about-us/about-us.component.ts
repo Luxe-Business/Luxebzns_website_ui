@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { ComponentsModule } from '../../../components/components.module';
 import { RouterLink } from '@angular/router';
-import { NgOptimizedImage, isPlatformBrowser } from '@angular/common';
+import { DOCUMENT, NgOptimizedImage, isPlatformBrowser } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
@@ -17,6 +17,8 @@ export class AboutUsComponent implements OnInit{
 
 
   constructor(private metaTagService: Meta,private titleService: Title,
+    private renderer: Renderer2,
+    @Inject(DOCUMENT) private document: Document,
     @Inject(PLATFORM_ID) private platformId: Object) {}
   
   ngOnInit() {
@@ -41,6 +43,11 @@ export class AboutUsComponent implements OnInit{
       const canonicalLink = document.querySelector('link[rel="canonical"]');
       if (canonicalLink) {
         canonicalLink.setAttribute('href', window.location.href);
+      } else {
+        const link = this.renderer.createElement('link');
+        this.renderer.setAttribute(link, 'rel', 'canonical');
+        this.renderer.setAttribute(link, 'href', window.location.href);
+        this.renderer.appendChild(this.document.head, link);
       }
   
       // Update specific meta tags for the "About Us" page

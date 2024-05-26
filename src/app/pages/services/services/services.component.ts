@@ -1,8 +1,8 @@
-import { Component, ElementRef, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { ComponentsModule } from '../../../components/components.module';
 import { Meta, Title } from '@angular/platform-browser';
-import { isPlatformBrowser } from '@angular/common';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 
 declare var bootstrap: any;
 
@@ -16,6 +16,8 @@ declare var bootstrap: any;
 export class ServicesComponent implements OnInit{
 
   constructor(private router: Router, private elRef: ElementRef,private metaTagService: Meta,private titleService: Title,
+    private renderer: Renderer2,
+    @Inject(DOCUMENT) private document: Document,
     @Inject(PLATFORM_ID) private platformId: Object) {}
 
   goToService(service: string) {
@@ -60,6 +62,11 @@ export class ServicesComponent implements OnInit{
       const canonicalLink = document.querySelector('link[rel="canonical"]');
       if (canonicalLink) {
         canonicalLink.setAttribute('href', window.location.href);
+      } else {
+        const link = this.renderer.createElement('link');
+        this.renderer.setAttribute(link, 'rel', 'canonical');
+        this.renderer.setAttribute(link, 'href', window.location.href);
+        this.renderer.appendChild(this.document.head, link);
       }
   
       // Update specific meta tags for the services page

@@ -1,7 +1,7 @@
 import { Component, ElementRef, Renderer2 } from '@angular/core';
 import { ComponentsModule } from '../../../components/components.module';
 import { RouterLink } from '@angular/router';
-import { NgOptimizedImage, isPlatformBrowser } from '@angular/common';
+import { DOCUMENT, NgOptimizedImage, isPlatformBrowser } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
@@ -9,16 +9,17 @@ import { Meta, Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-ar-app-design',
   standalone: true,
-  imports: [ComponentsModule,NgOptimizedImage,RouterLink,TranslateModule],
+  imports: [ComponentsModule, NgOptimizedImage, RouterLink, TranslateModule],
   templateUrl: './ar-app-design.component.html',
   styleUrl: './ar-app-design.component.scss'
 })
-export class ArabicAppDesignComponent implements OnInit{
+export class ArabicAppDesignComponent implements OnInit {
 
-  constructor(private metaTagService: Meta,private titleService: Title,
+  constructor(private metaTagService: Meta, private titleService: Title,
     private renderer: Renderer2,
+    @Inject(DOCUMENT) private document: Document,
     private el: ElementRef,
-    @Inject(PLATFORM_ID) private platformId: Object) {}
+    @Inject(PLATFORM_ID) private platformId: Object) { }
 
   ngOnInit() {
     this.updateMetadataForWebsiteDesign();
@@ -81,12 +82,12 @@ export class ArabicAppDesignComponent implements OnInit{
     });
     this.renderer.appendChild(this.el.nativeElement, script);
   }
-  
+
   updateMetadataForWebsiteDesign() {
     if (isPlatformBrowser(this.platformId)) {
       // Get the existing meta tags from the home page
       const existingMetaTags = Array.from(document.getElementsByTagName('meta'));
-  
+
       // Copy the existing meta tags to the website design page
       for (const tag of existingMetaTags) {
         if (tag.hasAttribute('name')) {
@@ -95,60 +96,65 @@ export class ArabicAppDesignComponent implements OnInit{
           this.metaTagService.updateTag({ property: tag.getAttribute('property') ?? '', content: tag.getAttribute('content') ?? '' });
         }
       }
-  
+
       // Update canonical link to the website design page
       const canonicalLink = document.querySelector('link[rel="canonical"]');
       if (canonicalLink) {
         canonicalLink.setAttribute('href', window.location.href);
+      } else {
+        const link = this.renderer.createElement('link');
+        this.renderer.setAttribute(link, 'rel', 'canonical');
+        this.renderer.setAttribute(link, 'href', window.location.href);
+        this.renderer.appendChild(this.document.head, link);
       }
-  
+
       // Update specific meta tags for the website design page
       this.titleService.setTitle("تصميم وبرمجة تطبيقات الجوال في دبي | CodeVay");
 
-this.metaTagService.updateTag({
-  name: 'description',
-  content: 'استكشف تصميم تطبيقات الجوال المبتكرة في دبي مع Codevay. نقدم حلول تطبيقات تفاعلية تعزز تجربة المستخدم وتساهم في نجاح عملك.'
-});
+      this.metaTagService.updateTag({
+        name: 'description',
+        content: 'استكشف تصميم تطبيقات الجوال المبتكرة في دبي مع Codevay. نقدم حلول تطبيقات تفاعلية تعزز تجربة المستخدم وتساهم في نجاح عملك.'
+      });
 
-this.metaTagService.updateTag({
-  name: 'keywords',
-  content: 'تصميم تطبيقات, تصميم تطبيق في دبي, تطوير تطبيق دبي, تصميم تطبيقات الكترونية, افضل شركة برمجة تطبيقات، Codevay'
-});
+      this.metaTagService.updateTag({
+        name: 'keywords',
+        content: 'تصميم تطبيقات, تصميم تطبيق في دبي, تطوير تطبيق دبي, تصميم تطبيقات الكترونية, افضل شركة برمجة تطبيقات، Codevay'
+      });
 
-this.metaTagService.updateTag({
-  name: 'twitter:description',
-  content: 'اكتشف خدمات تصميم  وبرمجة تطبيقات الجوال المبتكرة من Codevay في دبي، التي تعزز من تجربة المستخدم وتفاعله.'
-});
+      this.metaTagService.updateTag({
+        name: 'twitter:description',
+        content: 'اكتشف خدمات تصميم  وبرمجة تطبيقات الجوال المبتكرة من Codevay في دبي، التي تعزز من تجربة المستخدم وتفاعله.'
+      });
 
-this.metaTagService.updateTag({
-  name: 'twitter:title',
-  content: 'تصميم وبرمجة تطبيقات الجوال في دبي | CodeVay'
-});
+      this.metaTagService.updateTag({
+        name: 'twitter:title',
+        content: 'تصميم وبرمجة تطبيقات الجوال في دبي | CodeVay'
+      });
 
-this.metaTagService.updateTag({
-  name: 'twitter:card',
-  content: 'summary_large_image'
-});
+      this.metaTagService.updateTag({
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      });
 
-this.metaTagService.updateTag({
-  property: 'og:url',
-  content: window.location.href
-});
+      this.metaTagService.updateTag({
+        property: 'og:url',
+        content: window.location.href
+      });
 
-this.metaTagService.updateTag({
-  property: 'og:title',
-  content: 'تصميم وبرمجة تطبيقات الجوال في دبي | CodeVay'
-});
+      this.metaTagService.updateTag({
+        property: 'og:title',
+        content: 'تصميم وبرمجة تطبيقات الجوال في دبي | CodeVay'
+      });
 
-this.metaTagService.updateTag({
-  property: 'og:description',
-  content: 'اكتشف خدمات تصميم  وبرمجة تطبيقات الجوال المبتكرة من Codevay في دبي، التي تعزز من تجربة المستخدم وتفاعله.'
-});
+      this.metaTagService.updateTag({
+        property: 'og:description',
+        content: 'اكتشف خدمات تصميم  وبرمجة تطبيقات الجوال المبتكرة من Codevay في دبي، التي تعزز من تجربة المستخدم وتفاعله.'
+      });
 
-this.metaTagService.updateTag({
-  property: 'og:type',
-  content: 'website'
-});
+      this.metaTagService.updateTag({
+        property: 'og:type',
+        content: 'website'
+      });
 
     }
   }

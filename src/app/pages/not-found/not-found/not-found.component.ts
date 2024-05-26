@@ -1,5 +1,5 @@
-import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { Component, Inject, OnInit, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 
@@ -13,6 +13,8 @@ import { RouterLink } from '@angular/router';
 export class NotFoundComponent implements OnInit{
 
   constructor(private metaTagService: Meta,private titleService: Title,
+    private renderer: Renderer2,
+    @Inject(DOCUMENT) private document: Document,
     @Inject(PLATFORM_ID) private platformId: Object) {}
   ngOnInit() {
     this.updateMetadata();
@@ -35,6 +37,11 @@ export class NotFoundComponent implements OnInit{
       const canonicalLink = document.querySelector('link[rel="canonical"]');
       if (canonicalLink) {
         canonicalLink.setAttribute('href', window.location.href);
+      } else {
+        const link = this.renderer.createElement('link');
+        this.renderer.setAttribute(link, 'rel', 'canonical');
+        this.renderer.setAttribute(link, 'href', window.location.href);
+        this.renderer.appendChild(this.document.head, link);
       }
   
       // Update specific meta tags for the 404 page

@@ -1,6 +1,6 @@
 import { Component, ElementRef, Inject, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { ComponentsModule } from '../../../components/components.module';
-import { isPlatformBrowser } from '@angular/common';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
@@ -15,7 +15,7 @@ export class MobileAppDevelopmentComponent {
 
   constructor(private metaTagService: Meta,private titleService: Title,
     private renderer: Renderer2,
-    private el: ElementRef,
+    @Inject(DOCUMENT) private document: Document,private el: ElementRef,
     @Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit() {
@@ -103,6 +103,11 @@ export class MobileAppDevelopmentComponent {
       const canonicalLink = document.querySelector('link[rel="canonical"]');
       if (canonicalLink) {
         canonicalLink.setAttribute('href', window.location.href);
+      } else {
+        const link = this.renderer.createElement('link');
+        this.renderer.setAttribute(link, 'rel', 'canonical');
+        this.renderer.setAttribute(link, 'href', window.location.href);
+        this.renderer.appendChild(this.document.head, link);
       }
   
       // Update specific meta tags for the mobile apps development page

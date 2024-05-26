@@ -1,7 +1,7 @@
 import { Component, ElementRef, Inject, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { ComponentsModule } from '../../../components/components.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
 
 interface Blog {
@@ -54,7 +54,7 @@ export class BlogComponent {
   constructor(private http: HttpClient,
     private metaTagService: Meta,private titleService: Title,
     private renderer: Renderer2,
-    private el: ElementRef,
+    @Inject(DOCUMENT) private document: Document,private el: ElementRef,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
@@ -169,10 +169,14 @@ export class BlogComponent {
         }
       }
   
-      // Update canonical link to the website design page
       const canonicalLink = document.querySelector('link[rel="canonical"]');
       if (canonicalLink) {
         canonicalLink.setAttribute('href', window.location.href);
+      } else {
+        const link = this.renderer.createElement('link');
+        this.renderer.setAttribute(link, 'rel', 'canonical');
+        this.renderer.setAttribute(link, 'href', window.location.href);
+        this.renderer.appendChild(this.document.head, link);
       }
   
       // Update specific meta tags for the website design page
