@@ -181,21 +181,18 @@ export class ArabicBlogComponent implements OnInit {
 
   updateMetadataForWebsiteDesign() {
     if (isPlatformBrowser(this.platformId)) {
-
-      const canonicalLink = document.querySelector('link[rel="canonical"]');
+      let canonicalLink = document.querySelector('link[rel="canonical"]');
+      if (!canonicalLink) {
+        canonicalLink = this.renderer.createElement('link');
+        this.renderer.setAttribute(canonicalLink, 'rel', 'canonical');
+        this.renderer.appendChild(this.document.head, canonicalLink);
+      }
       if (canonicalLink) {
         canonicalLink.setAttribute('href', window.location.href);
-      } else {
-        const link = this.renderer.createElement('link');
-        this.renderer.setAttribute(link, 'rel', 'canonical');
-        this.renderer.setAttribute(link, 'href', window.location.href);
-        this.renderer.appendChild(this.document.head, link);
       }
-
-      // Get the existing meta tags from the home page
+  
       const existingMetaTags = Array.from(document.getElementsByTagName('meta'));
-
-      // Copy the existing meta tags to the website design page
+  
       for (const tag of existingMetaTags) {
         if (tag.hasAttribute('name')) {
           this.metaTagService.updateTag({ name: tag.getAttribute('name') ?? '', content: tag.getAttribute('content') ?? '' });
@@ -203,12 +200,13 @@ export class ArabicBlogComponent implements OnInit {
           this.metaTagService.updateTag({ property: tag.getAttribute('property') ?? '', content: tag.getAttribute('content') ?? '' });
         }
       }
+  
       if (this.blog && this.blog.length > 0) {
         const { metaTitle, metaDescription, keywords } = this.blog[0].attributes?.seo ?? {};
         const blogData = this.blog[0].attributes;
         const imageUrl = blogData?.Featured_Image?.data[0]?.attributes?.url;
         const fullImageUrl = imageUrl ? `https://codevaycms-production.up.railway.app${imageUrl}` : '';
-
+  
         this.titleService.setTitle(metaTitle ?? '');
         this.metaTagService.updateTag({ name: 'description', content: metaDescription ?? '' });
         this.metaTagService.updateTag({ name: 'keywords', content: keywords ?? '' });
@@ -216,11 +214,10 @@ export class ArabicBlogComponent implements OnInit {
         this.metaTagService.updateTag({ name: 'twitter:title', content: metaTitle ?? '' });
         this.metaTagService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
         this.metaTagService.updateTag({ name: 'twitter:image', content: fullImageUrl });
-
+  
         this.metaTagService.updateTag({ property: 'og:url', content: window.location.href });
         this.metaTagService.updateTag({ property: 'og:title', content: metaTitle ?? '' });
         this.metaTagService.updateTag({ property: 'og:description', content: metaDescription ?? '' });
-        this.metaTagService.updateTag({ property: 'og:type', content: 'article' });
         this.metaTagService.updateTag({ property: 'og:image', content: fullImageUrl });
       }
     }
